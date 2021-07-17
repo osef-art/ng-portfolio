@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+@font-face {
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamThin";
+  src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("assets/fonts/Greycliff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lufga";
+  src: url("assets/fonts/LufgaBold.otf") format("opentype");
+}
+
+%title {
+  font-family: "Lufga", sans-serif;
+}
+
+%mont {
+  font-family: "MontSerrat", sans-serif;
+  font-weight: 600;
+}
+
+%mont-bolder {
+  font-family: "MontSerrat", sans-serif;
+  font-weight: 800;
+}
+
+%bolder {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+%sans {
+  font-family: "Gotham", sans-serif;
+}
+
+%light {
+  font-family: "Poppins", sans-serif;
+}
+
+%thin {
+  font-family: "GothamThin", sans-serif;
+}
+
+// COLORS
+
+$fake-white: rgb(225, 225, 250);
+$fake-black: rgb(50, 50, 60);
+$no-color: rgba(0, 0, 0, 0);
+
+$sig-gradient: (
+  rgb(175, 125, 250),
+  rgb(250, 85, 150)
+);
+
+$accent-colors: (
+    "art": rgb(250, 25, 125),
+  "games": rgb(175, 150, 250),
+  "anims": rgb(150, 250, 225),
+  "music": rgb(200, 250, 100),
+);
+
+// GLOBAL RULES
+html,
+body {
+  @extend %sans;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+  min-height: 100%;
+  background: radial-gradient(
+    rgb(5, 5, 7.5),
+    rgb(40, 40, 42.5)
+  );
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @extend %title;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+// UTILS
+.border {
+  border: solid white 2px;
+}
+
+.line {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-y {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.center {
+  @extend .flex;
+  align-items: center; // horizontal
+  justify-content: center; // vertical
+}
+
+.center-y {
+  @extend .flex-y;
+  justify-content: center;
+}
+
+.invisible {
+  pointer-events: none;
+  opacity: 0 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.white {
+  color: white;
+}

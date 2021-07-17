@@ -1,0 +1,340 @@
+<head>
+    <title>welcome.</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicons/fav_home.png" />
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#bottom-stuff").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="title-box">
+        <span class="title-shadow-home">welcøme.</span>
+        <div>
+            <span class="title">welcøme.</span>
+        </div>
+        <div id="dashed-1"></div>
+        <div id="dashed-2"></div>
+        <div id="dashed-3"></div>
+        <div id="dashed-4"></div>
+
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" width="80px" height="60px" viewBox="10 0 65 60">
+
+            <path id="wave" fill="none" stroke="rgba(245, 235, 255, .25)" stroke-linecap="round" stroke-width="7" d="">
+                <script>
+                    buildWave(60, 60);
+                </script>
+            </path>
+        </svg>
+
+        <svg class="wheel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px"
+            height="100px">
+            <circle fill="none" stroke="rgba(245, 235, 255, .2)" stroke-linecap="round" stroke-width="2"
+                stroke-miterlimit="4" stroke-dasharray="12,12" cx="50" cy="50" r="40">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="30s" from="0 50 50"
+                    to="360 50 50" repeatCount="indefinite" />
+            </circle>
+        </svg>
+    </div>
+
+    <div class="flex">
+        <div class="spacer"></div>
+        <div id="intro">
+            <p>
+                <span class="bright"> Glad you got there. </span>
+                Feel free to check my latest works in
+                <a href="games.html" class="games-link">game developping</a>,
+                <a href="artwork.html" class="art-link">designing</a>,
+                <a href="music.html" class="music-link">producing</a> or
+                <a href="anims.html" class="anims-link">animating</a> !
+            </p>
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <div id="bitmosef-container">
+        <a id="bitmosef-body" href="about-me.html" tabindex="-1">
+            <div class="shadow"></div>
+            <img id="bitmosef-head" src="assets/icons/head.png">
+            <img id="bitmosef-glasses" src="assets/icons/glasses.png">
+            <img id="bitmosef-hand-l" src="assets/icons/hand.png">
+            <img id="bitmosef-hand-r" src="assets/icons/hand.png">
+        </a>
+
+        <div id="bitmosef-bubble">
+            <div id="bubble-container">
+                <img src="assets/icons/bubble-icon.png">
+                <div class="bubble-txt">hi!</div>
+            </div>
+        </div>
+
+        <div id="bitmosef-hide">
+            <div id="hide-button">
+                <div id="close-button" onclick="hideBitmoji()">
+                    <img src="assets/icons/exit-icon.png">
+                </div>
+                <span>HIDE</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="spacer"></div>
+        <div class="articles-container">
+            <div class="game-article">
+                <div class="thumbnail">
+                    <div id="ministick-carousel">
+                        <figure id="ministick-slider">
+                            <img src="assets/thumbnails/ministick-clip-1.gif">
+                            <img src="assets/thumbnails/ministick-clip-2.gif">
+                            <img src="assets/thumbnails/ministick-clip-3.gif">
+                        </figure>
+                        <script>
+                            slide("ministick-slider", 5, .75)
+                        </script>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="link"><a href="games.html">more games...</a></div>
+                </div>
+
+                <div>
+                    <div class="new-stamp">
+                        <div class="spin"></div>
+                        <div class="spin2"></div>
+                        <span>NEW</span>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <h2>my latest game: <span class="shadow">ministick</span></h2>
+
+                    <div class="date">26/03/2021</div>
+
+                    <p>
+                        One of the projects I'm the most proud of. <br>
+                        Chain <span class="bright">combos</span> and smash innocent guys in this
+                        <span class="bright">colorful</span> and <span class="bright">addicting</span> beat-them all.
+                        <br>
+                        <span class="bright">How far</span> can you get ? 💨
+                    </p>
+
+                    <div class="buttons-zone">
+                        <div class="spacer"></div>
+                        <a href="games/ministick.html">
+                            <div class="game-text-button">
+                                <span class="inner-txt"> PLAY !</span>
+                                <div class="inner-btn">
+                                    <img src="assets/icons/play-icon.png">
+                                </div>
+                            </div>
+                        </a>
+
+                        <a target="_blank" href="https://github.com/osef-art/ministick" title="Check the github page !">
+                            <div class="github-button">
+                                <img src="http://thomas-blondel.fr/img/github-logo.png">
+                            </div>
+                        </a>
+                        <div class="spacer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-line">
+                <div id="graphism-panel">
+                    <h2 class="shadow"> graphism </h2>
+                    <div id="art-carousel">
+                        <figure id="art-slider">
+                            <img src="assets/wallpapers/canyon.jpg">
+                            <img src="assets/wallpapers/mountains2.jpg">
+                            <img src="assets/wallpapers/smoke.jpg">
+                            <img src="assets/wallpapers/padami1.png">
+                        </figure>
+                        <script>
+                            slide("art-slider", 2.5, 1.25)
+                        </script>
+                    </div>
+
+                    <div id="art-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+
+                    <div class="buttons-zone">
+                        <div class="spacer"></div>
+                        <a href="artwork.html">
+                            <div class="art-text-button">
+                                <span class="inner-txt"> PEEK </span>
+                                <div class="inner-btn">
+                                    <span>👀</span>
+                                    <!-- <img src="assets/icons/eye-icon.png"> -->
+                                </div>
+                            </div>
+                        </a>
+                        <div class="spacer"></div>
+                    </div>
+
+                </div>
+
+                <div class="vertical-spacer"></div>
+
+                <div>
+                    <div class="tip">
+                        <h2> quick tip ! </h2>
+                        <div>
+                            <p>
+                                You can <u>navigate</u> through the website by pressing the <code>tab</code> key.
+                            </p>
+                            <div>
+                                <img src="assets/icons/tab.png" height="65px">
+                            </div>
+                            <p>
+                                To <u>press a button</u> / <u>follow a link</u>, press <code>enter</code> on the selected link. <br>
+                                You can even <u>browse backwards</u> by pressing <code>shift</code> + <code>tab</code> !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-article">
+                <div class="featured"> FEATURED <div class="glide"></div>
+                </div>
+
+                <div class="thumbnail">
+                    <img src="assets/thumbnails/potsdealer.png">
+                </div>
+
+                <div class="article-content">
+                    <h2>
+                        my collab with
+                        <a href="http://ecgs.fr/" target="blank" class="shadow"> @eChoGames</a> !
+                    </h2>
+                    <div class="date">20/03/2021</div>
+
+                    <p>
+                        Recently I've been drawing <span class="bright">sprites</span> for a game brought by <span
+                            class="bright">@eCho</span> on the
+                        occasion of the <a href="https://gamejam.com/jam/scorejam12/submissions" target="blank"
+                            class="bright">ScoreSpace Jam #12</a>.
+                    </p>
+                    <div id="collab-rm" class="read-more">
+                        <div class="spacer">
+                            <div class="stroke"></div>
+                        </div>
+                        <span onclick="readMore('collab')">Read more...</span>
+                        <div class="spacer">
+                            <div class="stroke"></div>
+                        </div>
+                    </div>
+                    <p id="collab-text" class="hidden">
+                        The jam's theme was <span class="bright">"COMBINING"</span>, so we've crafted a cute little game
+                        absed on <span class="bright">merging</span> and <span class="bright">selling</span> potions in
+                        town ! <br>
+                        We reached the <span class="bright">4th position</span> (among 94 participants !) and we keep
+                        polishing stuff to make it something <span class="bright">bigger</span>. 🧐 <br>
+                        We hope you'll enjoy playing the game as we enjoyed cooking it.
+                    </p>
+
+                    <div class="flex">
+                        <div class="buttons-zone spacer center">
+                            <a target="blank" href="https://gamejam.com/game/potsdealer">
+                                <div class=" game-text-button">
+                                    <span class="inner-txt"> PLAY !</span>
+                                    <div class="inner-btn">
+                                        <img src="assets/icons/play-icon.png">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="spacer"></div>
+                        <div class="spacer follow-box">
+                            <u> Follow @eCho ! </u>
+
+                            <div class="links">
+                                <div class="link-box">
+                                    <a target="blank" href="https://ecgs.fr/"><img src="assets/icons/web-icon.png"
+                                            class="link"></a>
+                                    WEBSITE
+                                </div>
+                                <div class="link-box">
+                                    <a target="blank" href="https://twitter.com/eChoGames_"><img
+                                            src="assets/icons/twitter-icon.png" class="link"></a>
+                                    TWITTER
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-article">
+                <div class="article-content">
+                    <h2>working on... <span class="shadow">ministick 2</span> ! </h2>
+                    <div class="date">01/04/2021</div>
+
+                    <p>
+                        Since the game had a lot of success among my friends,
+                        I have started to upgrade it to a <span class="bright">next level</span>. <br>
+                        I'm planning to make the game more <span class="bright">clever</span> and implement
+                        more precise <span class="bright">fighting</span>/<span class="bright">combo</span> mechanics.
+                        <br>
+                        I've already <span class="bright">smoothen</span> the animation and added a bunch of
+                        <span class="bright">new moves</span> ! <br>
+                        Stay tuned 👀
+                    </p>
+
+                    <div class="buttons-zone">
+                        <div class="spacer"></div>
+                        <a href="games/ministick-moves.html">
+                            <div class=" game-text-button">
+                                <span class="inner-txt"> TEST</span>
+                                <div class="inner-btn">
+                                    <img src="assets/icons/play-icon.png">
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a target="_blank" href="https://github.com/osef-art/ministick-moves" title="Check the github page !">
+                            <div class="github-button">
+                                <img src="http://thomas-blondel.fr/img/github-logo.png">
+                            </div>
+                        </a>
+                        <div class="spacer"></div>
+                    </div>
+                </div>
+
+                <div class="thumbnail">
+                    <div class="spacer"></div>
+                    <div id="ministick2-carousel">
+                        <figure id="ministick2-slider">
+                            <img src="assets/thumbnails/ministick2-clip-1.gif">
+                            <img src="assets/thumbnails/ministick2-clip-2.gif">
+                            <img src="assets/thumbnails/ministick2-clip-3.gif">
+                        </figure>
+                        <script>
+                            slide("ministick2-slider", 4, .5)
+                        </script>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="link"><a href="games.html">more games...</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</body>
+
+<div id="bottom-stuff"></div>

@@ -1,0 +1,1669 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("assets/fonts/Bahnschrift.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamThin";
+  src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("assets/fonts/Greycliff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lufga";
+  src: url("assets/fonts/LufgaBold.otf") format("opentype");
+}
+.articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, .new-stamp, body {
+  font-family: "Gotham", sans-serif;
+}
+
+.articles-container .art-article .thumbnail .link a, .articles-container .game-article .thumbnail .link a, .articles-container .art-article .read-more, .articles-container .game-article .read-more, #sub-panel #label-container-music, #sub-panel #label-container-anims, #sub-panel #label-container-games, #sub-panel #label-container-art {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.game-panel .container table td, .game-panel .container p, .articles-container h2, #bio p {
+  font-family: "Greycliff", sans-serif;
+}
+
+#intro .music-link, #intro .anims-link, #intro .games-link, #intro .art-link, #what-do-i-use th, #header #dot-music, #header #dot-anims, #header #dot-games, #header #dot-art, #header #dot, #header #osef {
+  font-family: "Lufga", sans-serif;
+}
+
+.github-button, .game-back-button, .dl-game-button, .dl-anim, .art-text-button, .game-text-button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.thin, .articles-container .art-article .date, .articles-container .game-article .date {
+  font-family: "GothamThin", sans-serif;
+}
+
+.flex, .game-panel, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #sub-panel, #header #logo-container, #header, #hide-button #close-button, #hide-button, #bubble-container div, .new-stamp, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn {
+  display: flex;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.border {
+  border: solid 2px white;
+}
+
+.line, .articles-container .panel-line, #sub-panel, #header {
+  width: 100%;
+}
+
+.center, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(#0a0a0d, #2b282b);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 5px;
+}
+a:focus-visible {
+  outline: dashed white 2px;
+}
+a:focus .art-text-button .inner-txt, a:focus .game-text-button .inner-txt {
+  margin-left: 50px;
+}
+a:focus .art-text-button .inner-btn, a:focus .game-text-button .inner-btn {
+  left: 0;
+}
+a:focus .github-button {
+  transform: scale(1.25);
+}
+a:focus .github-button img {
+  transform: scale(1.2);
+}
+
+.art-shadow, .articles-container .art-panel .shadow, .articles-container #graphism-panel .shadow, .articles-container .art-article .shadow {
+  text-shadow: -2.5px 2.5px #fa197d;
+}
+
+.games-shadow, .game-panel .container h1, .articles-container .game-article .shadow {
+  text-shadow: -2.5px 2.5px #af96fa;
+}
+
+.art-text-button, .game-text-button {
+  width: 150px;
+  height: 50px;
+  padding: 5px 0;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  border-radius: 3px;
+  box-shadow: 0 5px 7.5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1.5px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+}
+.art-text-button .inner-txt, .game-text-button .inner-txt {
+  display: inline-block;
+  transition: 0.3s;
+}
+.art-text-button .inner-btn, .game-text-button .inner-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 70px;
+  left: -50px;
+  top: -50px;
+  transition: 0.3s;
+}
+.art-text-button .inner-btn span, .game-text-button .inner-btn span {
+  margin-top: -10px;
+}
+.art-text-button .inner-btn img, .game-text-button .inner-btn img {
+  margin-top: -5px;
+  height: 40%;
+}
+.art-text-button:hover .inner-txt, .game-text-button:hover .inner-txt {
+  margin-left: 50px;
+}
+.art-text-button:hover .inner-btn, .game-text-button:hover .inner-btn {
+  left: 0;
+}
+
+.game-back-button, .dl-game-button, .dl-anim {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+}
+.game-back-button img, .dl-game-button img, .dl-anim img {
+  margin: 12.5px;
+  height: 50%;
+}
+.game-back-button:hover, .dl-game-button:hover, .dl-anim:hover {
+  transform: scale(1.15);
+}
+
+.dl-game-button .dl-icon, .dl-anim .dl-icon {
+  position: absolute;
+  margin: 12.5px 0 0 12.5px;
+  height: 25px;
+  border-bottom: solid white 0;
+  transition: 0.3s;
+}
+.dl-game-button .inner-btn, .dl-anim .inner-btn {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  top: -75px;
+  border-bottom: solid white 50px;
+}
+.dl-game-button .inner-btn img, .dl-anim .inner-btn img {
+  height: 50%;
+}
+.dl-game-button:hover, .dl-anim:hover {
+  transform: scale(1.25);
+}
+.dl-game-button:hover .dl-icon, .dl-anim:hover .dl-icon {
+  margin-top: 8.5px;
+  border-bottom: solid white 4px;
+}
+
+.github-button {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  border-radius: 25px;
+  background-color: #af96fa;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.github-button img {
+  height: 33.3333333333px;
+  margin: 8.3333333333px 0 0 8.3333333333px;
+  transition: 0.7s;
+}
+.github-button:hover {
+  transform: scale(1.25);
+}
+.github-button:hover img {
+  transform: scale(1.2);
+}
+
+.game-text-button {
+  background-color: #af96fa;
+}
+.game-text-button .inner-btn {
+  background: #9664e1;
+}
+
+.art-text-button {
+  background-color: #fa197d;
+}
+.art-text-button .inner-btn {
+  background: #e1006e;
+}
+
+.game-back-button {
+  background-color: #af96fa;
+}
+.game-back-button img {
+  transform: rotate(90deg);
+}
+
+.dl-game-button, .dl-anim {
+  background-color: #af96fa;
+}
+.dl-game-button .inner-btn, .dl-anim .inner-btn {
+  background: #32e1c8;
+}
+
+.dl-anim .dl-icon {
+  position: absolute;
+  animation: hide-icon 1.5s ease;
+  animation-fill-mode: forwards;
+}
+.dl-anim .inner-btn {
+  animation: tick-dl 0.5s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.dl-anim:hover {
+  transform: none;
+}
+@keyframes tick-dl {
+  100% {
+    border-bottom: solid white 0;
+    top: 0;
+  }
+}
+@keyframes hide-icon {
+  75% {
+    margin-top: 3.125px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+}
+
+.button-side-label {
+  display: inline-flex;
+  margin: 10px auto;
+  font-size: 16pt;
+}
+.button-side-label .game-back-button, .button-side-label .dl-game-button, .button-side-label .dl-anim {
+  margin: auto 10px;
+}
+.button-side-label .label {
+  align-items: center;
+  height: inherit;
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("assets/fonts/Bahnschrift.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamThin";
+  src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("assets/fonts/Greycliff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lufga";
+  src: url("assets/fonts/LufgaBold.otf") format("opentype");
+}
+.articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, .new-stamp, body {
+  font-family: "Gotham", sans-serif;
+}
+
+.articles-container .art-article .thumbnail .link a, .articles-container .game-article .thumbnail .link a, .articles-container .art-article .read-more, .articles-container .game-article .read-more, #sub-panel #label-container-music, #sub-panel #label-container-anims, #sub-panel #label-container-games, #sub-panel #label-container-art {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.game-panel .container table td, .game-panel .container p, .articles-container h2, #bio p {
+  font-family: "Greycliff", sans-serif;
+}
+
+#intro .music-link, #intro .anims-link, #intro .games-link, #intro .art-link, #what-do-i-use th, #header #dot-music, #header #dot-anims, #header #dot-games, #header #dot-art, #header #dot, #header #osef {
+  font-family: "Lufga", sans-serif;
+}
+
+.github-button, .game-text-button, .art-text-button, .game-back-button, .dl-game-button, .dl-anim {
+  font-family: "Quicksand", sans-serif;
+}
+
+.thin, .articles-container .art-article .date, .articles-container .game-article .date {
+  font-family: "GothamThin", sans-serif;
+}
+
+.flex, .game-panel, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #sub-panel, #header #logo-container, #header, #hide-button #close-button, #hide-button, #bubble-container div, .new-stamp, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+  display: flex;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.border {
+  border: solid 2px white;
+}
+
+.line, .articles-container .panel-line, #sub-panel, #header {
+  width: 100%;
+}
+
+.center, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(#0a0a0d, #2b282b);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 5px;
+}
+a:focus-visible {
+  outline: dashed white 2px;
+}
+a:focus .game-text-button .inner-txt, a:focus .art-text-button .inner-txt {
+  margin-left: 50px;
+}
+a:focus .game-text-button .inner-btn, a:focus .art-text-button .inner-btn {
+  left: 0;
+}
+a:focus .github-button {
+  transform: scale(1.25);
+}
+a:focus .github-button img {
+  transform: scale(1.2);
+}
+
+.art-shadow, .articles-container .art-panel .shadow, .articles-container #graphism-panel .shadow, .articles-container .art-article .shadow {
+  text-shadow: -2.5px 2.5px #fa197d;
+}
+
+.games-shadow, .game-panel .container h1, .articles-container .game-article .shadow {
+  text-shadow: -2.5px 2.5px #af96fa;
+}
+
+svg {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.wave {
+  margin: 32pt 0 0 225px;
+}
+
+.wheel {
+  margin-left: 110px;
+}
+
+#wave {
+  stroke-dasharray: 0 16 101 16;
+  animation: move-the-wave 5000ms linear infinite;
+}
+
+@keyframes move-the-wave {
+  0% {
+    stroke-dashoffset: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: -133;
+    transform: translate3d(-90px, 0, 0);
+  }
+}
+.new-stamp {
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: 10px 0 0 -40px;
+}
+.new-stamp .spin, .new-stamp .spin2 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #af96fa;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.new-stamp .spin2 {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  animation-name: spin2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.new-stamp span {
+  position: absolute;
+  vertical-align: middle;
+  z-index: 2;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+.press, .articles-container .tip:hover img {
+  animation: press-wiggle 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes press-wiggle {
+  0% {
+    margin: 0 0 20px 0;
+    opacity: 0.5;
+  }
+  20% {
+    margin: 30px 0 5px 0;
+    opacity: 1;
+  }
+  60% {
+    margin: 15px 0 5px 0;
+    opacity: 1;
+  }
+  100% {
+    margin: 20px 0 5px 0;
+    opacity: 1;
+  }
+}
+#bitmosef-container {
+  position: fixed;
+  height: 128px;
+  width: 128px;
+  transform: rotate(90deg) scale(0.5) translate(0, 50%);
+  z-index: 10;
+  transition: 0.3s;
+}
+#bitmosef-container #bitmosef-body .shadow {
+  position: absolute;
+  height: 128px;
+  width: 128px;
+  background: radial-gradient(black, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  transform: scale(1.3);
+}
+#bitmosef-container #bitmosef-glasses, #bitmosef-container #bitmosef-head, #bitmosef-container .shadow, #bitmosef-container #bitmosef-hand-r, #bitmosef-container #bitmosef-hand-l {
+  position: absolute;
+}
+#bitmosef-container #bitmosef-hand-r, #bitmosef-container #bitmosef-hand-l {
+  width: 40%;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+#bitmosef-container #bitmosef-head, #bitmosef-container .shadow {
+  margin: 70% 0 0 0;
+}
+#bitmosef-container #bitmosef-glasses {
+  margin: 80% 0 0 0;
+}
+#bitmosef-container #bitmosef-hand-l {
+  margin: 100% 0 0 -30%;
+}
+#bitmosef-container #bitmosef-hand-r {
+  margin: 100% 0 0 90%;
+}
+#bitmosef-container #bitmosef-bubble {
+  transform: rotate(-90deg) translate(64px, -128px) scale(0.8);
+}
+#bitmosef-container #bitmosef-hide {
+  transform: rotate(-90deg) translate(96px, 64px) scale(1.5);
+}
+@keyframes head-pop {
+  10% {
+    margin: 75% 0 0 0;
+  }
+  20% {
+    margin: 70% 0 0 0;
+  }
+  40% {
+    margin: -20% 0 0 0;
+  }
+  70% {
+    margin: 10% 0 0 0;
+  }
+  100% {
+    margin: 0 0 0 0;
+  }
+}
+@keyframes glasses-pop {
+  20% {
+    margin: 80% 0 0 0;
+  }
+  40% {
+    margin: -15% 0 0 0;
+  }
+  70% {
+    margin: 7.5% 0 0 0;
+  }
+  100% {
+    margin: 0 0 0 0;
+  }
+}
+@keyframes handl-pop {
+  0% {
+    margin: 100% 0 0 -30%;
+  }
+  15% {
+    margin: 50% 0 0 -30%;
+  }
+  30% {
+    margin: 60% 0 0 -30%;
+  }
+  100% {
+    margin: 60% 0 0 -30%;
+  }
+}
+@keyframes handr-pop {
+  0% {
+    margin: 100% 0 0 90%;
+  }
+  15% {
+    margin: 50% 0 0 90%;
+  }
+  30% {
+    margin: 60% 0 0 90%;
+  }
+  100% {
+    margin: 60% 0 0 90%;
+  }
+}
+#bitmosef-container:hover #bitmosef-head, #bitmosef-container:hover .shadow {
+  animation: head-pop 1.2s ease;
+  animation-fill-mode: forwards;
+}
+#bitmosef-container:hover #bitmosef-glasses {
+  animation: glasses-pop 1.4s ease;
+  animation-fill-mode: forwards;
+}
+#bitmosef-container:hover #bitmosef-hand-l {
+  animation: handl-pop 1.4s ease;
+  animation-fill-mode: forwards;
+}
+#bitmosef-container:hover #bitmosef-hand-r {
+  animation: handr-pop 1.4s ease;
+  animation-fill-mode: forwards;
+}
+#bitmosef-container:hover #bubble-container {
+  animation: bubble-raise 0.6s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+#bitmosef-container:hover #hide-button {
+  animation: hide-raise 0.6s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+
+#bubble-container {
+  position: absolute;
+  text-align: center;
+  display: table;
+  transform-origin: bottom left;
+  opacity: 0;
+}
+#bubble-container div {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  font-size: 32pt;
+  color: #5a5564;
+  text-shadow: 3px 3px rgba(200, 175, 225, 0.5);
+}
+@keyframes bubble-raise {
+  0% {
+    margin-top: 40px;
+    transform: rotate(75deg);
+    opacity: 0;
+  }
+  55% {
+    margin-top: -10px;
+    transform: rotate(-10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+#hide-button {
+  height: 20px;
+  opacity: 0;
+}
+#hide-button #close-button {
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgba(250, 50, 100, 0.5);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.4s;
+}
+#hide-button #close-button img {
+  height: 60%;
+}
+#hide-button #close-button:hover {
+  transform: scale(1.25);
+  background-color: #fa3264;
+}
+#hide-button #close-button:hover ~ span {
+  transform: translate(0);
+  opacity: 1;
+}
+#hide-button span {
+  color: white;
+  text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  margin: -2px 0 0 5px;
+  transform: translate(-100%);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s;
+}
+@keyframes hide-raise {
+  0% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("assets/fonts/Bahnschrift.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamThin";
+  src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("assets/fonts/Greycliff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lufga";
+  src: url("assets/fonts/LufgaBold.otf") format("opentype");
+}
+.articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, body, .new-stamp {
+  font-family: "Gotham", sans-serif;
+}
+
+.articles-container .art-article .thumbnail .link a, .articles-container .game-article .thumbnail .link a, .articles-container .art-article .read-more, .articles-container .game-article .read-more, #sub-panel #label-container-music, #sub-panel #label-container-anims, #sub-panel #label-container-games, #sub-panel #label-container-art {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.game-panel .container table td, .game-panel .container p, .articles-container h2, #bio p {
+  font-family: "Greycliff", sans-serif;
+}
+
+#intro .music-link, #intro .anims-link, #intro .games-link, #intro .art-link, #what-do-i-use th, #header #dot-music, #header #dot-anims, #header #dot-games, #header #dot-art, #header #dot, #header #osef {
+  font-family: "Lufga", sans-serif;
+}
+
+.github-button, .game-text-button, .art-text-button, .game-back-button, .dl-game-button, .dl-anim {
+  font-family: "Quicksand", sans-serif;
+}
+
+.thin, .articles-container .art-article .date, .articles-container .game-article .date {
+  font-family: "GothamThin", sans-serif;
+}
+
+.flex, .game-panel, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #sub-panel, #header #logo-container, #header, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button {
+  display: flex;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.border {
+  border: solid 2px white;
+}
+
+.line, .articles-container .panel-line, #sub-panel, #header {
+  width: 100%;
+}
+
+.center, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(#0a0a0d, #2b282b);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 5px;
+}
+a:focus-visible {
+  outline: dashed white 2px;
+}
+a:focus .game-text-button .inner-txt, a:focus .art-text-button .inner-txt {
+  margin-left: 50px;
+}
+a:focus .game-text-button .inner-btn, a:focus .art-text-button .inner-btn {
+  left: 0;
+}
+a:focus .github-button {
+  transform: scale(1.25);
+}
+a:focus .github-button img {
+  transform: scale(1.2);
+}
+
+.art-shadow, .articles-container .art-panel .shadow, .articles-container #graphism-panel .shadow, .articles-container .art-article .shadow {
+  text-shadow: -2.5px 2.5px #fa197d;
+}
+
+.games-shadow, .game-panel .container h1, .articles-container .game-article .shadow {
+  text-shadow: -2.5px 2.5px #af96fa;
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("assets/fonts/Bahnschrift.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("assets/fonts/Gotham.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamThin";
+  src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("assets/fonts/Greycliff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lufga";
+  src: url("assets/fonts/LufgaBold.otf") format("opentype");
+}
+.articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, body, .new-stamp {
+  font-family: "Gotham", sans-serif;
+}
+
+.articles-container .art-article .thumbnail .link a, .articles-container .game-article .thumbnail .link a, .articles-container .art-article .read-more, .articles-container .game-article .read-more, #sub-panel #label-container-music, #sub-panel #label-container-anims, #sub-panel #label-container-games, #sub-panel #label-container-art {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.game-panel .container table td, .game-panel .container p, .articles-container h2, #bio p {
+  font-family: "Greycliff", sans-serif;
+}
+
+#intro .music-link, #intro .anims-link, #intro .games-link, #intro .art-link, #what-do-i-use th, #header #dot-music, #header #dot-anims, #header #dot-games, #header #dot-art, #header #dot, #header #osef {
+  font-family: "Lufga", sans-serif;
+}
+
+.github-button, .game-text-button, .art-text-button, .game-back-button, .dl-game-button, .dl-anim {
+  font-family: "Quicksand", sans-serif;
+}
+
+.thin, .articles-container .art-article .date, .articles-container .game-article .date {
+  font-family: "GothamThin", sans-serif;
+}
+
+.flex, .game-panel, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #sub-panel, #header #logo-container, #header, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button {
+  display: flex;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.border {
+  border: solid 2px white;
+}
+
+.line, .articles-container .panel-line, #sub-panel, #header {
+  width: 100%;
+}
+
+.center, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(#0a0a0d, #2b282b);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 5px;
+}
+a:focus-visible {
+  outline: dashed white 2px;
+}
+a:focus .game-text-button .inner-txt, a:focus .art-text-button .inner-txt {
+  margin-left: 50px;
+}
+a:focus .game-text-button .inner-btn, a:focus .art-text-button .inner-btn {
+  left: 0;
+}
+a:focus .github-button {
+  transform: scale(1.25);
+}
+a:focus .github-button img {
+  transform: scale(1.2);
+}
+
+.art-shadow, .articles-container .art-panel .shadow, .articles-container #graphism-panel .shadow, .articles-container .art-article .shadow {
+  text-shadow: -2.5px 2.5px #fa197d;
+}
+
+.games-shadow, .game-panel .container h1, .articles-container .game-article .shadow {
+  text-shadow: -2.5px 2.5px #af96fa;
+}
+
+#header {
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  height: 85px;
+  background: radial-gradient(#494650, #3f3c44);
+  background-color: #3f3c44;
+  border-bottom: solid #35323a 7.5px;
+}
+#header a:focus #logo-container #osef, #header a:focus #logo-container #dot, #header #logo-container:hover #osef, #header #logo-container:hover #dot {
+  letter-spacing: 7.5px;
+}
+#header #logo-container {
+  margin-top: -5px;
+  transition: 0.2s;
+}
+#header #logo-container #osef, #header #logo-container #dot {
+  transition: 1.2s;
+}
+#header #dot-music, #header #dot-anims, #header #dot-games, #header #dot-art, #header #dot, #header #osef {
+  letter-spacing: 2.5px;
+  filter: drop-shadow(-2px 6px 1px rgba(0, 0, 0, 0.25));
+  font-size: 45px;
+  margin-top: 20px;
+}
+#header #osef {
+  color: white;
+  background: linear-gradient(white, white, #d7c8fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#header #dot {
+  color: #af96fa;
+  background: linear-gradient(to bottom right, #af7dfa, #fa55a0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#header #dot-art {
+  color: #fa197d;
+}
+#header #dot-games {
+  color: #af96fa;
+}
+#header #dot-anims {
+  color: #96fae1;
+}
+#header #dot-music {
+  color: #c8fa64;
+}
+#header .icon {
+  height: 37.5px;
+}
+#header #icon-container-music, #header #icon-container-anims, #header #icon-container-games, #header #icon-container-art {
+  box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+  width: 85px;
+  padding: 21.25px;
+  transition: 0.2s;
+}
+#header #icon-container-music img, #header #icon-container-anims img, #header #icon-container-games img, #header #icon-container-art img {
+  transition: 0.4s;
+}
+#header #icon-container-music:hover img, #header #icon-container-anims:hover img, #header #icon-container-games:hover img, #header #icon-container-art:hover img {
+  transform: translate(0px, -5px);
+}
+#header #a:hover + #b {
+  background-color: #fff;
+}
+#header #icon-container-art {
+  border-bottom: solid #fa197d 0px;
+  margin-right: 10px;
+}
+#header #icon-container-art:hover, #header #icon-container-art:focus {
+  background-color: rgba(250, 25, 125, 0.3);
+  border-bottom: solid #fa197d 5px;
+}
+#header #icon-container-art:focus ~ #sub-panel #label-container-art, #header #icon-container-art:hover ~ #sub-panel #label-container-art {
+  transform: translate(0px, 5px);
+  color: #fa197d;
+}
+#header #icon-container-games {
+  border-bottom: solid #af96fa 0px;
+}
+#header #icon-container-games:hover, #header #icon-container-games:focus {
+  background-color: rgba(175, 150, 250, 0.3);
+  border-bottom: solid #af96fa 5px;
+}
+#header #icon-container-games:focus ~ #sub-panel #label-container-games, #header #icon-container-games:hover ~ #sub-panel #label-container-games {
+  transform: translate(0px, 5px);
+  color: #af96fa;
+}
+#header #icon-container-anims {
+  border-bottom: solid #96fae1 0px;
+}
+#header #icon-container-anims:hover, #header #icon-container-anims:focus {
+  background-color: rgba(150, 250, 225, 0.3);
+  border-bottom: solid #96fae1 5px;
+}
+#header #icon-container-anims:focus ~ #sub-panel #label-container-anims, #header #icon-container-anims:hover ~ #sub-panel #label-container-anims {
+  transform: translate(0px, 5px);
+  color: #96fae1;
+}
+#header #icon-container-music {
+  border-bottom: solid #c8fa64 0px;
+  margin-left: 10px;
+}
+#header #icon-container-music:hover, #header #icon-container-music:focus {
+  background-color: rgba(200, 250, 100, 0.3);
+  border-bottom: solid #c8fa64 5px;
+}
+#header #icon-container-music:focus ~ #sub-panel #label-container-music, #header #icon-container-music:hover ~ #sub-panel #label-container-music {
+  transform: translate(0px, 5px);
+  color: #c8fa64;
+}
+
+#sub-panel {
+  position: fixed;
+  top: 72.5px;
+  z-index: 11;
+}
+#sub-panel #label-container-music, #sub-panel #label-container-anims, #sub-panel #label-container-games, #sub-panel #label-container-art {
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+  width: 85px;
+  color: rgba(255, 255, 255, 0);
+  text-align: center;
+  transition: 0.3s;
+  z-index: 11;
+}
+#sub-panel #label-container-art {
+  margin-right: 10px;
+}
+#sub-panel #label-container-music {
+  margin-left: 10px;
+}
+
+#bio {
+  text-align: justify;
+  width: 70%;
+}
+#bio p {
+  color: #d7d7e6;
+  font-size: 12pt;
+}
+#bio p .link {
+  color: white;
+  text-decoration: underline;
+}
+#bio p .link img {
+  height: 12pt;
+  transform: translate(0, 2.5pt);
+  margin-right: 2pt;
+}
+#bio p .youtube {
+  text-shadow: 1pt 1pt red;
+}
+#bio p .stickpage {
+  text-shadow: 1pt 1pt #64646e;
+}
+#bio p .stick-fighter {
+  text-shadow: 1pt 1pt blue;
+}
+#bio .intro {
+  font-size: 14pt;
+}
+#bio .left {
+  transform: translate(-5%);
+}
+#bio .right {
+  transform: translate(5%);
+}
+
+#what-do-i-use {
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+}
+#what-do-i-use th {
+  padding: 5px 0;
+  font-size: 20pt;
+}
+#what-do-i-use th.art {
+  text-shadow: -2px 2px #fa197d;
+}
+#what-do-i-use th.games {
+  text-shadow: -2px 2px #af96fa;
+}
+#what-do-i-use th.anims {
+  text-shadow: -2px 2px rgba(150, 250, 225, 0.75);
+}
+#what-do-i-use th.music {
+  text-shadow: -2px 2px rgba(200, 250, 100, 0.75);
+}
+#what-do-i-use td.art:hover {
+  background-color: rgba(250, 25, 125, 0.3);
+}
+#what-do-i-use td.games:hover {
+  background-color: rgba(175, 150, 250, 0.3);
+}
+#what-do-i-use td.anims:hover {
+  background-color: rgba(150, 250, 225, 0.15);
+}
+#what-do-i-use td.music:hover {
+  background-color: rgba(200, 250, 100, 0.3);
+}
+#what-do-i-use tbody th {
+  width: 70px;
+}
+#what-do-i-use tbody th img {
+  width: 35px;
+}
+#what-do-i-use td {
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: 0.5s;
+}
+#what-do-i-use td br {
+  margin: 10px auto;
+}
+#what-do-i-use td a {
+  margin: 5px;
+}
+#what-do-i-use td a img {
+  height: 35px;
+  -webkit-filter: grayscale(100%) brightness(125%);
+  -moz-filter: grayscale(100%) brightness(125%);
+  -ms-filter: grayscale(100%) brightness(125%);
+  -o-filter: grayscale(100%) brightness(125%);
+  filter: grayscale(100%) brightness(125%);
+  transition: 0.4s;
+}
+#what-do-i-use td a:focus img,
+#what-do-i-use td a img:hover {
+  transform: scale(1.2);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+#what-do-i-use .empty {
+  background: none;
+}
+
+#intro {
+  text-align: justify;
+  width: 70%;
+}
+#intro p {
+  font-size: 18pt;
+}
+#intro .music-link, #intro .anims-link, #intro .games-link, #intro .art-link {
+  color: white;
+  display: inline-block;
+  transition: 0.15s;
+}
+#intro .music-link:hover, #intro .anims-link:hover, #intro .games-link:hover, #intro .art-link:hover, #intro .music-link:focus, #intro .anims-link:focus, #intro .games-link:focus, #intro .art-link:focus {
+  transform: translate(2px, -2px);
+}
+#intro .art-link {
+  text-shadow: -1.25px 1.25px rgba(250, 25, 125, 0.5);
+}
+#intro .art-link:hover, #intro .art-link:focus {
+  text-shadow: -1.5px 1.5px rgba(250, 25, 125, 0.75);
+}
+#intro .games-link {
+  text-shadow: -1.25px 1.25px rgba(175, 150, 250, 0.5);
+}
+#intro .games-link:hover, #intro .games-link:focus {
+  text-shadow: -1.5px 1.5px rgba(175, 150, 250, 0.75);
+}
+#intro .anims-link {
+  text-shadow: -1.25px 1.25px rgba(150, 250, 225, 0.5);
+}
+#intro .anims-link:hover, #intro .anims-link:focus {
+  text-shadow: -1.5px 1.5px rgba(150, 250, 225, 0.75);
+}
+#intro .music-link {
+  text-shadow: -1.25px 1.25px #c8fa6480;
+}
+#intro .music-link:hover, #intro .music-link:focus {
+  text-shadow: -1.5px 1.5px rgba(200, 250, 100, 0.75);
+}
+
+.articles-container {
+  max-width: 900px;
+}
+.articles-container h2 {
+  text-transform: lowercase;
+  margin: 0;
+  font-size: 28pt;
+  text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+.articles-container p {
+  text-align: justify;
+  font-size: 14pt;
+  color: #c8c8e1;
+}
+.articles-container p .bright {
+  color: white;
+}
+.articles-container .panel-line {
+  margin: 10px 0;
+}
+.articles-container .panel-line .vertical-spacer {
+  min-width: 20px;
+}
+.articles-container .tip, .articles-container .art-panel, .articles-container #graphism-panel, .articles-container .art-article, .articles-container .game-article {
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(235, 235, 255, 0.3);
+  margin: 10px 0;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+.articles-container .tip br, .articles-container .art-panel br, .articles-container #graphism-panel br, .articles-container .art-article br, .articles-container .game-article br {
+  margin: 15px 0;
+}
+.articles-container .tip h2 .shadow, .articles-container .art-panel h2 .shadow, .articles-container #graphism-panel h2 .shadow, .articles-container .art-article h2 .shadow, .articles-container .game-article h2 .shadow {
+  color: white;
+}
+.articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  font-size: 0;
+  height: 5px;
+  width: 150px;
+  padding: 0;
+  margin-top: -15px;
+  color: #bec832;
+  background-color: #ebfa64;
+  transition: 0.3s;
+}
+.articles-container .tip .featured .glide, .articles-container .art-panel .featured .glide, .articles-container #graphism-panel .featured .glide, .articles-container .art-article .featured .glide, .articles-container .game-article .featured .glide {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  transform: translate(-200%, 0) skew(-20deg);
+  background-color: white;
+  transition: none;
+}
+.articles-container .tip:hover .featured, .articles-container .art-panel:hover .featured, .articles-container #graphism-panel:hover .featured, .articles-container .art-article:hover .featured, .articles-container .game-article:hover .featured {
+  padding: 10px;
+  margin-top: -40px;
+  font-size: 20px;
+  height: 30px;
+}
+.articles-container .tip:hover .featured .glide, .articles-container .art-panel:hover .featured .glide, .articles-container #graphism-panel:hover .featured .glide, .articles-container .art-article:hover .featured .glide, .articles-container .game-article:hover .featured .glide {
+  transform: translate(220%, 0) skew(-20deg);
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.5s;
+}
+.articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+  color: #ebfa64;
+}
+.articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links {
+  border-radius: 10px;
+  border: dotted #ebfa64 4px;
+  margin: 10px 0;
+}
+.articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box {
+  width: 50px;
+  height: 50px;
+  margin: 5px 5px 25px 5px;
+  font-size: 10px;
+}
+.articles-container .tip .follow-box .links .link-box img, .articles-container .art-panel .follow-box .links .link-box img, .articles-container #graphism-panel .follow-box .links .link-box img, .articles-container .art-article .follow-box .links .link-box img, .articles-container .game-article .follow-box .links .link-box img {
+  margin: 5px 0;
+  width: 40px;
+  transition: 0.3s;
+}
+.articles-container .tip .follow-box .links .link-box img:hover, .articles-container .art-panel .follow-box .links .link-box img:hover, .articles-container #graphism-panel .follow-box .links .link-box img:hover, .articles-container .art-article .follow-box .links .link-box img:hover, .articles-container .game-article .follow-box .links .link-box img:hover {
+  margin: 2.5px 0;
+  width: 47.5px;
+}
+.articles-container .tip .follow-box .links .link-box a:focus img, .articles-container .art-panel .follow-box .links .link-box a:focus img, .articles-container #graphism-panel .follow-box .links .link-box a:focus img, .articles-container .art-article .follow-box .links .link-box a:focus img, .articles-container .game-article .follow-box .links .link-box a:focus img {
+  margin: 2.5px 0;
+  width: 47.5px;
+}
+.articles-container .art-article, .articles-container .game-article {
+  text-align: left;
+  width: 100%;
+  display: flex;
+}
+.articles-container .art-article a, .articles-container .game-article a {
+  text-decoration: underline;
+}
+.articles-container .art-article .date, .articles-container .game-article .date {
+  color: rgba(255, 255, 255, 0.5);
+}
+.articles-container .art-article .read-more, .articles-container .game-article .read-more {
+  margin: 15px auto;
+  color: rgba(255, 255, 255, 0.5);
+}
+.articles-container .art-article .read-more span, .articles-container .game-article .read-more span {
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.5s;
+}
+.articles-container .art-article .read-more span:hover, .articles-container .game-article .read-more span:hover {
+  color: white;
+  padding: 0 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 1s;
+}
+.articles-container .art-article .read-more .spacer, .articles-container .game-article .read-more .spacer {
+  padding: 0 25px;
+}
+.articles-container .art-article .read-more .spacer .stroke, .articles-container .game-article .read-more .spacer .stroke {
+  height: 50%;
+  border-bottom: solid rgba(255, 255, 255, 0.6) 1px;
+}
+.articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail {
+  flex-direction: column;
+  width: 100%;
+}
+.articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img {
+  border-radius: 5px;
+  margin: 15px 0;
+  width: 100%;
+}
+.articles-container .art-article .thumbnail .link a, .articles-container .game-article .thumbnail .link a {
+  font-size: 14pt;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.7s;
+}
+.articles-container .art-article .thumbnail .link a:hover, .articles-container .game-article .thumbnail .link a:hover {
+  color: white;
+}
+.articles-container .art-article .article-content, .articles-container .game-article .article-content {
+  padding: 0 20px;
+}
+.articles-container .art-article .article-content h2 span, .articles-container .game-article .article-content h2 span {
+  display: inline-block;
+}
+.articles-container .game-article p a {
+  transition: 0.5s;
+}
+.articles-container .game-article p a:hover, .articles-container .game-article p a:focus {
+  color: #af96fa;
+}
+.articles-container .game-article:hover {
+  background-color: rgba(175, 150, 250, 0.4);
+}
+.articles-container .art-article:hover {
+  background-color: rgba(250, 75, 175, 0.4);
+}
+.articles-container .art-panel:hover, .articles-container #graphism-panel:hover {
+  background-color: rgba(250, 75, 175, 0.4);
+}
+.articles-container #graphism-panel {
+  min-width: 60%;
+  width: 60%;
+}
+.articles-container .tip {
+  border-radius: 7.5px;
+  border: dashed 5px #32fae1;
+  background: repeating-linear-gradient(-60deg, #004141, #004141 20px, #006464 20px, #006464 40px);
+}
+.articles-container .tip p {
+  font-size: 12pt;
+  font-weight: lighter;
+  color: white;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.5);
+}
+.articles-container .tip code {
+  font-weight: bold;
+  font-variant: small-caps;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0 5px;
+  text-shadow: none;
+}
+.articles-container .tip img {
+  opacity: 0.5;
+  margin: 0 0 20px 0;
+}
+.articles-container #ministick2-carousel, .articles-container #ministick-carousel, .articles-container #art-carousel {
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.articles-container #ministick2-carousel figure, .articles-container #ministick-carousel figure, .articles-container #art-carousel figure {
+  height: inherit;
+}
+.articles-container #ministick2-carousel figure img, .articles-container #ministick-carousel figure img, .articles-container #art-carousel figure img {
+  height: inherit;
+  object-fit: cover;
+}
+.articles-container #art-carousel {
+  width: 100%;
+  height: 250px;
+}
+.articles-container #ministick-carousel {
+  width: 100%;
+}
+.articles-container #ministick2-carousel {
+  width: 100%;
+}
+.articles-container .button {
+  overflow: hidden;
+  display: inline-block;
+  font-family: "Raleway";
+  font-size: 28pt;
+  height: 100px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #967dfa;
+  transition: 0.3s;
+}
+.articles-container .button span {
+  position: absolute;
+}
+.articles-container .button .light {
+  position: absolute;
+  height: inherit;
+  width: 50px;
+  background-color: white;
+  transform: translate(-200%) skew(-20deg);
+}
+.articles-container .button:hover {
+  overflow: hidden;
+  transform: scale(1.1);
+}
+.articles-container .button:hover .light {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(250px) skew(-20deg);
+  transition: 0.7s;
+}
+
+.buttons-zone {
+  color: white;
+  padding: 20px 0;
+  align-items: center;
+}
+.buttons-zone a {
+  margin: auto 10px;
+}
+
+.anim-focus {
+  width: 70%;
+  height: max-content;
+  text-align: center;
+  padding: 0 50px 20px 50px;
+  background-color: #64e1c8;
+  transform: skew(-5deg);
+}
+.anim-focus h2 {
+  font-size: 20pt;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
+.anim-focus iframe {
+  width: 100%;
+  height: 250px;
+  box-shadow: 7.5px 7.5px rgba(0, 0, 0, 0.2);
+  transform: skew(5deg);
+}
+
+.game-panel {
+  width: 90%;
+  padding: 15px;
+  margin: 0 5% 5% 5%;
+  color: lavender;
+  background-color: rgba(230, 230, 250, 0.4);
+  border-radius: 25px;
+  text-align: center;
+}
+.game-panel .container {
+  width: 70%;
+}
+.game-panel .container h1 {
+  font-size: 36pt;
+  text-align: center;
+}
+.game-panel .container h1 img {
+  height: 30pt;
+}
+.game-panel .container h2 {
+  font-size: 24pt;
+  text-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.game-panel .container h3 {
+  font-size: 20pt;
+  text-shadow: 0 5px rgba(0, 0, 0, 0.5);
+}
+.game-panel .container h4 {
+  margin: 20px 0 0 20px;
+  font-size: 18pt;
+  text-shadow: 0 5px rgba(0, 0, 0, 0.5);
+}
+.game-panel .container hr {
+  margin: 30px auto;
+  width: 80%;
+  border: solid rgba(0, 0, 0, 0.1) 2px;
+}
+.game-panel .container p {
+  font-size: 12pt;
+  text-align: justify;
+}
+.game-panel .container p br {
+  margin: 10px auto;
+}
+.game-panel .container p img {
+  height: 14pt;
+  margin: 5px 5px 0 0;
+}
+.game-panel .container ul,
+.game-panel .container h3,
+.game-panel .container h4,
+.game-panel .container pre,
+.game-panel .container code,
+.game-panel .container .dl-game-button,
+.game-panel .container .dl-anim {
+  text-align: left;
+}
+.game-panel .container a,
+.game-panel .container h1,
+.game-panel .container h2,
+.game-panel .container h3,
+.game-panel .container h4,
+.game-panel .container code,
+.game-panel .container strong,
+.game-panel .container .intro {
+  color: white;
+}
+.game-panel .container a {
+  text-decoration: underline;
+}
+.game-panel .container code {
+  font-size: 11pt;
+  font-weight: bold;
+  background-color: rgba(10, 0, 15, 0.4);
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 0 5px;
+}
+.game-panel .container pre {
+  font-size: 12pt;
+  font-weight: bold;
+  background-color: rgba(20, 15, 50, 0.5);
+  padding: 10px 0 10px 25px;
+}
+.game-panel .container pre .cmd {
+  color: rgba(255, 255, 255, 0.5);
+}
+.game-panel .container pre .hljs-keyword {
+  color: #dcdcfa;
+}
+.game-panel .container pre code {
+  font-size: 13pt;
+  background: none;
+}
+.game-panel .container table td {
+  padding: 5px 10px;
+}
+.game-panel .container table th {
+  padding: 10px;
+  background-color: rgba(175, 150, 250, 0.75);
+}
+.game-panel .container table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.game-panel .container table img {
+  height: 50px;
+}
+.game-panel .container .launch {
+  padding: 5px 10px;
+  background-color: rgba(230, 230, 250, 0.2);
+  border-radius: 10px;
+}
+.game-panel .container .launch .buttons-zone {
+  transform: scale(0.8);
+}
+.game-panel .container .intro {
+  font-size: 16pt;
+  text-align: center;
+}
+.game-panel .container .warning {
+  background-color: rgba(175, 150, 250, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.game-panel .container .thumbnail {
+  width: 90%;
+  border-radius: 10px;
+}
+.game-panel .container .signature {
+  margin: 20px auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+.game-panel .container .game-text-button, .game-panel .container .art-text-button,
+.game-panel .container .dl-game-button,
+.game-panel .container .dl-anim {
+  margin: 0 10px;
+  font-size: 20pt;
+}
+
+/*# sourceMappingURL=game-page.css.map */
