@@ -1,0 +1,299 @@
+@import "../../styles.scss";
+
+.bitmosef-container {
+  position: fixed;
+  height: 128px;
+  width: 128px;
+  transform: rotate(90deg) scale(0.5) translate(0, 50%);
+  z-index: 10;
+  transition: .3s;
+
+  &:hover {
+    @mixin trigger-anim($name, $duration, $delay: 0s) {
+      animation: $name $duration ease;
+      animation-fill-mode: forwards;
+      animation-delay: $delay;
+    }
+
+    .shadow,
+    .bitmosef-head {
+      @include trigger-anim(head-pop, 1.2s);
+    }
+
+    .bitmosef-glasses {
+      @include trigger-anim(glasses-pop, 1.4s);
+    }
+
+    .bitmosef-hand-l {
+      @include trigger-anim(handl-pop, 1.4s);
+    }
+
+    .bitmosef-hand-r {
+      @include trigger-anim(handr-pop, 1.4s);
+    }
+
+    .bubble-container {
+      @include trigger-anim(bubble-raise, .6s, .6s);
+    }
+
+    .hide-button {
+      @include trigger-anim(hide-raise, .6s, .3s);
+    }
+  }
+}
+
+%bitmosef-part {
+  position: absolute;
+}
+
+%bitmosef-hand {
+  @extend %bitmosef-part;
+  width: 40%;
+  background: radial-gradient(
+    rgba($color: black, $alpha: 0.2),
+    rgba($color: black, $alpha: 0),
+    rgba($color: black, $alpha: 0)
+  );
+}
+
+.bitmosef-head {
+  @extend %bitmosef-part;
+  margin: 70% 0 0 0;
+}
+
+.bitmosef-glasses {
+  @extend %bitmosef-part;
+  margin: 80% 0 0 0;
+}
+
+.bitmosef-hand-l {
+  @extend %bitmosef-hand;
+  margin: 100% 0 0 -30%;
+}
+
+.bitmosef-hand-r {
+  @extend %bitmosef-hand;
+  margin: 100% 0 0 90%;
+}
+
+.bitmosef-bubble {
+  transform: rotate(-90deg) translate(64px, -128px) scale(0.8);
+}
+
+.bitmosef-hide {
+  transform: rotate(-90deg) translate(96px, 64px) scale(1.5);
+}
+
+.shadow {
+  @extend %bitmosef-part;
+  margin-top: 70%;
+  height: 128px;
+  width: 128px;
+  background: radial-gradient(
+      rgba($color: black, $alpha: 1),
+      rgba($color: black, $alpha: 0.7),
+      rgba($color: black, $alpha: 0.3),
+      rgba($color: black, $alpha: 0),
+      rgba($color: black, $alpha: 0)
+  );
+  transform: scale(1.3);
+}
+
+.bubble-container {
+  position: absolute;
+  text-align: center;
+  display: table;
+  transform-origin: bottom left;
+  opacity: 0;
+
+  div {
+    @extend .flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+    font-size: 32pt;
+    color: rgb(90, 85, 100);
+    text-shadow: 3px 3px rgba(200, 175, 225, 0.5);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hide-button {
+  @extend .flex;
+
+  height: 20px;
+  opacity: 0;
+  $warn-color: rgb(250, 50, 100);
+
+  .close-button {
+    @extend .center;
+    cursor: pointer;
+
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba($color: $warn-color, $alpha: 0.5);
+    box-shadow: 0 20px 20px rgba($color: black, $alpha: 0.35);
+
+    transition: .4s;
+    z-index: 2;
+
+    img {
+      height: 60%;
+    }
+
+    &:hover {
+      transform: scale(1.25);
+      background-color: $warn-color;
+
+      &~span {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  span {
+    margin: -2px 0 0 5px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 2.5px rgba($color: black, $alpha: 0.25);
+    transform: translate(-100%);
+
+    opacity: 0;
+    z-index: 1;
+    transition: .3s;
+  }
+}
+
+@keyframes hide-raise {
+  0% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+@keyframes head-pop {
+  10% {
+    margin: 75% 0 0 0;
+  }
+
+  20% {
+    margin: 70% 0 0 0;
+  }
+
+  40% {
+    margin: -20% 0 0 0;
+  }
+
+  70% {
+    margin: 10% 0 0 0;
+  }
+
+  100% {
+    margin: 0 0 0 0;
+  }
+}
+
+@keyframes glasses-pop {
+  20% {
+    margin: 80% 0 0 0;
+  }
+
+  40% {
+    margin: -15% 0 0 0;
+  }
+
+  70% {
+    margin: 7.5% 0 0 0;
+  }
+
+  100% {
+    margin: 0 0 0 0;
+  }
+}
+
+@keyframes handl-pop {
+  0% {
+    margin: 100% 0 0 -30%;
+  }
+
+  15% {
+    margin: 50% 0 0 -30%;
+  }
+
+  30% {
+    margin: 60% 0 0 -30%;
+  }
+
+  100% {
+    margin: 60% 0 0 -30%;
+  }
+}
+
+@keyframes handr-pop {
+  0% {
+    margin: 100% 0 0 90%;
+  }
+
+  15% {
+    margin: 50% 0 0 90%;
+  }
+
+  30% {
+    margin: 60% 0 0 90%;
+  }
+
+  100% {
+    margin: 60% 0 0 90%;
+  }
+}
+
+@keyframes bubble-raise {
+  0% {
+    margin-top: 40px;
+    transform: rotate(75deg);
+    opacity: 0;
+  }
+
+  55% {
+    margin-top: -10px;
+    transform: rotate(-10deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hide-raise {
+  0% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}

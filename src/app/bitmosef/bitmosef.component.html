@@ -1,1 +1,25 @@
-<p>bitmosef works!</p>
+<div class="bitmosef-container" [ngClass]="{'hidden': hidden}">
+  <a class="bitmosef-body" tabindex="-1" routerLink="/hi" routerLinkActive="active">
+    <div class="shadow"></div>
+    <img class="bitmosef-head" src="assets/icons/head.png">
+    <img class="bitmosef-glasses" src="assets/icons/glasses.png">
+    <img class="bitmosef-hand-l" src="assets/icons/hand.png">
+    <img class="bitmosef-hand-r" src="assets/icons/hand.png">
+  </a>
+
+  <div class="bitmosef-bubble">
+    <div class="bubble-container">
+      <img src="assets/icons/bubble-icon.png">
+      <div class="bubble-txt">hi!</div>
+    </div>
+  </div>
+
+  <div class="bitmosef-hide">
+    <div class="hide-button">
+      <div class="close-button" (click)="hideBitmoji()">
+        <img src="assets/icons/exit-icon.png">
+      </div>
+      <span>HIDE</span>
+    </div>
+  </div>
+</div>

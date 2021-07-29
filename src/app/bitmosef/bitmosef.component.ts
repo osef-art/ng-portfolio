@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-bitmosef',
+  selector: 'bitmosef',
   templateUrl: './bitmosef.component.html',
   styleUrls: ['./bitmosef.component.scss']
 })
-export class BitmosefComponent implements OnInit {
+export class BitmosefComponent {
+  hidden : boolean = false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  hideBitmoji() {
+    this.hidden = true;
   }
-
 }
