@@ -1,0 +1,93 @@
+@import "../styles.scss";
+
+$header-height: 75px;
+
+.header-spacer {
+  height: $header-height;
+}
+
+.title-zone {
+  @extend .line,
+  .title,
+  .flex;
+  margin: 40px 0;
+  padding-left: 5%;
+  font-size: 48pt;
+
+  .title-text {
+    position: relative;
+    z-index: 2;
+    transition: ease-out .3s;
+  }
+
+  %title-shadow {
+    margin-top: 3.5px;
+    margin-left: -3.5px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  @each $name,
+  $color in $accent-colors {
+    .title-shadow-#{$name} {
+      @extend %title-shadow;
+
+      background: -webkit-linear-gradient(left, rgba($color: $color, $alpha: .5), $color);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .title-shadow-home {
+    @extend %title-shadow;
+    background: -webkit-linear-gradient(left, #a0a0af, #af7dfa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: ease-out .3s;
+  }
+
+  &:hover .title-shadow-home {
+    margin-top: 5px;
+    margin-left: -5px;
+    background: -webkit-linear-gradient(left, #af7dfa, #fa55a0);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+  %dashed {
+    border-top: dashed rgba(230, 230, 255, 0.4) 2.5px;
+    border-left: dashed rgba(230, 230, 255, 0.4) 2.5px;
+    position: absolute;
+  }
+
+  #dashed-1 {
+    @extend %dashed;
+    width: 40px;
+    margin-top: 15px;
+    margin-left: -15px;
+  }
+
+  #dashed-2 {
+    @extend %dashed;
+    width: 130px;
+    margin-top: 75px;
+    margin-left: -25px;
+  }
+
+  #dashed-3 {
+    @extend %dashed;
+    height: 85px;
+    margin-top: 5px;
+    margin-left: -10px;
+  }
+
+  #dashed-4 {
+    @extend %dashed;
+    height: 60px;
+    margin-top: 55px;
+    margin-left: 55px;
+  }
