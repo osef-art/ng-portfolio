@@ -1,4 +1,5 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
@@ -37,7 +38,7 @@
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-#footer #signature, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, .new-stamp, body {
+#footer #signature, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, .new-stamp, body {
   font-family: "Gotham", sans-serif;
 }
 
@@ -61,7 +62,7 @@
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #hide-button #close-button, #hide-button, #bubble-container div, .new-stamp, #sub-panel, #header #logo-container, #header {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #hide-button #close-button, #hide-button, #bubble-container div, .new-stamp, #sub-panel, #header #logo-container, #header {
   display: flex;
 }
 
@@ -77,7 +78,7 @@
   width: 100%;
 }
 
-.center, #caution p, #caution, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+.center, #caution p, #caution, .articles-container .tip-panel .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -383,7 +384,7 @@ a:focus .github-button img {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-#footer #signature, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, .new-stamp, body {
+#footer #signature, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, .new-stamp, body {
   font-family: "Gotham", sans-serif;
 }
 
@@ -407,7 +408,7 @@ a:focus .github-button img {
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #hide-button #close-button, #hide-button, #bubble-container div, .new-stamp, #header, #header #logo-container, #sub-panel {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #hide-button #close-button, #hide-button, #bubble-container div, .new-stamp, #header, #header #logo-container, #sub-panel {
   display: flex;
 }
 
@@ -423,7 +424,7 @@ a:focus .github-button img {
   width: 100%;
 }
 
-.center, #caution p, #caution, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+.center, #caution p, #caution, .articles-container .tip-panel .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -554,7 +555,7 @@ svg {
   }
 }
 
-.press, .articles-container .tip:hover img {
+.press, .articles-container .tip-panel:hover img {
   animation: press-wiggle 0.5s ease;
   animation-fill-mode: forwards;
 }
@@ -811,7 +812,7 @@ svg {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-#footer #signature, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, body, .new-stamp {
+#footer #signature, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, body, .new-stamp {
   font-family: "Gotham", sans-serif;
 }
 
@@ -835,7 +836,7 @@ svg {
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button {
   display: flex;
 }
 
@@ -851,7 +852,7 @@ svg {
   width: 100%;
 }
 
-.center, #caution p, #caution, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+.center, #caution p, #caution, .articles-container .tip-panel .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -924,7 +925,7 @@ a:focus .github-button img {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-#footer #signature, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, body, .new-stamp {
+#footer #signature, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container p, #bio .intro, body, .new-stamp {
   font-family: "Gotham", sans-serif;
 }
 
@@ -948,7 +949,7 @@ a:focus .github-button img {
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, .button-side-label .label, .dl-anim .dl-icon, .dl-game-button .inner-btn, .dl-anim .inner-btn, .buttons-zone, .articles-container .art-article .thumbnail img, .articles-container .game-article .thumbnail img, .articles-container .art-article .thumbnail, .articles-container .game-article .thumbnail, .articles-container .art-article .read-more, .articles-container .game-article .read-more, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured, .articles-container .panel-line, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button {
   display: flex;
 }
 
@@ -964,7 +965,7 @@ a:focus .github-button img {
   width: 100%;
 }
 
-.center, #caution p, #caution, .articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+.center, #caution p, #caution, .articles-container .tip-panel .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box, .articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links, .articles-container .tip-panel .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -1246,11 +1247,11 @@ a:focus .github-button img {
 }
 #what-do-i-use td a img {
   height: 35px;
-  -webkit-filter: grayscale(100%) brightness(125%);
-  -moz-filter: grayscale(100%) brightness(125%);
-  -ms-filter: grayscale(100%) brightness(125%);
-  -o-filter: grayscale(100%) brightness(125%);
-  filter: grayscale(100%) brightness(125%);
+  -webkit-filter: grayscale(100%) whiteness(125%);
+  -moz-filter: grayscale(100%) whiteness(125%);
+  -ms-filter: grayscale(100%) whiteness(125%);
+  -o-filter: grayscale(100%) whiteness(125%);
+  filter: grayscale(100%) whiteness(125%);
   transition: 0.4s;
 }
 #what-do-i-use td a:focus img,
@@ -1321,7 +1322,7 @@ a:focus .github-button img {
   font-size: 14pt;
   color: #c8c8e1;
 }
-.articles-container p .bright {
+.articles-container p .white {
   color: white;
 }
 .articles-container .panel-line {
@@ -1330,7 +1331,7 @@ a:focus .github-button img {
 .articles-container .panel-line .vertical-spacer {
   min-width: 20px;
 }
-.articles-container .tip, .articles-container .art-panel, .articles-container #graphism-panel, .articles-container .art-article, .articles-container .game-article {
+.articles-container .tip-panel, .articles-container .art-panel, .articles-container #graphism-panel, .articles-container .art-article, .articles-container .game-article {
   display: inline-block;
   text-align: center;
   background-color: rgba(235, 235, 255, 0.3);
@@ -1338,13 +1339,13 @@ a:focus .github-button img {
   padding: 10px 20px;
   transition: 0.5s;
 }
-.articles-container .tip br, .articles-container .art-panel br, .articles-container #graphism-panel br, .articles-container .art-article br, .articles-container .game-article br {
+.articles-container .tip-panel br, .articles-container .art-panel br, .articles-container #graphism-panel br, .articles-container .art-article br, .articles-container .game-article br {
   margin: 15px 0;
 }
-.articles-container .tip h2 .shadow, .articles-container .art-panel h2 .shadow, .articles-container #graphism-panel h2 .shadow, .articles-container .art-article h2 .shadow, .articles-container .game-article h2 .shadow {
+.articles-container .tip-panel h2 .shadow, .articles-container .art-panel h2 .shadow, .articles-container #graphism-panel h2 .shadow, .articles-container .art-article h2 .shadow, .articles-container .game-article h2 .shadow {
   color: white;
 }
-.articles-container .tip .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured {
+.articles-container .tip-panel .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .art-article .featured, .articles-container .game-article .featured {
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -1358,7 +1359,7 @@ a:focus .github-button img {
   background-color: #ebfa64;
   transition: 0.3s;
 }
-.articles-container .tip .featured .glide, .articles-container .art-panel .featured .glide, .articles-container #graphism-panel .featured .glide, .articles-container .art-article .featured .glide, .articles-container .game-article .featured .glide {
+.articles-container .tip-panel .featured .glide, .articles-container .art-panel .featured .glide, .articles-container #graphism-panel .featured .glide, .articles-container .art-article .featured .glide, .articles-container .game-article .featured .glide {
   position: absolute;
   width: 50px;
   height: 100%;
@@ -1366,41 +1367,41 @@ a:focus .github-button img {
   background-color: white;
   transition: none;
 }
-.articles-container .tip:hover .featured, .articles-container .art-panel:hover .featured, .articles-container #graphism-panel:hover .featured, .articles-container .art-article:hover .featured, .articles-container .game-article:hover .featured {
+.articles-container .tip-panel:hover .featured, .articles-container .art-panel:hover .featured, .articles-container #graphism-panel:hover .featured, .articles-container .art-article:hover .featured, .articles-container .game-article:hover .featured {
   padding: 10px;
   margin-top: -40px;
   font-size: 20px;
   height: 30px;
 }
-.articles-container .tip:hover .featured .glide, .articles-container .art-panel:hover .featured .glide, .articles-container #graphism-panel:hover .featured .glide, .articles-container .art-article:hover .featured .glide, .articles-container .game-article:hover .featured .glide {
+.articles-container .tip-panel:hover .featured .glide, .articles-container .art-panel:hover .featured .glide, .articles-container #graphism-panel:hover .featured .glide, .articles-container .art-article:hover .featured .glide, .articles-container .game-article:hover .featured .glide {
   transform: translate(220%, 0) skew(-20deg);
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.5s;
 }
-.articles-container .tip .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
+.articles-container .tip-panel .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .art-article .follow-box, .articles-container .game-article .follow-box {
   color: #ebfa64;
 }
-.articles-container .tip .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links {
+.articles-container .tip-panel .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .game-article .follow-box .links {
   border-radius: 10px;
   border: dotted #ebfa64 4px;
   margin: 10px 0;
 }
-.articles-container .tip .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box {
+.articles-container .tip-panel .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .game-article .follow-box .links .link-box {
   width: 50px;
   height: 50px;
   margin: 5px 5px 25px 5px;
   font-size: 10px;
 }
-.articles-container .tip .follow-box .links .link-box img, .articles-container .art-panel .follow-box .links .link-box img, .articles-container #graphism-panel .follow-box .links .link-box img, .articles-container .art-article .follow-box .links .link-box img, .articles-container .game-article .follow-box .links .link-box img {
+.articles-container .tip-panel .follow-box .links .link-box img, .articles-container .art-panel .follow-box .links .link-box img, .articles-container #graphism-panel .follow-box .links .link-box img, .articles-container .art-article .follow-box .links .link-box img, .articles-container .game-article .follow-box .links .link-box img {
   margin: 5px 0;
   width: 40px;
   transition: 0.3s;
 }
-.articles-container .tip .follow-box .links .link-box img:hover, .articles-container .art-panel .follow-box .links .link-box img:hover, .articles-container #graphism-panel .follow-box .links .link-box img:hover, .articles-container .art-article .follow-box .links .link-box img:hover, .articles-container .game-article .follow-box .links .link-box img:hover {
+.articles-container .tip-panel .follow-box .links .link-box img:hover, .articles-container .art-panel .follow-box .links .link-box img:hover, .articles-container #graphism-panel .follow-box .links .link-box img:hover, .articles-container .art-article .follow-box .links .link-box img:hover, .articles-container .game-article .follow-box .links .link-box img:hover {
   margin: 2.5px 0;
   width: 47.5px;
 }
-.articles-container .tip .follow-box .links .link-box a:focus img, .articles-container .art-panel .follow-box .links .link-box a:focus img, .articles-container #graphism-panel .follow-box .links .link-box a:focus img, .articles-container .art-article .follow-box .links .link-box a:focus img, .articles-container .game-article .follow-box .links .link-box a:focus img {
+.articles-container .tip-panel .follow-box .links .link-box a:focus img, .articles-container .art-panel .follow-box .links .link-box a:focus img, .articles-container #graphism-panel .follow-box .links .link-box a:focus img, .articles-container .art-article .follow-box .links .link-box a:focus img, .articles-container .game-article .follow-box .links .link-box a:focus img {
   margin: 2.5px 0;
   width: 47.5px;
 }
@@ -1481,18 +1482,18 @@ a:focus .github-button img {
   min-width: 60%;
   width: 60%;
 }
-.articles-container .tip {
+.articles-container .tip-panel {
   border-radius: 7.5px;
   border: dashed 5px #32fae1;
   background: repeating-linear-gradient(-60deg, #004141, #004141 20px, #006464 20px, #006464 40px);
 }
-.articles-container .tip p {
+.articles-container .tip-panel p {
   font-size: 12pt;
   font-weight: lighter;
   color: white;
   text-shadow: 0 2px rgba(0, 0, 0, 0.5);
 }
-.articles-container .tip code {
+.articles-container .tip-panel code {
   font-weight: bold;
   font-variant: small-caps;
   background-color: rgba(0, 0, 0, 0.5);
@@ -1500,7 +1501,7 @@ a:focus .github-button img {
   padding: 0 5px;
   text-shadow: none;
 }
-.articles-container .tip img {
+.articles-container .tip-panel img {
   opacity: 0.5;
   margin: 0 0 20px 0;
 }
@@ -1789,7 +1790,7 @@ a:focus .github-button img {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-#footer #signature, body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured {
+#footer #signature, body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured {
   font-family: "Gotham", sans-serif;
 }
 
@@ -1813,7 +1814,7 @@ a:focus .github-button img {
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .featured, .articles-container .tip .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .featured, .articles-container .tip-panel .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
   display: flex;
 }
 
@@ -1829,7 +1830,7 @@ a:focus .github-button img {
   width: 100%;
 }
 
-.center, #caution p, #caution, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box, .articles-container .tip .follow-box .links, .articles-container .tip .follow-box .links .link-box {
+.center, #caution p, #caution, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box, .articles-container .tip-panel .follow-box .links, .articles-container .tip-panel .follow-box .links .link-box {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -1984,7 +1985,7 @@ a:focus .github-button img {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured, #footer #signature {
+body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured, #footer #signature {
   font-family: "Gotham", sans-serif;
 }
 
@@ -2008,7 +2009,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .featured, .articles-container .tip .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .featured, .articles-container .tip-panel .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
   display: flex;
 }
 
@@ -2024,7 +2025,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   width: 100%;
 }
 
-.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box, .articles-container .tip .follow-box .links, .articles-container .tip .follow-box .links .link-box, #caution, #caution p {
+.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box, .articles-container .tip-panel .follow-box .links, .articles-container .tip-panel .follow-box .links .link-box, #caution, #caution p {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -2155,7 +2156,7 @@ svg {
   }
 }
 
-.press, .articles-container .tip:hover img {
+.press, .articles-container .tip-panel:hover img {
   animation: press-wiggle 0.5s ease;
   animation-fill-mode: forwards;
 }
@@ -2412,7 +2413,7 @@ svg {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured, #footer #signature {
+body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured, #footer #signature {
   font-family: "Gotham", sans-serif;
 }
 
@@ -2436,7 +2437,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .featured, .articles-container .tip .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .featured, .articles-container .tip-panel .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
   display: flex;
 }
 
@@ -2452,7 +2453,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   width: 100%;
 }
 
-.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box, .articles-container .tip .follow-box .links, .articles-container .tip .follow-box .links .link-box, #caution, #caution p {
+.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box, .articles-container .tip-panel .follow-box .links, .articles-container .tip-panel .follow-box .links .link-box, #caution, #caution p {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -2525,7 +2526,7 @@ a:focus .github-button img {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured, #footer #signature {
+body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured, #footer #signature {
   font-family: "Gotham", sans-serif;
 }
 
@@ -2549,7 +2550,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .featured, .articles-container .tip .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .featured, .articles-container .tip-panel .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
   display: flex;
 }
 
@@ -2565,7 +2566,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   width: 100%;
 }
 
-.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box, .articles-container .tip .follow-box .links, .articles-container .tip .follow-box .links .link-box, #caution, #caution p {
+.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box, .articles-container .tip-panel .follow-box .links, .articles-container .tip-panel .follow-box .links .link-box, #caution, #caution p {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -2696,7 +2697,7 @@ svg {
   }
 }
 
-.press, .articles-container .tip:hover img {
+.press, .articles-container .tip-panel:hover img {
   animation: press-wiggle 0.5s ease;
   animation-fill-mode: forwards;
 }
@@ -2953,7 +2954,7 @@ svg {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured, #footer #signature {
+body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured, #footer #signature {
   font-family: "Gotham", sans-serif;
 }
 
@@ -2977,7 +2978,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .featured, .articles-container .tip .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .featured, .articles-container .tip-panel .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
   display: flex;
 }
 
@@ -2993,7 +2994,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   width: 100%;
 }
 
-.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box, .articles-container .tip .follow-box .links, .articles-container .tip .follow-box .links .link-box, #caution, #caution p {
+.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box, .articles-container .tip-panel .follow-box .links, .articles-container .tip-panel .follow-box .links .link-box, #caution, #caution p {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -3066,7 +3067,7 @@ a:focus .github-button img {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
 }
-body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured, #footer #signature {
+body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured, #footer #signature {
   font-family: "Gotham", sans-serif;
 }
 
@@ -3090,7 +3091,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   font-family: "GothamThin", sans-serif;
 }
 
-.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .featured, .articles-container .tip .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
+.flex, .game-list .column .game-card .progression-bar, .game-list .column .beta-card .info, .game-list .column .game-card .info, .game-list, #header, #header #logo-container, #sub-panel, .new-stamp, #bubble-container div, #hide-button, #hide-button #close-button, .articles-container .panel-line, .articles-container .game-article .featured, .articles-container .game-article .follow-box .links, .articles-container .game-article .read-more, .articles-container .game-article .thumbnail, .articles-container .game-article .thumbnail img, .articles-container .art-article .featured, .articles-container .art-article .follow-box .links, .articles-container .art-article .read-more, .articles-container .art-article .thumbnail, .articles-container .art-article .thumbnail img, .articles-container .art-panel .featured, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .featured, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .featured, .articles-container .tip-panel .follow-box .links, .buttons-zone, .dl-game-button .inner-btn, .dl-anim .inner-btn, .dl-anim .dl-icon, .button-side-label .label {
   display: flex;
 }
 
@@ -3106,7 +3107,7 @@ body, .new-stamp, #bio .intro, .articles-container p, .articles-container .game-
   width: 100%;
 }
 
-.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box, .articles-container .tip .follow-box .links, .articles-container .tip .follow-box .links .link-box, #caution, #caution p {
+.center, .articles-container .game-article .follow-box, .articles-container .game-article .follow-box .links, .articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box, .articles-container .art-article .follow-box .links, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box, .articles-container .art-panel .follow-box .links, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box, .articles-container #graphism-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box, .articles-container .tip-panel .follow-box .links, .articles-container .tip-panel .follow-box .links .link-box, #caution, #caution p {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -3388,11 +3389,11 @@ a:focus .github-button img {
 }
 #what-do-i-use td a img {
   height: 35px;
-  -webkit-filter: grayscale(100%) brightness(125%);
-  -moz-filter: grayscale(100%) brightness(125%);
-  -ms-filter: grayscale(100%) brightness(125%);
-  -o-filter: grayscale(100%) brightness(125%);
-  filter: grayscale(100%) brightness(125%);
+  -webkit-filter: grayscale(100%) whiteness(125%);
+  -moz-filter: grayscale(100%) whiteness(125%);
+  -ms-filter: grayscale(100%) whiteness(125%);
+  -o-filter: grayscale(100%) whiteness(125%);
+  filter: grayscale(100%) whiteness(125%);
   transition: 0.4s;
 }
 #what-do-i-use td a:focus img,
@@ -3463,7 +3464,7 @@ a:focus .github-button img {
   font-size: 14pt;
   color: #c8c8e1;
 }
-.articles-container p .bright {
+.articles-container p .white {
   color: white;
 }
 .articles-container .panel-line {
@@ -3472,7 +3473,7 @@ a:focus .github-button img {
 .articles-container .panel-line .vertical-spacer {
   min-width: 20px;
 }
-.articles-container .game-article, .articles-container .art-article, .articles-container .art-panel, .articles-container #graphism-panel, .articles-container .tip {
+.articles-container .game-article, .articles-container .art-article, .articles-container .art-panel, .articles-container #graphism-panel, .articles-container .tip-panel {
   display: inline-block;
   text-align: center;
   background-color: rgba(235, 235, 255, 0.3);
@@ -3480,13 +3481,13 @@ a:focus .github-button img {
   padding: 10px 20px;
   transition: 0.5s;
 }
-.articles-container .game-article br, .articles-container .art-article br, .articles-container .art-panel br, .articles-container #graphism-panel br, .articles-container .tip br {
+.articles-container .game-article br, .articles-container .art-article br, .articles-container .art-panel br, .articles-container #graphism-panel br, .articles-container .tip-panel br {
   margin: 15px 0;
 }
-.articles-container .game-article h2 .shadow, .articles-container .art-article h2 .shadow, .articles-container .art-panel h2 .shadow, .articles-container #graphism-panel h2 .shadow, .articles-container .tip h2 .shadow {
+.articles-container .game-article h2 .shadow, .articles-container .art-article h2 .shadow, .articles-container .art-panel h2 .shadow, .articles-container #graphism-panel h2 .shadow, .articles-container .tip-panel h2 .shadow {
   color: white;
 }
-.articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip .featured {
+.articles-container .game-article .featured, .articles-container .art-article .featured, .articles-container .art-panel .featured, .articles-container #graphism-panel .featured, .articles-container .tip-panel .featured {
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -3500,7 +3501,7 @@ a:focus .github-button img {
   background-color: #ebfa64;
   transition: 0.3s;
 }
-.articles-container .game-article .featured .glide, .articles-container .art-article .featured .glide, .articles-container .art-panel .featured .glide, .articles-container #graphism-panel .featured .glide, .articles-container .tip .featured .glide {
+.articles-container .game-article .featured .glide, .articles-container .art-article .featured .glide, .articles-container .art-panel .featured .glide, .articles-container #graphism-panel .featured .glide, .articles-container .tip-panel .featured .glide {
   position: absolute;
   width: 50px;
   height: 100%;
@@ -3508,41 +3509,41 @@ a:focus .github-button img {
   background-color: white;
   transition: none;
 }
-.articles-container .game-article:hover .featured, .articles-container .art-article:hover .featured, .articles-container .art-panel:hover .featured, .articles-container #graphism-panel:hover .featured, .articles-container .tip:hover .featured {
+.articles-container .game-article:hover .featured, .articles-container .art-article:hover .featured, .articles-container .art-panel:hover .featured, .articles-container #graphism-panel:hover .featured, .articles-container .tip-panel:hover .featured {
   padding: 10px;
   margin-top: -40px;
   font-size: 20px;
   height: 30px;
 }
-.articles-container .game-article:hover .featured .glide, .articles-container .art-article:hover .featured .glide, .articles-container .art-panel:hover .featured .glide, .articles-container #graphism-panel:hover .featured .glide, .articles-container .tip:hover .featured .glide {
+.articles-container .game-article:hover .featured .glide, .articles-container .art-article:hover .featured .glide, .articles-container .art-panel:hover .featured .glide, .articles-container #graphism-panel:hover .featured .glide, .articles-container .tip-panel:hover .featured .glide {
   transform: translate(220%, 0) skew(-20deg);
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.5s;
 }
-.articles-container .game-article .follow-box, .articles-container .art-article .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .tip .follow-box {
+.articles-container .game-article .follow-box, .articles-container .art-article .follow-box, .articles-container .art-panel .follow-box, .articles-container #graphism-panel .follow-box, .articles-container .tip-panel .follow-box {
   color: #ebfa64;
 }
-.articles-container .game-article .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .tip .follow-box .links {
+.articles-container .game-article .follow-box .links, .articles-container .art-article .follow-box .links, .articles-container .art-panel .follow-box .links, .articles-container #graphism-panel .follow-box .links, .articles-container .tip-panel .follow-box .links {
   border-radius: 10px;
   border: dotted #ebfa64 4px;
   margin: 10px 0;
 }
-.articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip .follow-box .links .link-box {
+.articles-container .game-article .follow-box .links .link-box, .articles-container .art-article .follow-box .links .link-box, .articles-container .art-panel .follow-box .links .link-box, .articles-container #graphism-panel .follow-box .links .link-box, .articles-container .tip-panel .follow-box .links .link-box {
   width: 50px;
   height: 50px;
   margin: 5px 5px 25px 5px;
   font-size: 10px;
 }
-.articles-container .game-article .follow-box .links .link-box img, .articles-container .art-article .follow-box .links .link-box img, .articles-container .art-panel .follow-box .links .link-box img, .articles-container #graphism-panel .follow-box .links .link-box img, .articles-container .tip .follow-box .links .link-box img {
+.articles-container .game-article .follow-box .links .link-box img, .articles-container .art-article .follow-box .links .link-box img, .articles-container .art-panel .follow-box .links .link-box img, .articles-container #graphism-panel .follow-box .links .link-box img, .articles-container .tip-panel .follow-box .links .link-box img {
   margin: 5px 0;
   width: 40px;
   transition: 0.3s;
 }
-.articles-container .game-article .follow-box .links .link-box img:hover, .articles-container .art-article .follow-box .links .link-box img:hover, .articles-container .art-panel .follow-box .links .link-box img:hover, .articles-container #graphism-panel .follow-box .links .link-box img:hover, .articles-container .tip .follow-box .links .link-box img:hover {
+.articles-container .game-article .follow-box .links .link-box img:hover, .articles-container .art-article .follow-box .links .link-box img:hover, .articles-container .art-panel .follow-box .links .link-box img:hover, .articles-container #graphism-panel .follow-box .links .link-box img:hover, .articles-container .tip-panel .follow-box .links .link-box img:hover {
   margin: 2.5px 0;
   width: 47.5px;
 }
-.articles-container .game-article .follow-box .links .link-box a:focus img, .articles-container .art-article .follow-box .links .link-box a:focus img, .articles-container .art-panel .follow-box .links .link-box a:focus img, .articles-container #graphism-panel .follow-box .links .link-box a:focus img, .articles-container .tip .follow-box .links .link-box a:focus img {
+.articles-container .game-article .follow-box .links .link-box a:focus img, .articles-container .art-article .follow-box .links .link-box a:focus img, .articles-container .art-panel .follow-box .links .link-box a:focus img, .articles-container #graphism-panel .follow-box .links .link-box a:focus img, .articles-container .tip-panel .follow-box .links .link-box a:focus img {
   margin: 2.5px 0;
   width: 47.5px;
 }
@@ -3623,18 +3624,18 @@ a:focus .github-button img {
   min-width: 60%;
   width: 60%;
 }
-.articles-container .tip {
+.articles-container .tip-panel {
   border-radius: 7.5px;
   border: dashed 5px #32fae1;
   background: repeating-linear-gradient(-60deg, #004141, #004141 20px, #006464 20px, #006464 40px);
 }
-.articles-container .tip p {
+.articles-container .tip-panel p {
   font-size: 12pt;
   font-weight: lighter;
   color: white;
   text-shadow: 0 2px rgba(0, 0, 0, 0.5);
 }
-.articles-container .tip code {
+.articles-container .tip-panel code {
   font-weight: bold;
   font-variant: small-caps;
   background-color: rgba(0, 0, 0, 0.5);
@@ -3642,7 +3643,7 @@ a:focus .github-button img {
   padding: 0 5px;
   text-shadow: none;
 }
-.articles-container .tip img {
+.articles-container .tip-panel img {
   opacity: 0.5;
   margin: 0 0 20px 0;
 }

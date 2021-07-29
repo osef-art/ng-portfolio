@@ -12,11 +12,11 @@ var stats = {
         'href': 'mailto:sirosef@gmail.com'
     }
 };
-const m = .512286623256592433;
 
 function buildWave(w, h) {
-    const a = h / 4;
-    const y = h / 2;
+  const a = h / 4;
+  const y = h / 2;
+  const m = .512286623256592433;
 
     const pathData = [
         'M', w * 0, y + a / 2,
