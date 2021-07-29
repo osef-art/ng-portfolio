@@ -10,21 +10,20 @@
   font-family: "Gotham";
   src: url("assets/fonts/Gotham.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GothamThin";
   src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Greycliff";
   src: url("assets/fonts/Greycliff.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Lufga";
   src: url("assets/fonts/LufgaBold.otf") format("opentype");
-}
-
-%title {
-  font-family: "Lufga", sans-serif;
 }
 
 %mont {
@@ -37,20 +36,32 @@
   font-weight: 800;
 }
 
-%bolder {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-}
-
 %sans {
   font-family: "Gotham", sans-serif;
 }
 
-%light {
+%greycliff {
+  font-family: "Greycliff", sans-serif;
+}
+
+%qsand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.title {
+  font-family: "Lufga", sans-serif;
+}
+
+.bolder {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.light {
   font-family: "Poppins", sans-serif;
 }
 
-%thin {
+.thin {
   font-family: "GothamThin", sans-serif;
 }
 
@@ -58,18 +69,23 @@
 
 $fake-white: rgb(225, 225, 250);
 $fake-black: rgb(50, 50, 60);
-$no-color: rgba(0, 0, 0, 0);
+$no-color: rgba($color: black, $alpha: 0);
 
-$sig-gradient: (
-  rgb(175, 125, 250),
-  rgb(250, 85, 150)
-);
+$sig-gradient: (rgb(175, 125, 250), rgb(250, 85, 150));
+$featured-color: rgb(235, 250, 100);
 
 $accent-colors: (
-    "art": rgb(250, 25, 125),
+  "art": rgb(250, 25, 125),
   "games": rgb(175, 150, 250),
   "anims": rgb(150, 250, 225),
   "music": rgb(200, 250, 100),
+);
+
+$accent-colors-dark: (
+  "art": rgb(225, 0, 110),
+  "games": rgb(150, 100, 225),
+  "anims": rgb(125, 225, 210),
+  "music": rgb(175, 225, 75),
 );
 
 // GLOBAL RULES
@@ -81,17 +97,15 @@ body {
   height: 100%;
   color: white;
   min-height: 100%;
-  background: radial-gradient(
-    rgb(5, 5, 7.5),
-    rgb(40, 40, 42.5)
-  );
+  background: radial-gradient(rgb(5, 5, 7.5),
+      rgb(40, 40, 42.5));
 }
 
 h1,
 h2,
 h3,
 h4 {
-  @extend %title;
+  @extend .title;
 }
 
 div {
@@ -100,6 +114,26 @@ div {
 
 a {
   text-decoration: none;
+  outline-width: 5px;
+  outline-offset: 10px;
+  outline-style: solid;
+  outline-color: rgba($color: white, $alpha: 0);
+  transition: .1s;
+
+  &:focus {
+    outline-width: 2px;
+    outline-offset: 5px;
+    outline-color: rgba($color: white, $alpha: .8);
+  }
+}
+
+%discrete-link:focus {
+  outline-width: 0;
+  outline-offset: 0px;
+
+  &:focus {
+    outline-color: $no-color;
+  }
 }
 
 // UTILS
