@@ -1,0 +1,48 @@
+<div class="games-article">
+  <ng-container *ngIf="textRight; then thumbnails else content"></ng-container>
+  <ng-container *ngIf="!textRight; then thumbnails else content"></ng-container>
+</div>
+
+<ng-template #thumbnails>
+  <div class="thumbnail">
+    <div class="spacer"></div>
+    <div class="flex">
+      <img-carousel [name]="articleId"></img-carousel>
+      <ng-container *ngIf="new">
+        <div class="new-stamp">
+          <div class="spin"></div>
+          <div class="spin2"></div>
+          <span>NEW</span>
+        </div>
+      </ng-container>
+    </div>
+    <div class="spacer"></div>
+    <div class="link">
+      <a routerLink="/games" routerLinkActive="active">more games...</a>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="article-content">
+    <h2 [innerHtml]="parsedTitle"></h2>
+    <div [innerHtml]="formattedDate" class="date"></div>
+    <p [innerHtml]="parsedContent"></p>
+
+    <div class="buttons-zone">
+      <div class="spacer"></div>
+      <text-button [kind]="eKind.GAMES" [text]="'PLAY !'" [innerContent]="'assets/icons/play-icon.png'"
+        [link]="'games/ministick'">
+      </text-button>
+
+      <ng-container *ngIf="githubLink">
+        <a target="_blank" [href]="githubLink" title="Check the github page !">
+          <div class="github-button">
+            <img src="http://thomas-blondel.fr/img/github-logo.png">
+          </div>
+        </a>
+      </ng-container>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</ng-template>
