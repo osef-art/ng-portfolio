@@ -7,17 +7,16 @@ export enum Kind {
 }
 
 export enum Lang {
-  ENG, FRA,
+  ENG = "ENG", FRA = "FRA",
 }
 
 export class TextContent {
-  langs : {[key in Lang]: string;} = {0:"", 1: ""};
+  langArray = Object.keys(Lang).filter(k => typeof Lang[k as Lang] === "string")
+  langs : {[name:string]: string;} = {};
 
   constructor(...text : string[]) {
-    var enumArray = Object.keys(Lang);
-
-    for (let i : Lang = 0; i < enumArray.length; i++) {
-      this.langs[i] = text[i];
+    for (let i = 0; i < this.langArray.length; i++) {
+      this.langs[this.langArray[i]] = text[i];
     }
   }
 
@@ -37,6 +36,7 @@ export class URLsData {
       }
     });
     this.data["art"] = ['canyon.jpg', 'mountains2.jpg', 'smoke.jpg', 'padami1.png'].map(name => "assets/wallpapers/" + name);
+    this.data["collab"] = ["assets/thumbnails/potsdealer.png"];
   }
 
   from(key : string) : string[] {
@@ -45,13 +45,13 @@ export class URLsData {
 }
 
 export class Article {
-  title: string;
+  title: TextContent;
   date: Date;
-  content: string;
+  content: TextContent;
   // new Date(Date.UTC(currentYear + 1, 6, 1, -2, 0, 0))
   thumbnails: string[];
 
-  constructor(title: string, content: string, date: Date, thumbnails: string[]) {
+  constructor(title: TextContent, content: TextContent, date: Date, thumbnails: string[]) {
     this.title = title;
     this.date = date;
     this.thumbnails = thumbnails;
@@ -81,9 +81,10 @@ export default class ArticlesData {
       *parfaitement innocents* dans ce *'beat-them-all'* assez addictif.\n\
       *Jusqu'où* pourrez-vous aller ? 💨"
     );
+
     this.titles['ministick2'] = new TextContent(
       "working on... *ministick 2* !",
-      "*ministick 2* en préparation !",
+      "*ministick 2* est en préparation !",
     )
     this.contents['ministick2'] = new TextContent(
       "Since the game had a lot of success among my friends,\
@@ -93,28 +94,60 @@ export default class ArticlesData {
       I've already *smoothen* the animation and added a bunch of *new moves* !\n\
       Stay tuned 👀",
 
-      "Vu comment mes potes s'étaient enjaillés sur la\
-      première version, j'ai commencé à travailler sur\
-      une version plus poussée de ministick.\n\
+      "Vu comment mes potes s'étaient *enjaillés* sur le\
+      premier jeu, j'ai commencé à travailler sur\
+      une version plus poussée de *ministick*.\n\
       L'idéal, ce serait de rendre le jeu beaucoup plus\
-      technique à maîtriser, avec des mécaniques et des combos uniques.\n\
-      J'ai déjà dessiné des animation plus fluides ainsi\
-      que plein de nouveaux moves que vous pouvez tester tout de suite !!\n\
+      *technique*, avec des *mécaniques* et des *combos uniques*. ça rime.\n\
+      J'ai déjà fluidifié l'animations des mouvements, et j'ai aussi dessiné\
+      plein de *nouveaux moves* que vous pouvez tester *tout de suite* !!\n\
       Hésitez pas à check le Github 👀"
     );
 
+    this.titles['collab'] = new TextContent(
+      "my collab with *@eChoGames* !",
+      "grosse collab avec *@eChoGames* !",
+    )
+    this.contents['collab'] = new TextContent(
+      "Recently I've been drawing *sprites* for a game brought by *@eCho*\
+      on the occasion of the ScoreSpace Jam #12.\n\
+      The jam's theme was *\"COMBINING\"*, so we've crafted a cute little\
+      game absed on *merging* and *selling* potions in town !\n\
+      We reached the *4th position* (among 94 participants !) and we keep\
+      polishing stuff to make it something *bigger*. 🧐\n\
+      We hope you'll enjoy playing the game as we enjoyed cooking it.",
+
+      "Assez récemment, j'ai dessiné des *sprites* pour un jeu sur lequel\
+      bossait *@eCho* à l'occation de la ScoreSpace Jam #12.\
+      Le thème de la Jam était *\"COMBINING\"*, du coup on vous a concocté un petit\
+      jeu à la 2048 où l'on doit *fusionner* et *vendre* des potions en ville !\n\
+      On a fini par atteindre la *4è place* (sur genre 94 hein !), et vu le\
+      *succès* que le jeu a eu auprès du jury, on s'est dit que ce serait\
+      intéressant de continuer à bosser dessus et d'en faire quelque chose\
+      de plus *sérieux*. 🧐\n\
+      En tous cas, on espère que vousprendrez autant de plaisir à y jouer\
+      qu'on en a pris pour le faire. :D"
+    );
+
     ArticlesData.articles['ministick'] = new Article(
-      this.titleFrom('ministick', Lang.ENG),
-      this.contentFrom('ministick', Lang.ENG),
+      this.titles['ministick'],
+      this.contents['ministick'],
       new Date(Date.UTC(2021, 2, 27, -2, 0, 0)),
       new URLsData().from('ministick')
     );
 
     ArticlesData.articles['ministick2'] = new Article(
-      this.titleFrom('ministick2', Lang.ENG),
-      this.contentFrom('ministick2', Lang.ENG),
+      this.titles['ministick2'],
+      this.contents['ministick2'],
       new Date(Date.UTC(2021, 3, 1, 0, 0, 0)),
       new URLsData().from('ministick2')
+    );
+
+    ArticlesData.articles['collab'] = new Article(
+      this.titles['collab'],
+      this.contents['collab'],
+      new Date(Date.UTC(2021, 2, 20, 0, 0, 0)),
+      new URLsData().from('collab')
     );
   }
 
