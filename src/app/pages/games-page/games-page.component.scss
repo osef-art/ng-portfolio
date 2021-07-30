@@ -41,7 +41,7 @@
   text-align: left;
   margin-top: 0;
   font-size: 13pt;
-  color: rgba(230, 230, 250, 0.8);
+  color: rgba(230, 230, 250, .8);
 }
 .game-list .column .beta-card .desc, .game-list .column .game-card .desc {
   margin-top: 15px;
@@ -54,24 +54,24 @@
 .game-list .column .beta-card .info span, .game-list .column .game-card .info span {
   font-size: 14pt;
   height: inherit;
-  color: rgba(230, 230, 250, 0.6);
+  color: rgba(230, 230, 250, .6);
 }
 .game-list .column .beta-card .info .lang, .game-list .column .game-card .info .lang {
   margin: 0 5px;
   height: 25px;
 }
 .game-list .column .game-card {
-  background-color: rgba(175, 150, 250, 0.4);
+  background-color: rgba(175, 150, 250, .4);
 }
 .game-list .column .game-card h1 {
   text-shadow: 2.5px 2.5px #af96fa;
 }
 .game-list .column .game-card:hover {
-  background-color: rgba(175, 150, 250, 0.5);
+  background-color: rgba(175, 150, 250, .5);
 }
 .game-list .column .game-card .progression-bar {
   height: 10px;
-  background-color: rgba(230, 230, 250, 0.3);
+  background-color: rgba(230, 230, 250, .3);
   border-radius: 5px;
 }
 .game-list .column .game-card .progression-bar div {
@@ -88,7 +88,7 @@
 }
 .game-list .column .beta-card {
   padding-bottom: 0px;
-  background-color: rgba(150, 250, 225, 0.4);
+  background-color: rgba(150, 250, 225, .4);
 }
 .game-list .column .beta-card h1 {
   text-shadow: 2.5px 2.5px #64e1c8;
@@ -101,5 +101,5 @@
   border-radius: 5px;
 }
 .game-list .column .beta-card:hover {
-  background-color: rgba(150, 250, 225, 0.5);
+  background-color: rgba(150, 250, 225, .5);
 }
