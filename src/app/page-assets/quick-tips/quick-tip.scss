@@ -1,0 +1,22 @@
+@import "../panel/panel.component.scss";
+
+%tip-panel {
+  @extend %panel;
+  border-radius: 15px;
+
+  p {
+    color: white;
+    font-size: 12pt;
+    font-weight: lighter;
+    text-shadow: 0 2px rgba($color: black, $alpha: .5);
+  }
+
+  code {
+    padding: 0 5px;
+    font-weight: bold;
+    font-variant: small-caps;
+    background-color: rgba($color: black, $alpha: .5);
+    border-radius: 5px;
+    text-shadow: none;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../quick-tip.scss";
+
+.tip-lang-panel {
+  @extend %tip-panel;
+  border: dashed 5px rgb(200, 175, 225);
+  background: repeating-linear-gradient(
+    -60deg,
+      rgb(50, 25, 75),
+      rgb(50, 25, 75) 20px,
+      rgb(75, 50, 100) 20px,
+      rgb(75, 50, 100) 40px
+  );
+
+  h2 {
+    font-size: 24pt;
+  }
+
+  img {
+    opacity: .5;
+    margin: 0 0 20px 0;
+  }
+
+  &:hover img {
+    animation: press-wiggle .5s ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes press-wiggle {
+    0% {
+      margin: 0 0 20px 0;
+      opacity: .5;
+    }
+
+    20% {
+      margin: 30px 0 5px 0;
+      opacity: 1;
+    }
+
+    60% {
+      margin: 15px 0 5px 0;
+      opacity: 1;
+    }
+
+    100% {
+      margin: 20px 0 5px 0;
+      opacity: 1;
+    }
+  }
+}

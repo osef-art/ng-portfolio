@@ -1,0 +1,180 @@
+@use "sass:map";
+@import "../panel/panel.component.scss";
+
+.new-stamp {
+  @extend .center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+
+  @mixin spin($anim) {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: map.get($accent-colors, "games");
+
+    animation-name: $anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  span {
+    position: absolute;
+    vertical-align: middle;
+    z-index: 2;
+  }
+
+  .spin {
+    @include spin(spin);
+  }
+
+  .spin2 {
+    @include spin(spin2);
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin2 {
+    from {
+      transform: rotate(45deg);
+    }
+
+    to {
+      transform: rotate(405deg);
+    }
+  }
+}
+
+$article-padding: 20px;
+
+%article {
+  @extend %panel, .line;
+  display: flex;
+  text-align: left;
+  padding: 0;
+
+  h2 {
+    font-size: 24pt;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .date {
+    @extend .thin;
+    color: rgba($color: $fake-white, $alpha: .5);
+  }
+
+  .article-content {
+    padding: $article-padding;
+
+    h2 span {
+      display: inline-block;
+    }
+  }
+
+  p a {
+    transition: .5s;
+  }
+
+  .buttons-zone {
+    @extend .spacer;
+    padding: 20px 0;
+  }
+
+  .thumbnail-zone {
+    @extend .center-y, .line;
+    padding: $article-padding;
+    background-color: rgba($color: $fake-white, $alpha: .05);
+
+    img {
+      @extend .line;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+
+    .more-link {
+      @extend .light;
+
+      a {
+        font-size: 14pt;
+        text-transform: uppercase;
+        color: rgba($color: $fake-white, $alpha: .7);
+        transition: .7s;
+
+        &:hover {
+          @extend .white;
+        }
+      }
+    }
+  }
+}
+
+:host::ng-deep %article br {
+  margin-bottom: 15px;
+}
+
+@each $name, $color in $accent-colors {
+  .#{$name}-article {
+    @extend %article;
+
+    p a {
+      &:hover, &:focus {
+        color: $color;
+      }
+    }
+
+    .shadow {
+      text-shadow: -2.5px 2.5px $color;
+    }
+
+    &:hover {
+      background-color: rgba($color: $color, $alpha: .4);
+    }
+  }
+
+  :host::ng-deep .#{$name}-article .shadow {
+    text-shadow: -2.5px 2.5px $color;
+  }
+}
+
+a {
+  $button-size: 50px;
+
+  .github-button {
+    @extend .center;
+    width: $button-size;
+    height: $button-size;
+    overflow: hidden;
+    cursor: pointer;
+
+    font-size: 30px;
+    border-radius: $button-size / 2;
+    background-color: map.get($accent-colors, "games");
+    box-shadow: 0 5px 5px rgba($color: black, $alpha: .2);
+    transition: .5s;
+
+    img {
+      height: $button-size * 2 / 3;
+      transition: .7s;
+    }
+  }
+
+  &:focus .github-button, .github-button:hover {
+    transform: scale(1.25);
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<ng-container *ngIf="urls.length > 1; else singleImg">
+  <div class="carousel">
+    <figure [id]="sliderId">
+      <ng-container *ngFor="let url of urls">
+        <img [src]="url">
+      </ng-container>
+    </figure>
+  </div>
+  <div class="hidden">
+    {{ animateCarousel() }}
+  </div>
+</ng-container>
+
+<ng-template #singleImg>
+  <div class="flex">
+    <img [src]="urls[0]">
+  </div>
+</ng-template>

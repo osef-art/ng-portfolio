@@ -1,0 +1,64 @@
+@import "../../../styles.scss";
+
+%panel {
+  display: inline-block;
+  text-align: center;
+
+  padding: 10px 20px;
+  background-color: rgba($color: $fake-white, $alpha: .3);
+  transition: .5s;
+
+  h2 {
+    margin: 0;
+    font-size: 32pt;
+    text-transform: lowercase;
+    text-shadow: -3px 3px 5px rgba($color: black, $alpha: .4);
+
+    a {
+      @extend .white;
+    }
+  }
+
+  p {
+    text-align: justify;
+    font-size: 14pt;
+    color: $fake-white;
+  }
+
+  br {
+    margin-bottom: 15px;
+  }
+
+  .buttons-zone {
+    @extend .center, .white;
+    padding: 10px 0;
+
+    a {
+      margin: auto 10px;
+    }
+  }
+}
+
+@each $name, $color in $accent-colors {
+  .#{$name}-panel {
+    @extend %panel;
+
+    p a {
+      &:hover, &:focus {
+        color: $color;
+      }
+    }
+
+    .shadow {
+      text-shadow: -2.5px 2.5px $color;
+    }
+
+    &:hover {
+      background-color: rgba($color: $color, $alpha: .4);
+    }
+  }
+
+  :host::ng-deep .#{$name}-panel .shadow {
+    text-shadow: -2.5px 2.5px $color;
+  }
+}

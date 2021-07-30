@@ -1,0 +1,65 @@
+@use "sass:map";
+@import "../../app.component.scss";
+
+$button-height: 50px;
+
+@each $name, $color in $accent-colors {
+  a {
+    .#{$name}-text-button {
+      @extend %qsand, .white;
+      width: $button-height * 3;
+      height: $button-height;
+      padding: 5px 0;
+      margin: 0 10px;
+
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+
+      font-size: 30px;
+      border-radius: 5px;
+
+      background-color: $color;
+      box-shadow: 0 5px 7.5px rgba($color: black, $alpha: .2);
+      text-shadow: 0 1.5px rgba($color: black, $alpha: .25);
+      transition: .2s;
+
+      .inner-txt {
+        display: inline-block;
+        transition: .3s;
+      }
+
+      .inner-btn {
+        $inner-padding: 10px;
+        @extend .center;
+        position: relative;
+        width: $button-height;
+        height: $button-height + (2 * $inner-padding);
+        left: -$button-height;
+        top: -$button-height;
+        background: map.get($accent-colors-dark, $name);
+        transition: .3s;
+
+        span {
+          font-size: 25px;
+          margin-top: -$inner-padding;
+        }
+
+        img {
+          margin-top: -$inner-padding / 2;
+          height: 40%;
+        }
+      }
+    }
+
+    &:focus .#{$name}-text-button, .#{$name}-text-button:hover {
+      .inner-txt {
+        margin-left: $button-height;
+      }
+
+      .inner-btn {
+        left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<div class="games-featured-article">
+  <div class="featured-stamp"> FEATURED
+    <div class="glide"></div>
+  </div>
+  <ng-container *ngIf="textRight; then thumbnailZone else content"></ng-container>
+  <ng-container *ngIf="!textRight; then thumbnailZone else content"></ng-container>
+</div>
+
+<ng-template #thumbnailZone>
+  <div class="thumbnail-zone">
+    <div class="spacer"></div>
+    <div class="flex">
+      <img-carousel [name]="articleId"></img-carousel>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="more-link">
+      <a routerLink="/games" routerLinkActive="active">more games...</a>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #content>
+  <div class="article-content">
+    <h2 [innerHtml]="parsedTitle"></h2>
+    <div [innerHtml]="formattedDate" class="date"></div>
+    <p [innerHtml]="parsedContent"></p>
+
+    <div class="flex">
+      <div class="buttons-zone">
+        <text-button [kind]="eKind.GAMES" [text]="btnText" [link]="'games/ministick'"></text-button>
+
+        <ng-container *ngIf="githubLink">
+          <a target="_blank" [href]="githubLink" title="Check the github page !">
+            <div class="github-button">
+              <img src="http://thomas-blondel.fr/img/github-logo.png">
+            </div>
+          </a>
+        </ng-container>
+      </div>
+
+      <div class="follow-zone">
+        <u> Follow @eCho ! </u>
+
+        <div class="links">
+          <ng-container *ngIf="websiteLink">
+            <div class="link-box">
+              <a target="blank" [href]="'https://' + websiteLink">
+                <img class="link" src="assets/icons/web-icon.png">
+              </a>
+              WEBSITE
+            </div>
+          </ng-container>
+          <ng-container *ngIf="twitterLink">
+            <div class="link-box">
+              <a target="blank" [href]="'https://twitter.com/' + twitterLink">
+                <img class="link" src="assets/icons/twitter-icon.png">
+              </a>
+              TWITTER
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

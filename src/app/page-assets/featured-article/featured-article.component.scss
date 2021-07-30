@@ -1,0 +1,85 @@
+@import "../article/article.component.scss";
+
+%featured-article {
+  @extend %article;
+
+  .featured-stamp {
+    @extend .center;
+    $stamp-height: 5px;
+
+    position: absolute;
+    overflow: hidden;
+
+    height: $stamp-height;
+    width: 150px;
+    margin: 0 25px;
+    font-size: 0;
+
+    color: rgb(190, 200, 50);
+    background-color: $featured-color;
+    transform: translateY(-$stamp-height);
+    transition: .3s;
+
+    .glide {
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      background-color: white;
+      transform: translate(-210%, 0) skew(-20deg);
+      transition: none;
+    }
+  }
+
+  &:hover .featured-stamp {
+    $stamp-height: 30px;
+    padding: 10px;
+    font-size: 20px;
+    height: $stamp-height;
+    transform: translateY(-$stamp-height);
+
+    .glide {
+      background-color: rgba($color: white, $alpha: .7);
+      transform: translate(220%, 0) skew(-20deg);
+      transition: .5s;
+    }
+  }
+
+  .follow-zone {
+    text-align: center;
+    color: $featured-color;
+
+    .links {
+      @extend .center;
+      padding: 0 15px;
+      margin: 10px 0;
+      border: dotted $featured-color 4px;
+      border-radius: 15px;
+
+      .link-box {
+        $box-size: 50px;
+        width: $box-size;
+        height: $box-size;
+        margin: 5px 10px;
+        margin-bottom: $box-size / 2;
+        font-size: 8pt;
+
+        img {
+          width: 40px;
+          margin: 5px 0;
+          transition: .3s;
+        }
+
+        a:focus img, img:hover {
+          margin: 7.5px 0;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@each $name, $color in $accent-colors {
+  .#{$name}-featured-article {
+    @extend %featured-article, .#{$name}-article;
+  }
+}
