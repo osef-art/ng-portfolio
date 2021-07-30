@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Lang } from 'src/models/models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-portfolio';
+  static language : Lang = Lang.ENG;
+
+  static toggleLanguage() {
+    this.language = this.language == Lang.ENG ? Lang.FRA : Lang.ENG;
+  }
+
+  static scrollToTop() {
+    let scrollToTop = window.setInterval(() => {
+      let pos = window.pageYOffset;
+      if (pos > 0) {
+        window.scrollTo(0, pos * 3 / 4);
+      } else {
+        window.clearInterval(scrollToTop);
+      }
+    }, 8);
+  }
 }

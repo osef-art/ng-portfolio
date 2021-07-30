@@ -7,9 +7,7 @@ $header-height: 75px;
 }
 
 .title-zone {
-  @extend .line,
-  .title,
-  .flex;
+  @extend .line, .title, .flex;
   margin: 40px 0;
   padding-left: 5%;
   font-size: 48pt;
@@ -59,8 +57,8 @@ $header-height: 75px;
 }
 
   %dashed {
-    border-top: dashed rgba(230, 230, 255, 0.4) 2.5px;
-    border-left: dashed rgba(230, 230, 255, 0.4) 2.5px;
+    border-top: dashed rgba(230, 230, 255, .4) 2.5px;
+    border-left: dashed rgba(230, 230, 255, .4) 2.5px;
     position: absolute;
   }
 
