@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AppComponent } from 'src/app/app.component';
 import { Kind } from 'src/models/models';
 
 @Component({
@@ -78,5 +79,9 @@ export class HomePageComponent implements OnInit {
     if (path != null) {
       path.setAttribute('d', pathData);
     }
+  }
+
+  scrollToTop() {
+    AppComponent.scrollToTop();
   }
 }

@@ -47,25 +47,25 @@
   .intro {
     text-align: justify;
     width: 65%;
+  }
 
-    p {
-      color: $fake-white;
-      font-size: 18pt;
-    }
+  p {
+    color: $fake-white;
+    font-size: 18pt;
+  }
 
-    @each $name,
-    $color in $accent-colors {
-      .#{$name}-link {
-        color: white;
-        display: inline-block;
-        text-shadow: -2px 2px rgba($color: $color, $alpha: .5);
-        transition: .5s;
+  @each $name,
+  $color in $accent-colors {
+    .#{$name}-link {
+      color: white;
+      display: inline-block;
+      text-shadow: -2px 2px rgba($color: $color, $alpha: .5);
+      transition: .5s;
 
-        &:hover,
-        &:focus {
-          transform: translate(2.5px, -2.5px);
-          text-shadow: -2px 2px rgba($color: $color, $alpha: .8);
-        }
+      &:hover,
+      &:focus {
+        transform: translate(2.5px, -2.5px);
+        text-shadow: -2px 2px rgba($color: $color, $alpha: .8);
       }
     }
   }
@@ -74,182 +74,48 @@
 .articles-zone {
   max-width: 900px;
 
-  .panel-line {
+  .panel-line, article, featured-article {
     @extend .flex;
-    margin: 10px 0;
-
-    .vertical-spacer {
-      min-width: 20px;
-    }
+    margin: 20px 0;
   }
 
-  .button {
-    @extend .flex;
-    overflow: hidden;
-    display: inline-block;
-    font-family: "Raleway";
-    font-size: 28pt;
-    height: 100px;
-    width: 250px;
-    border-radius: 5px;
-    background-color: #967dfa;
-    transition: .3s;
-
-    span {
-      position: absolute;
-    }
-
-    .light {
-      position: absolute;
-      height: inherit;
-      width: 50px;
-      background-color: white;
-      transform: translate(-200%) skew(-20deg);
-    }
-
-    &:hover {
-      overflow: hidden;
-      transform: scale(1.1);
-
-      .light {
-        background-color: rgba(255, 255, 255, .5);
-        transform: translate(250px) skew(-20deg);
-        transition: .7s;
-      }
-    }
+  .vertical-spacer {
+    min-width: 20px;
   }
+
+  // .button {
+  //   @extend .flex;
+  //   overflow: hidden;
+  //   display: inline-block;
+  //   font-family: "Raleway";
+  //   font-size: 28pt;
+  //   height: 100px;
+  //   width: 250px;
+  //   border-radius: 5px;
+  //   background-color: #967dfa;
+  //   transition: .3s;
+
+  //   span {
+  //     position: absolute;
+  //   }
+
+  //   .light {
+  //     position: absolute;
+  //     height: inherit;
+  //     width: 50px;
+  //     background-color: white;
+  //     transform: translate(-200%) skew(-20deg);
+  //   }
+
+  //   &:hover {
+  //     overflow: hidden;
+  //     transform: scale(1.1);
+
+  //     .light {
+  //       background-color: rgba(255, 255, 255, .5);
+  //       transform: translate(250px) skew(-20deg);
+  //       transition: .7s;
+  //     }
+  //   }
+  // }
 }
-
-%panel {
-  @extend .flex;
-  display: inline-block;
-  text-align: center;
-
-  margin: 10px 0;
-  padding: 10px 20px;
-  background-color: rgba($color: $fake-white, $alpha: .3);
-  transition: .5s;
-
-  h2 {
-    margin: 0;
-    font-size: 32pt;
-    text-transform: lowercase;
-    text-shadow: -3px 3px 5px rgba($color: black, $alpha: .4);
-
-    a {
-      @extend .white;
-    }
-  }
-
-  p {
-    text-align: justify;
-    font-size: 14pt;
-    color: $fake-white;
-  }
-
-  br {
-    margin-bottom: 15px;
-  }
-
-  .buttons-zone {
-    @extend .center, .white;
-    padding: 10px 0;
-
-    a {
-      margin: auto 10px;
-    }
-  }
-}
-
-.tip-panel {
-  @extend %panel;
-  border-radius: 7.5px;
-  border: dashed 5px rgb(50, 250, 225);
-  background: repeating-linear-gradient(
-    -60deg,
-      rgb(0, 65, 75),
-      rgb(0, 65, 75) 20px,
-      rgb(0, 90, 100) 20px,
-      rgb(0, 90, 100) 40px
-      );
-
-  p {
-    font-size: 12pt;
-    font-weight: lighter;
-    color: white;
-    text-shadow: 0 2px rgba($color: black, $alpha: .5);
-  }
-
-  code {
-    font-weight: bold;
-    font-variant: small-caps;
-    background-color: rgba($color: black, $alpha: .5);
-    border-radius: 5px;
-    padding: 0 5px;
-    text-shadow: none;
-  }
-
-  img {
-    opacity: .5;
-    margin: 0 0 20px 0;
-  }
-
-  &:hover img {
-    animation: press-wiggle .5s ease;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes press-wiggle {
-    0% {
-      margin: 0 0 20px 0;
-      opacity: 0.5;
-    }
-
-    20% {
-      margin: 30px 0 5px 0;
-      opacity: 1;
-    }
-
-    60% {
-      margin: 15px 0 5px 0;
-      opacity: 1;
-    }
-
-    100% {
-      margin: 20px 0 5px 0;
-      opacity: 1;
-    }
-  }
-}
-
-
-@each $name,
-$color in $accent-colors {
-  .#{$name}-panel {
-    @extend %panel;
-
-    p a {
-
-      &:hover,
-      &:focus {
-        color: $color;
-      }
-    }
-
-    .shadow {
-      text-shadow: -2.5px 2.5px $color;
-    }
-
-    &:hover {
-      background-color: rgba($color: $color, $alpha: .4);
-    }
-  }
-}
-
-#graphism-panel {
-  @extend .art-panel;
-
-  min-width: 60%;
-  width: 60%;
-}
-
