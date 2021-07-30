@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-anims-page',
+  selector: 'anims-page',
   templateUrl: './anims-page.component.html',
   styleUrls: ['./anims-page.component.scss']
 })
-export class AnimsPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class AnimsPageComponent {
+  constructor(private titleService: Title) {
+    this.titleService.setTitle("anims.");
   }
-
 }
