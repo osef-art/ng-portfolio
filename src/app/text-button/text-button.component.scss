@@ -52,8 +52,7 @@ $button-height: 50px;
       }
     }
 
-    &:focus .#{$name}-text-button,
-    .#{$name}-text-button:hover {
+    &:focus .#{$name}-text-button, .#{$name}-text-button:hover {
       .inner-txt {
         margin-left: $button-height;
       }
