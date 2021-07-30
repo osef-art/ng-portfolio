@@ -15,8 +15,7 @@
       animation-delay: $delay;
     }
 
-    .shadow,
-    .bitmosef-head {
+    .shadow, .bitmosef-head {
       @include trigger-anim(head-pop, 1.2s);
     }
 
@@ -50,7 +49,7 @@
   @extend %bitmosef-part;
   width: 40%;
   background: radial-gradient(
-    rgba($color: black, $alpha: 0.2),
+    rgba($color: black, $alpha: .2),
     rgba($color: black, $alpha: 0),
     rgba($color: black, $alpha: 0)
   );
@@ -91,8 +90,8 @@
   width: 128px;
   background: radial-gradient(
       rgba($color: black, $alpha: 1),
-      rgba($color: black, $alpha: 0.7),
-      rgba($color: black, $alpha: 0.3),
+      rgba($color: black, $alpha: .7),
+      rgba($color: black, $alpha: .3),
       rgba($color: black, $alpha: 0),
       rgba($color: black, $alpha: 0)
   );
@@ -119,7 +118,7 @@
 
     font-size: 32pt;
     color: rgb(90, 85, 100);
-    text-shadow: 3px 3px rgba(200, 175, 225, 0.5);
+    text-shadow: 3px 3px rgba(200, 175, 225, .5);
     transform: translate(-50%, -50%);
   }
 }
@@ -137,8 +136,8 @@
 
     width: 20px;
     border-radius: 50%;
-    background-color: rgba($color: $warn-color, $alpha: 0.5);
-    box-shadow: 0 20px 20px rgba($color: black, $alpha: 0.35);
+    background-color: rgba($color: $warn-color, $alpha: .5);
+    box-shadow: 0 20px 20px rgba($color: black, $alpha: .35);
 
     transition: .4s;
     z-index: 2;
@@ -162,7 +161,7 @@
     margin: -2px 0 0 5px;
     font-size: 20px;
     color: white;
-    text-shadow: 0 2.5px rgba($color: black, $alpha: 0.25);
+    text-shadow: 0 2.5px rgba($color: black, $alpha: .25);
     transform: translate(-100%);
 
     opacity: 0;
