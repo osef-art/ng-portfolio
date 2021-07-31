@@ -11,35 +11,40 @@ export enum Lang {
 }
 
 export class TextContent {
-  langArray = Object.keys(Lang).filter(k => typeof Lang[k as Lang] === "string")
-  langs : {[name:string]: string;} = {};
+  private text: { [key in Lang]: string; } = {
+    FRA: "",
+    ENG: ""
+  };
 
-  constructor(...text : string[]) {
-    for (let i = 0; i < this.langArray.length; i++) {
-      this.langs[this.langArray[i]] = text[i];
+  constructor(...text: string[]) {
+    var langArray = Object.values(Lang);
+    for (let i = 0; i < langArray.length; i++) {
+      this.text[langArray[i]] = text[i];
     }
   }
 
-  in(lang : Lang) : string {
-    return this.langs[lang];
+  in(lang: Lang): string {
+    return this.text[lang];
   }
 }
 
 export class URLsData {
-  data : { [name: string]: string[] } = {};
+  data: {
+    [key: string]: string[]
+  } = {};
 
   constructor() {
     ["ministick", "ministick2"].forEach(id => {
       this.data[id] = [];
       for (let n = 0; n < 3; n++) {
-        this.data[id].push("assets/thumbnails/" + id + "-clip-" + (n+1) + ".gif")
+        this.data[id].push("assets/thumbnails/" + id + "-clip-" + (n + 1) + ".gif")
       }
     });
     this.data["art"] = ['canyon.jpg', 'mountains2.jpg', 'smoke.jpg', 'padami1.png'].map(name => "assets/wallpapers/" + name);
     this.data["collab"] = ["assets/thumbnails/potsdealer.png"];
   }
 
-  from(key : string) : string[] {
+  from(key: string): string[] {
     return this.data[key];
   }
 }
@@ -60,10 +65,16 @@ export class Article {
 }
 
 export default class ArticlesData {
-  titles : { [name: string] : TextContent} = {};
-  contents : { [name: string] : TextContent} = {};
-  static articles : { [name: string]: Article } = {};
-  ids : string[] = ['ministick', 'ministick2', 'collab'];
+  titles: {
+    [key: string]: TextContent
+  } = {};
+  contents: {
+    [key: string]: TextContent
+  } = {};
+  static articles: {
+    [key: string]: Article
+  } = {};
+  ids: string[] = ['ministick', 'ministick2', 'collab'];
 
   constructor() {
     this.titles['ministick'] = new TextContent(
@@ -109,23 +120,23 @@ export default class ArticlesData {
       "grosse collab avec *@eChoGames* !",
     )
     this.contents['collab'] = new TextContent(
-      "Recently I've been drawing *sprites* for a game brought by *@eCho*\
-      on the occasion of the ScoreSpace Jam #12.\n\
+      "Recently I've been drawing *sprites* for a game brought by *[guest]*\
+      on the occasion of the (ScoreSpace Jam #12)[https://gamejam.com/jam/scorejam12/submissions].\n\
       The jam's theme was *\"COMBINING\"*, so we've crafted a cute little\
       game absed on *merging* and *selling* potions in town !\n\
       We reached the *4th position* (among 94 participants !) and we keep\
       polishing stuff to make it something *bigger*. 🧐\n\
       We hope you'll enjoy playing the game as we enjoyed cooking it.",
 
-      "Assez récemment, j'ai dessiné des *sprites* pour un jeu sur lequel\
-      bossait *@eCho* à l'occation de la ScoreSpace Jam #12.\
+      "Assez récemment, j'ai dessiné des *sprites* pour un jeu d'*[guest]* à l'occation de la\
+      (ScoreSpace Jam #12)[https://gamejam.com/jam/scorejam12/submissions].\n\
       Le thème de la Jam était *\"COMBINING\"*, du coup on vous a concocté un petit\
       jeu à la 2048 où l'on doit *fusionner* et *vendre* des potions en ville !\n\
       On a fini par atteindre la *4è place* (sur genre 94 hein !), et vu le\
       *succès* que le jeu a eu auprès du jury, on s'est dit que ce serait\
       intéressant de continuer à bosser dessus et d'en faire quelque chose\
       de plus *sérieux*. 🧐\n\
-      En tous cas, on espère que vousprendrez autant de plaisir à y jouer\
+      En tous cas, on espère que vous prendrez autant de plaisir à y jouer\
       qu'on en a pris pour le faire. :D"
     );
 
@@ -151,15 +162,15 @@ export default class ArticlesData {
     );
   }
 
-  static get(key : string) : Article {
+  static get(key: string): Article {
     return ArticlesData.articles[key];
   }
 
-  titleFrom(key : string, lang : Lang) : string {
+  titleFrom(key: string, lang: Lang): string {
     return this.titles[key].in(lang);
   }
 
-  contentFrom(key : string, lang : Lang) : string {
+  contentFrom(key: string, lang: Lang): string {
     return this.contents[key].in(lang);
   }
 }
