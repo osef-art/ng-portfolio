@@ -9,7 +9,6 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
-  eKind = Kind;
   @Input() articleId !: string;
   @Input() kind: Kind = Kind.NONE;
 
@@ -18,6 +17,10 @@ export class ArticleComponent implements OnInit {
   @Input() textRight : boolean = false;
   @Input() new : boolean = false;
   article !: Article;
+  regexPatterns : { [key:string]: RegExp } = {
+    '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
+    '$1<br>\r': /(.*)\n/
+  }
 
   constructor(private datepipe : DatePipe) {}
 
@@ -42,15 +45,14 @@ export class ArticleComponent implements OnInit {
 
   get parsedContent() : string {
     var parsedTxt: string = this.article.content.in(AppComponent.language);
-    var regex = /\*([^\s]([^\*]+)[^\s])\*/;
-    var regexLine = /(.*)\n/;
 
-    while (regex.test(parsedTxt)) {
-      parsedTxt = parsedTxt.replace(regex, '<span class="white">$1</span>');
-    }
-    while (regexLine.test(parsedTxt)) {
-      parsedTxt = parsedTxt.replace(regexLine, '$1<br>\r');
-    }
+    Object.keys(this.regexPatterns).forEach(reg => {
+      var regex = this.regexPatterns[reg];
+
+      while (regex.test(parsedTxt)) {
+        parsedTxt = parsedTxt.replace(regex, reg);
+      }
+    });
     return parsedTxt;
   }
 }
