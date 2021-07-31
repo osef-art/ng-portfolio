@@ -1,4 +1,4 @@
-<div class="games-featured-article">
+<div [class]="kind + '-featured-article'">
   <div class="featured-stamp"> FEATURED
     <div class="glide"></div>
   </div>
@@ -28,7 +28,7 @@
 
     <div class="flex">
       <div class="buttons-zone">
-        <text-button [kind]="eKind.GAMES" [text]="btnText" [link]="'games/ministick'"></text-button>
+        <text-button [kind]="kind" [text]="btnText" [link]="'games/ministick'"></text-button>
 
         <ng-container *ngIf="githubLink">
           <a target="_blank" [href]="githubLink" title="Check the github page !">
@@ -40,7 +40,7 @@
       </div>
 
       <div class="follow-zone">
-        <u> Follow @eCho ! </u>
+        <u> Follow {{ guestName }} ! </u>
 
         <div class="links">
           <ng-container *ngIf="websiteLink">

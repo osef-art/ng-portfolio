@@ -10,4 +10,13 @@ export class FeaturedArticleComponent extends ArticleComponent {
   @Input() guestName !: string;
   @Input() websiteLink !: string;
   @Input() twitterLink !: string;
+
+  ngOnInit(): void {
+    super.ngOnInit();
+    this.guestName = '@' + this.guestName;
+
+    this.regexPatterns[this.guestName] = /\[guest\]/;
+    this.regexPatterns['<a href="$2">$1</a>'] = /\((.+)\)\[(.+)\]/;
+  }
+
 }
