@@ -7,12 +7,12 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  get lang() {
+  get mainLang() {
     return AppComponent.language;
   }
 
-  toggleLanguage() {
-    AppComponent.toggleLanguage();
+  switchLanguage() {
+    AppComponent.switchLanguage();
     AppComponent.scrollToTop();
   }
 }

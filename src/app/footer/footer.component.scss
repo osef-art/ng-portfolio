@@ -64,19 +64,22 @@ footer {
 
   .lang-box {
     @extend .flex-y, .bolder;
-    padding: 0 10px;
     cursor: pointer;
-    opacity: .4;
+    padding: 0 10px;
+    color: rgba($color: $fake-white, $alpha: .6);
     transition: .4s;
 
     img {
+      opacity: .7;
       padding: 10px;
       width: 40px;
       height: 40px;
+      transition: .5s;
     }
 
-    &:hover {
+    &:hover img {
       opacity: 1;
+      transform: scale(1.2);
     }
   }
 

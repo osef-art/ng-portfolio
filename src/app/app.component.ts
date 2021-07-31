@@ -9,7 +9,7 @@ import { Lang } from 'src/models/models';
 export class AppComponent {
   static language : Lang = Lang.ENG;
 
-  static toggleLanguage() {
+  static switchLanguage() {
     this.language = this.language == Lang.ENG ? Lang.FRA : Lang.ENG;
   }
 

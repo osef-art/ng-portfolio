@@ -24,11 +24,11 @@
 </div>
 
 <footer>
-    <div class="lang-box" title="Toggle language !" (click)="toggleLanguage()">
+    <div class="lang-box" [title]="mainLang == 'FRA' ? 'Switch to English !' : 'Passer en français !'" (click)="switchLanguage()">
       <div class="center">
-        <img src="assets/icons/web-icon.png">
+        <img [src]="'assets/icons/' + mainLang + '-icon.png'">
       </div>
-      <div class="center"> {{ lang }} </div>
+      <div class="center"> {{ mainLang }} </div>
     </div>
 
     <div class="spacer"></div>
