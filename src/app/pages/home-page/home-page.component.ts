@@ -9,8 +9,6 @@ import { Kind } from 'src/models/models';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  eKind = Kind;
-
   constructor(private titleService: Title) {
     this.titleService.setTitle("welcome.");
   }
@@ -83,5 +81,9 @@ export class HomePageComponent implements OnInit {
 
   scrollToTop() {
     AppComponent.scrollToTop();
+  }
+
+  get Kind() : typeof Kind {
+    return Kind;
   }
 }
