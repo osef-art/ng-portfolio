@@ -1,6 +1,7 @@
+@use "sass:map";
 @import "../../../styles.scss";
 
-%panel {
+:host::ng-deep %panel {
   display: inline-block;
   text-align: center;
 
@@ -40,7 +41,8 @@
 }
 
 @each $name, $color in $accent-colors {
-  .#{$name}-panel {
+  :host::ng-deep .#{$name}-panel {
+    display: inherit;
     @extend %panel;
 
     p a {
@@ -54,11 +56,7 @@
     }
 
     &:hover {
-      background-color: rgba($color: $color, $alpha: .4);
+      background-color: rgba($color: map.get($accent-colors-dimmed, $name), $alpha: .4);
     }
-  }
-
-  :host::ng-deep .#{$name}-panel .shadow {
-    text-shadow: -2.5px 2.5px $color;
   }
 }

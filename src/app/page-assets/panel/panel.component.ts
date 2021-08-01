@@ -11,6 +11,7 @@ export class PanelComponent implements OnInit {
   @Input() title !: string;
   @Input() btnText !: string;
   @Input() content !: string;
+  @Input() link !: string;
   @Input() minWidth : number = 50;
 
   constructor(private elRef: ElementRef) {}
