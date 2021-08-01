@@ -1,105 +1,74 @@
 @import "../../app.component.scss";
 
+html, body {
+  scrollbar-color: rgb(100, 100, 115) rgb(134, 87, 144);
+}
 
-.game-list {
-  max-width: 900px;
+ul {
+  margin: 0;
+  padding: 0;
+
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -moz-column-fill: balance;
+  column-fill: balance;
+  column-gap: 0;
 }
-.game-list .column {
-  width: 28.5%;
-}
-.game-list .column .beta-card, .game-list .column .game-card {
-  display: inline-block;
-  padding: 20px;
-  margin: 15px 0;
-  text-align: justify;
-  color: white;
-  border-radius: 15px;
-  transition:  .5s;
-}
-.game-list .column .beta-card .thumbnail, .game-list .column .game-card .thumbnail {
-  width: 100%;
-  max-height: 125px;
+
+li {
   overflow: hidden;
-  border-radius: 10px;
+  break-inside: avoid;
+  margin: 15px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
-.game-list .column .beta-card .thumbnail img, .game-list .column .game-card .thumbnail img {
-  width: 100%;
-}
-.game-list .column .beta-card .thumbnail .tbn, .game-list .column .game-card .thumbnail .tbn {
-  z-index: 2;
-}
-.game-list .column .beta-card .thumbnail .animated-tbn, .game-list .column .game-card .thumbnail .animated-tbn {
-  z-index: 1;
-}
-.game-list .column .beta-card h1, .game-list .column .game-card h1 {
-  text-align: left;
-  margin-bottom: 5px;
-  font-size: 20pt;
-  text-shadow: 2.5px 2.5px #af96fa;
-}
-.game-list .column .beta-card h2, .game-list .column .game-card h2 {
-  text-align: left;
-  margin-top: 0;
-  font-size: 13pt;
-  color: rgba(230, 230, 250, .8);
-}
-.game-list .column .beta-card .desc, .game-list .column .game-card .desc {
-  margin-top: 15px;
-  font-size: 11pt;
-}
-.game-list .column .beta-card .info, .game-list .column .game-card .info {
-  margin: 20px 0;
-  align-items: center;
-}
-.game-list .column .beta-card .info span, .game-list .column .game-card .info span {
-  font-size: 14pt;
-  height: inherit;
-  color: rgba(230, 230, 250, .6);
-}
-.game-list .column .beta-card .info .lang, .game-list .column .game-card .info .lang {
-  margin: 0 5px;
-  height: 25px;
-}
-.game-list .column .game-card {
-  background-color: rgba(175, 150, 250, .4);
-}
-.game-list .column .game-card h1 {
-  text-shadow: 2.5px 2.5px #af96fa;
-}
-.game-list .column .game-card:hover {
-  background-color: rgba(175, 150, 250, .5);
-}
-.game-list .column .game-card .progression-bar {
-  height: 10px;
-  background-color: rgba(230, 230, 250, .3);
-  border-radius: 5px;
-}
-.game-list .column .game-card .progression-bar div {
-  height: inherit;
-  width: 5%;
-  background-color: #af96fa;
-  border-radius: inherit;
-}
-.game-list .column .game-card .progression-bar span {
-  position: absolute;
-  color: lavender;
-  font-size: 9pt;
-  margin-top: calc(-9pt - 3px);
-}
-.game-list .column .beta-card {
-  padding-bottom: 0px;
-  background-color: rgba(150, 250, 225, .4);
-}
-.game-list .column .beta-card h1 {
-  text-shadow: 2.5px 2.5px #64e1c8;
-}
-.game-list .column .beta-card h1 sup {
-  font-weight: initial;
-  font-size: 9pt;
-  padding: 2.5px 5px;
-  background-color: #64e1c8;
-  border-radius: 5px;
-}
-.game-list .column .beta-card:hover {
-  background-color: rgba(150, 250, 225, .5);
+
+.game-column {
+  width: 85%;
+  max-width: $page-max-width;
+  margin-bottom: 50px;
+
+  .column-label {
+    @extend .center;
+    font-size: 14pt;
+    transition: 1s;
+
+    .spacer {
+      margin: 0 15px;
+    }
+
+    .stroke {
+      @extend .spacer;
+      border-bottom: solid $fake-white 1px;
+    }
+
+    img {
+      padding: 0 15px;
+      height: 10px;
+
+      animation-name: spin;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .right {
+      animation-direction: reverse;
+    }
+
+    span {
+      transition: inherit;
+    }
+  }
+
+  &:hover .column-label {
+    letter-spacing: 5px;
+
+    .spacer {
+      padding: 0 30px;
+    }
+  }
 }
