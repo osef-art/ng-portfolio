@@ -31,14 +31,10 @@
     <p [innerHtml]="parsedContent"></p>
 
     <div class="buttons-zone">
-      <text-button [kind]="kind" [text]="btnText" [link]="'games/ministick'"></text-button>
+      <text-button [kind]="kind" [text]="btnText" [link]="link"></text-button>
 
       <ng-container *ngIf="githubLink">
-        <a target="_blank" [href]="githubLink" title="Check the github page !">
-          <div class="github-button">
-            <img src="http://thomas-blondel.fr/img/github-logo.png">
-          </div>
-        </a>
+        <icon-button [kind]="kind" [icon]="'http://thomas-blondel.fr/img/github-logo.png'" [link]="githubLink"></icon-button>
       </ng-container>
     </div>
   </div>

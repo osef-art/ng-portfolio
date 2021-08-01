@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DatePipe } from '@angular/common';
-import ArticlesData, { Article, Kind } from 'src/models/models';
 import { AppComponent } from 'src/app/app.component';
+import { DatePipe } from '@angular/common';
+import { Kind } from 'src/models/models';
+import ArticlesData, { Article } from 'src/models/articles';
 
 @Component({
   selector: 'article',
@@ -13,9 +14,12 @@ export class ArticleComponent implements OnInit {
   @Input() kind: Kind = Kind.NONE;
 
   @Input() btnText !: string;
+  @Input() link !: string;
   @Input() githubLink ?: string;
+
   @Input() textRight : boolean = false;
   @Input() new : boolean = false;
+
   article !: Article;
   regexPatterns : { [key:string]: RegExp } = {
     '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
