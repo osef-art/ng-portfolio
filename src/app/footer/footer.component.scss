@@ -32,7 +32,7 @@ $caution-yellow: rgb(225, 255, 100);
   }
 
   h3 {
-    @extend %greycliff;
+    @extend .desc;
     margin: 0;
     padding-bottom: 10px;
     font-size: 16pt;
@@ -65,9 +65,8 @@ footer {
   .lang-box {
     @extend .flex-y, .bolder;
     cursor: pointer;
-    padding: 0 10px;
+    min-width: $box-size * 2;
     color: rgba($color: $fake-white, $alpha: .6);
-    transition: .4s;
 
     img {
       opacity: .7;
