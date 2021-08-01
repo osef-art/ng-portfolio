@@ -1,0 +1,31 @@
+<div class="game-card" [ngClass]="{ 'beta': game.isBeta }">
+  <div class="thumbnail">
+    <!-- <img class="animated-tbn" src="assets/thumbnails/ministick-clip-2.gif"> -->
+    <img class="static" [src]="game.thumbnailUrl">
+  </div>
+
+  <h1>
+    {{ game.title }}
+    <sup *ngIf="game.isBeta">BETA</sup>
+  </h1>
+  <div class="desc"> {{ gameDesc }} </div>
+
+  <div class="center">
+    <icon-button [kind]="Kind.GAMES" [link]="''" [title]="'Play ' + game.title + '!'"></icon-button>
+  </div>
+
+  <div class="info">
+    <span class="date"> {{ formattedDate }} </span>
+    <div class="spacer"></div>
+    <ng-container *ngFor="let lang of game.languages">
+      <img class="lang" [src]="langURL(lang)" [title]="lang">
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="!game.isBeta">
+    <span class="prog-label">DEV PROGRESSION:</span>
+    <div class="progression-bar">
+      <div class="gauge" [style.width.%]="100 * game.devProg"></div>
+    </div>
+  </ng-container>
+</div>
