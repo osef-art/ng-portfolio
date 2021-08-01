@@ -1,35 +1,20 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Kind } from 'src/models/models';
+import { IconButtonComponent } from '../icon-button/icon-button.component';
 
 @Component({
   selector: 'text-button',
   templateUrl: './text-button.component.html',
   styleUrls: ['./text-button.component.scss']
 })
-export class TextButtonComponent implements OnInit {
-  @Input() kind: Kind = Kind.NONE;
+export class TextButtonComponent extends IconButtonComponent implements OnInit {
   @Input() text!: string;
-  @Input() innerContent!: string;
-  @Input() link!: string;
 
   ngOnInit(): void {
+    super.ngOnInit();
     if (!this.text) {
       this.text = this.defaultButtonText(this.kind);
     }
-    if (!this.innerContent) {
-      this.innerContent = this.defaultInnerContent(this.kind);
-    }
-    if (!this.link) {
-      this.link = this.kind;
-    }
-  }
-
-  get linkIsURL(): boolean {
-    return /https:\/\/.+/.test(this.link);
-  }
-
-  get innerContentIsImg(): boolean {
-    return this.innerContent.includes("/");
   }
 
   defaultButtonText(kind: Kind): string {
@@ -44,17 +29,5 @@ export class TextButtonComponent implements OnInit {
         return 'WATCH !'
     }
     return 'GO !';
-  }
-
-  defaultInnerContent(kind: Kind): string {
-    switch (kind) {
-      case Kind.GAMES:
-      case Kind.ANIMS:
-      case Kind.MUSIC:
-        return 'assets/icons/play-icon.png'
-      case Kind.ART:
-        return '👀'
-    }
-    return '👉';
   }
 }
