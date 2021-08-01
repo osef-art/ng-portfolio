@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Kind } from 'src/models/models';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -7,6 +8,10 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  get kind() {
+    return AppComponent.pageKind;
+  }
+
   scrollToTop() {
     AppComponent.scrollToTop();
   }

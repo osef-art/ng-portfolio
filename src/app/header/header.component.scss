@@ -1,7 +1,6 @@
 @use "sass:list";
 @import "../app.component.scss";
 
-$header-color: rgb(62.5, 60, 67.5);
 $icon-size: $header-height/2;
 $layer: 10;
 
@@ -14,8 +13,7 @@ $layer: 10;
   z-index: $layer;
   height: $header-height + 10px;
 
-  background: radial-gradient(rgb(72.5, 70, 80), $header-color);
-  background-color: $header-color;
+  background: radial-gradient(rgb(72.5, 70, 80), rgb(62.5, 60, 67.5));
   border-bottom: solid rgb(52.5, 50, 57.5) 7.5px;
 }
 
@@ -35,8 +33,7 @@ $layer: 10;
       transition: .4s;
     }
 
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
       background-color: rgba($color: $color, $alpha: .3);
       border-bottom: solid $color 5px;
 
@@ -58,8 +55,7 @@ $layer: 10;
   top: $header-height;
   z-index: $layer +1;
 
-  @each $name,
-  $color in $accent-colors {
+  @each $name, $color in $accent-colors {
     .label-container-#{$name} {
       @extend .light;
       text-align: center;
@@ -92,22 +88,32 @@ $layer: 10;
 
   .osef-logo {
     @extend %logo;
-    background: linear-gradient(white, white, #d7c8fa);
+    background: linear-gradient(white, white, rgb(215, 200, 250));
     background-clip: text;
   }
 
   .dot-logo {
     @extend %logo;
-    background: linear-gradient(to bottom right,
-        list.nth($sig-gradient, 1),
-        list.nth($sig-gradient, 2));
+    background: linear-gradient(
+      to bottom right,
+      list.nth($sig-gradient, 1),
+      list.nth($sig-gradient, 2)
+    );
     background-clip: text;
+    transition: .4s;
   }
 
-  &:hover,
-  &:focus {
+  @each $name, $color in $accent-colors {
+    .#{$name}-hue {
+      background: $color;
+      background-clip: text;
+    }
+  }
+
+  &:hover, &:focus {
     .osef-logo {
       letter-spacing: 7.5px;
     }
   }
 }
+
