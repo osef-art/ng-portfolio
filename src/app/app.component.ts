@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Lang } from 'src/models/models';
+import { Kind, Lang } from 'src/models/models';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { Lang } from 'src/models/models';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  static pageKind: Kind = Kind.NONE;
   static language : Lang = Lang.ENG;
 
   static switchLanguage() {
@@ -22,5 +23,13 @@ export class AppComponent {
         window.clearInterval(scrollToTop);
       }
     }, 8);
+  }
+
+  static resetPageKind() {
+    this.pageKind = Kind.NONE;
+  }
+
+  static setPageKind(kind: Kind) {
+    this.pageKind = kind;
   }
 }
