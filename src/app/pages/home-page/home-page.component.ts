@@ -11,6 +11,7 @@ import { Kind } from 'src/models/models';
 export class HomePageComponent implements OnInit {
   constructor(private titleService: Title) {
     this.titleService.setTitle("welcome.");
+    AppComponent.resetPageKind();
   }
 
   ngOnInit(): void {
