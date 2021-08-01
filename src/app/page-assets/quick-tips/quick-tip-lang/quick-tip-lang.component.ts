@@ -8,19 +8,22 @@ import { Lang } from 'src/models/models';
   styleUrls: ['./quick-tip-lang.component.scss']
 })
 export class QuickTipLangComponent {
-  get mainLang() {
-    return AppComponent.language;
-  }
+  pressed : boolean = false;
 
-  get Lang() : typeof Lang {
+  get Lang(): typeof Lang {
     return Lang;
   }
 
-  get langKeys() {
+  get mainLang(): Lang {
+    return AppComponent.language;
+  }
+
+  get langKeys(): Lang[] {
     return Object.values(Lang);
   }
 
   setLanguage(lang : Lang) {
     AppComponent.language = lang;
+    this.pressed = true
   }
 }

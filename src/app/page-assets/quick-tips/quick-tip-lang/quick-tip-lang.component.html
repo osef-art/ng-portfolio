@@ -1,29 +1,27 @@
 <div class="tip-lang-panel">
   <h2> did you know ?? </h2>
-  <div>
-    <p>
-      You can now <u>switch</u> between
-      <span>
-        <img src="assets/icons/ENG-icon.png"> <u>english</u>
-      </span>
-      and
-      <span>
-        <img src="assets/icons/FRA-icon.png"> <u>french</u>
-      </span>
-      on this website !
-    </p>
-    <div class="flags">
-      <ng-container *ngFor="let lang of langKeys">
-        <div (click)="setLanguage(lang)">
-          <img [src]="'assets/icons/flag-' + lang + '.gif'" class="animated">
-          <img [src]="'assets/icons/flag-' + lang + '.png'" class="static" [ngClass]="{'selected': mainLang == lang }">
-        </div>
-      </ng-container>
-    </div>
-    <p>
-      You can also change the main language <u>any time</u> by clicking on the
-      <u>flag icon</u> (<img [src]="'assets/icons/' + mainLang + '-icon.png'">)
-      at the very <u>bottom</u> of the page. 👇🏾
-    </p>
+  <p>
+    You can now <u>switch</u> between
+    <span>
+      <img src="assets/icons/ENG-icon.png"> <u>english</u>
+    </span>
+    and
+    <span>
+      <img src="assets/icons/FRA-icon.png"> <u>french</u>
+    </span>
+    on this website !
+  </p>
+  <div class="flags">
+    <ng-container *ngFor="let lang of langKeys">
+      <div [ngClass]="{'pressed': pressed && (lang == mainLang)}" (click)="setLanguage(lang);" (mouseleave)="pressed = false">
+        <img [src]="'assets/icons/flag-' + lang + '.gif'" class="animated">
+        <img [src]="'assets/icons/flag-' + lang + '.png'" class="static" [ngClass]="{'selected': mainLang == lang}">
+      </div>
+    </ng-container>
   </div>
+  <p>
+    You can also change the main language <u>any time</u> by clicking on the
+    <u>flag icon</u> (<img [src]="'assets/icons/' + mainLang + '-icon.png'">)
+    at the very <u>bottom</u> of the page. 👇🏾
+  </p>
 </div>
