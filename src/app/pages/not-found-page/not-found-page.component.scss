@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "sass:list";
+@import "../../app.component.scss";
+
+.wheel-anim {
+  position: absolute;
+  transform: scale(2);
+}
+
+.logo-404 {
+  @extend %mont-bold,;
+  font-size: 156pt;
+  margin: 50px;
+
+  .text {
+    position: relative;
+    cursor: crosshair;
+    z-index: 2;
+  }
+
+  .shadow {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -10px;
+    z-index: 1;
+    background: -webkit-linear-gradient(left,
+      list.nth($sig-gradient, 1),
+      list.nth($sig-gradient, 2)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.message {
+  font-size: 16pt;
+  color: rgba($color: $fake-white, $alpha: .3);
+}
+
+a {
+  @extend .white;
+  margin: 35px;
+  text-decoration: underline;
+  transition: .7s;
+
+  &:hover {
+    color: map.get($accent-colors, "games");
+    letter-spacing: 1px;
+  }
+}

@@ -15,13 +15,15 @@ export class GameCard {
   devProg: number = 0;
   languages: ProgLang[];
 
+  url: string;
   thumbnailUrl: string;
   thumbnailAnimatedUrl!: string;
 
-  constructor(title: string, desc: TextContent, thumbnailName: string, languages: ProgLang[], date: Date, devProg?: number) {
+  constructor(title: string, desc: TextContent, url: string, thumbnailName: string, languages: ProgLang[], date: Date, devProg?: number) {
     this.thumbnailUrl = "assets/thumbnails/" + thumbnailName + "-tbn.png";
     if (devProg) this.devProg = devProg;
     else this.isBeta = true;
+    this.url = 'games/' + url;
     this.languages = languages;
     this.title = title;
     this.desc = desc;
@@ -43,6 +45,7 @@ export class GameCardData {
            Let's see how far you can go !"
         ),
         "ministick",
+        "ministick",
         [ProgLang.JAVA],
         new Date(Date.UTC(2020, 3, 0, 0, 0, 0)), .8
       )
@@ -56,6 +59,7 @@ export class GameCardData {
           The controls and physics have quite changed since, but this one was\
           more focused on the different enemies abilities !"
         ),
+        "ministick.html",
         "ministick-js",
         [ProgLang.JS],
         new Date(Date.UTC(2019, 9, 0, 0, 0, 0)), .6
@@ -68,6 +72,7 @@ export class GameCardData {
         new TextContent(
           "A simple Tetris made with Javascript."
         ),
+        "tetris.html",
         "tetris",
         [ProgLang.JS],
         new Date(Date.UTC(2018, 5, 0, 0, 0, 0)), 1
@@ -81,6 +86,7 @@ export class GameCardData {
           "This was the final project I had to return in my first year\
           in computer science studies.\n It got me the maximal grade 😏"
         ),
+        "lost-in-space.html",
         "lost-in-space",
         [ProgLang.JS],
         new Date(Date.UTC(2018, 4, 0, 0, 0, 0)), 1
@@ -94,6 +100,7 @@ export class GameCardData {
           "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !"
         ),
         "ministick-moves",
+        "ministick-moves",
         [ProgLang.LIBGDX, ProgLang.JAVA],
         new Date(Date.UTC(2021, 2, 0, 0, 0, 0))
       )
@@ -105,6 +112,7 @@ export class GameCardData {
         new TextContent(
           "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !"
         ),
+        "KAPS-2",
         "kaps-v2-3",
         [ProgLang.LIBGDX, ProgLang.JAVA],
         new Date(Date.UTC(2021, 1, 0, 0, 0, 0))
@@ -118,6 +126,7 @@ export class GameCardData {
           "A 'Dr. Mario'-like colorful mini-game.\n\
           Match the colored capsules and get rid of every germ in the grid ! 🧪"
         ),
+        "KAPS",
         "kaps-2",
         [ProgLang.JAVA],
         new Date(Date.UTC(2019, 12, 0, 0, 0, 0)), .5
