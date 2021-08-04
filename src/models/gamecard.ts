@@ -15,19 +15,27 @@ export class GameCard {
   devProg: number = 0;
   languages: ProgLang[];
 
-  url: string;
+  link: string;
   thumbnailUrl: string;
   thumbnailAnimatedUrl!: string;
 
-  constructor(title: string, desc: TextContent, url: string, thumbnailName: string, languages: ProgLang[], date: Date, devProg?: number) {
-    this.thumbnailUrl = "assets/thumbnails/" + thumbnailName + "-tbn.png";
+  constructor(title: string, desc: TextContent, path: string, languages: ProgLang[], date: Date, devProg?: number, thumbUrl?: string) {
+    this.thumbnailUrl = "assets/thumbnails/" + (thumbUrl ? thumbUrl : path) + "-tbn.png";
+    this.date = date;this.languages = languages;
     if (devProg) this.devProg = devProg;
     else this.isBeta = true;
-    this.url = 'games/' + url;
-    this.languages = languages;
     this.title = title;
     this.desc = desc;
-    this.date = date;
+
+    if (this.isJsGame) {
+      this.link = "/js-games/" + path + ".html";
+    } else {
+      this.link = "https://github.com/osef-art/" + path + "/archive/refs/heads/main.zip"
+    }
+  }
+
+  get isJsGame() : boolean {
+    return this.languages.includes(ProgLang.JS);
   }
 }
 
@@ -45,7 +53,6 @@ export class GameCardData {
            Let's see how far you can go !"
         ),
         "ministick",
-        "ministick",
         [ProgLang.JAVA],
         new Date(Date.UTC(2020, 3, 0, 0, 0, 0)), .8
       )
@@ -59,10 +66,10 @@ export class GameCardData {
           The controls and physics have quite changed since, but this one was\
           more focused on the different enemies abilities !"
         ),
-        "ministick.html",
-        "ministick-js",
+        "ministick/ministick",
         [ProgLang.JS],
-        new Date(Date.UTC(2019, 9, 0, 0, 0, 0)), .6
+        new Date(Date.UTC(2019, 9, 0, 0, 0, 0)), .6,
+        "ministick-js",
       )
     )
 
@@ -72,10 +79,10 @@ export class GameCardData {
         new TextContent(
           "A simple Tetris made with Javascript."
         ),
-        "tetris.html",
-        "tetris",
+        "TETRIIIS/tetris",
         [ProgLang.JS],
-        new Date(Date.UTC(2018, 5, 0, 0, 0, 0)), 1
+        new Date(Date.UTC(2018, 5, 0, 0, 0, 0)), 1,
+        "tetris",
       )
     )
 
@@ -86,10 +93,10 @@ export class GameCardData {
           "This was the final project I had to return in my first year\
           in computer science studies.\n It got me the maximal grade 😏"
         ),
-        "lost-in-space.html",
-        "lost-in-space",
+        "lost_in_space/lost_in_space",
         [ProgLang.JS],
-        new Date(Date.UTC(2018, 4, 0, 0, 0, 0)), 1
+        new Date(Date.UTC(2018, 4, 0, 0, 0, 0)), 1,
+        "lost-in-space",
       )
     )
 
@@ -99,7 +106,6 @@ export class GameCardData {
         new TextContent(
           "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !"
         ),
-        "ministick-moves",
         "ministick-moves",
         [ProgLang.LIBGDX, ProgLang.JAVA],
         new Date(Date.UTC(2021, 2, 0, 0, 0, 0))
@@ -112,8 +118,7 @@ export class GameCardData {
         new TextContent(
           "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !"
         ),
-        "KAPS-2",
-        "kaps-v2-3",
+        "kaps-libgdx",
         [ProgLang.LIBGDX, ProgLang.JAVA],
         new Date(Date.UTC(2021, 1, 0, 0, 0, 0))
       )
@@ -126,8 +131,7 @@ export class GameCardData {
           "A 'Dr. Mario'-like colorful mini-game.\n\
           Match the colored capsules and get rid of every germ in the grid ! 🧪"
         ),
-        "KAPS",
-        "kaps-2",
+        "kaps",
         [ProgLang.JAVA],
         new Date(Date.UTC(2019, 12, 0, 0, 0, 0)), .5
       )
