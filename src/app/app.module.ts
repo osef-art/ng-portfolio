@@ -14,6 +14,7 @@ import { BitmosefComponent } from './bitmosef/bitmosef.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CarouselComponent } from './page-assets/carousel/carousel.component';
 import { GameCardComponent } from './pages/games-page/game-card/game-card.component';
+import { GamePageComponent } from './pages/games-page/game-page/game-page.component';
 import { GamesPageComponent } from './pages/games-page/games-page.component';
 import { AnimsPageComponent } from './pages/anims-page/anims-page.component';
 import { MusicPageComponent } from './pages/music-page/music-page.component';
@@ -21,6 +22,7 @@ import { RandomTipComponent } from './page-assets/quick-tips/random-tip/random-t
 import { TextButtonComponent } from './page-assets/text-button/text-button.component';
 import { IconButtonComponent } from './page-assets/icon-button/icon-button.component';
 import { QuickTipTabComponent } from './page-assets/quick-tips/quick-tip-tab/quick-tip-tab.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { QuickTipLangComponent } from './page-assets/quick-tips/quick-tip-lang/quick-tip-lang.component';
 import { FeaturedArticleComponent } from './page-assets/featured-article/featured-article.component';
 
@@ -31,6 +33,7 @@ import { FocusRemoverDirective } from './directives/focus-remover.directive';
     FeaturedArticleComponent,
     FocusRemoverDirective,
     QuickTipLangComponent,
+    NotFoundPageComponent,
     QuickTipTabComponent,
     TextButtonComponent,
     IconButtonComponent,
@@ -41,6 +44,7 @@ import { FocusRemoverDirective } from './directives/focus-remover.directive';
     CarouselComponent,
     BitmosefComponent,
     GameCardComponent,
+    GamePageComponent,
     HomePageComponent,
     ArticleComponent,
     AboutMeComponent,

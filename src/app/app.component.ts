@@ -7,7 +7,7 @@ import { Kind, Lang } from 'src/models/models';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  static pageKind: Kind = Kind.NONE;
+  static pageKind : Kind = Kind.NONE;
   static language : Lang = Lang.ENG;
 
   static switchLanguage() {

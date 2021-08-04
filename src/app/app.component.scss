@@ -1,15 +1,17 @@
+@use "sass:list";
 @import "../styles.scss";
 
 $header-height: 75px;
 $page-max-width: 900px;
 
 .header-spacer {
-  height: $header-height;
+  height: $header-height + 15px;
 }
 
 .title-zone {
   @extend .line, .title, .flex;
-  margin: 40px 0;
+  user-select: none;
+  margin: 30px 0;
   padding-left: 5%;
   font-size: 48pt;
 
@@ -36,24 +38,6 @@ $page-max-width: 900px;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
-  }
-
-  .title-shadow-home {
-    @extend %title-shadow;
-    background: -webkit-linear-gradient(left, #a0a0af, #af7dfa);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    transition: ease-out .3s;
-  }
-
-  &:hover .title-shadow-home {
-    margin-top: 5px;
-    margin-left: -5px;
-    background: -webkit-linear-gradient(left, #af7dfa, #fa55a0);
-    background-clip: text;
-    -webkit-background-clip: text;
   }
 }
 
