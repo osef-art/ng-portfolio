@@ -1,5 +1,42 @@
-<a target="_blank" [href]="link">
-  <div class="icon-button">
-    <img [src]="icon">
-  </div>
-</a>
+<!-- RETURN BUTTON  -->
+<ng-container *ngIf="icon.includes('return'); else download">
+  <a onclick="history.back()">
+    <div class="return-button">
+      <img [src]="icon">
+    </div>
+  </a>
+</ng-container>
+
+<!-- DOWNLOAD BUTTON -->
+<ng-template #download>
+  <ng-container *ngIf="isURL(link) && (icon.includes('download') || icon.includes('play')); else url">
+    <a target="_blank" [href]="link" (click)="triggered = true">
+      <div [ngClass]="{'download-button': icon.includes('download'), 'play-download-button': icon.includes('play'), 'dl-anim': triggered}">
+        <img class="dl-icon" [src]="icon.includes('play') ? icon : 'assets/icons/arrow-down-icon.png'">
+        <div class="tick-icon">
+          <img src="assets/icons/tick-icon.png">
+        </div>
+      </div>
+    </a>
+  </ng-container>
+</ng-template>
+
+<!-- URL BUTTON -->
+<ng-template #url>
+  <ng-container *ngIf="isURL(link) || isNavLink; else router">
+    <a [target]="isNavLink ? '' : '_blank'" [href]="link">
+      <div class="icon-button" [ngClass]="{'growing-button': icon.includes('github')}">
+        <img [src]="icon">
+      </div>
+    </a>
+  </ng-container>
+</ng-template>
+
+<!-- ROUTER BUTTON -->
+<ng-template #router>
+  <a [routerLink]="link" routerLinkActive="active">
+    <div class="icon-button">
+      <img [src]="icon">
+    </div>
+  </a>
+</ng-template>

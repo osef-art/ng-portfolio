@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 import { Kind } from 'src/models/models';
 
 @Component({
@@ -6,22 +7,32 @@ import { Kind } from 'src/models/models';
   templateUrl: './icon-button.component.html',
   styleUrls: ['./icon-button.component.scss']
 })
-export class IconButtonComponent {
-  @Input() kind : Kind = Kind.NONE;
+export class IconButtonComponent implements OnInit {
+  @Input() kind : Kind = AppComponent.pageKind;
   @Input() link !: string;
   @Input() icon !: string;
+  triggered: boolean = false;
 
   ngOnInit(): void {
     if (!this.icon) {
       this.icon = this.defaultIcon(this.kind);
     }
+
+    if (!this.isURL(this.icon) && this.icon.length > "🍆".length) {
+      this.icon = 'assets/icons/' + this.icon + '-icon.png';
+    }
+
     if (!this.link) {
       this.link = this.kind;
     }
   }
 
-  get linkIsURL(): boolean {
-    return /https:\/\/.+/.test(this.link);
+  get isNavLink() {
+    return this.link.includes('/');
+  }
+
+  isURL(link : string): boolean {
+    return link.includes("http");
   }
 
   get iconIsImg(): boolean {
@@ -33,7 +44,7 @@ export class IconButtonComponent {
       case Kind.GAMES:
       case Kind.ANIMS:
       case Kind.MUSIC:
-        return 'assets/icons/play-icon.png'
+        return 'play'
       case Kind.ART:
         return '👀'
     }
