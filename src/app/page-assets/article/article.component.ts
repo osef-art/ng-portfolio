@@ -59,4 +59,8 @@ export class ArticleComponent implements OnInit {
     });
     return parsedTxt;
   }
+
+  scrollToTop() {
+    AppComponent.scrollToTop();
+  }
 }
