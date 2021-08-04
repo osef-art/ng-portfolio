@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { AppComponent } from 'src/app/app.component';
+import { Title } from '@angular/platform-browser';
 import { Kind } from 'src/models/models';
 
 @Component({
@@ -15,10 +15,10 @@ export class HomePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.buildWave(60, 60);
+    HomePageComponent.buildWave(60, 60);
   }
 
-  buildWave(w: number, h: number) {
+  static buildWave(w: number, h: number) {
     const a = h / 4;
     const y = h / 2;
     const m = .512286623256592433;

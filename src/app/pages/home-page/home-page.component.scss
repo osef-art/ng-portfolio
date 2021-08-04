@@ -1,13 +1,28 @@
+@use "sass:list";
 @import "../../app.component.scss";
 
 .title-zone {
   margin-bottom: 0;
+
+  .title-shadow-home {
+    @extend %title-shadow;
+    background: -webkit-linear-gradient(left, rgb(160, 160, 175), rgb(175, 125, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: ease-out .3s;
+  }
 
   svg {
     position: absolute;
     overflow: hidden;
     margin: 0 auto;
     z-index: 0;
+  }
+
+  .wheel-anim {
+    margin-left: 110px;
   }
 
   .wave-anim {
@@ -17,10 +32,6 @@
       stroke-dasharray: 0 16 101 16;
       animation: move-the-wave 5000ms linear infinite;
     }
-  }
-
-  .wheel-anim {
-    margin-left: 110px;
   }
 
   @keyframes move-the-wave {
@@ -33,6 +44,17 @@
       stroke-dashoffset: -133;
       transform: translate3d(-90px, 0, 0);
     }
+  }
+
+  &:hover .title-shadow-home {
+    margin-top: 5px;
+    margin-left: -5px;
+    background: -webkit-linear-gradient(left,
+      list.nth($sig-gradient, 1),
+      list.nth($sig-gradient, 2)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 }
 
@@ -53,8 +75,7 @@
     font-size: 18pt;
   }
 
-  @each $name,
-  $color in $accent-colors {
+  @each $name, $color in $accent-colors {
     .#{$name}-link {
       color: white;
       display: inline-block;
