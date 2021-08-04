@@ -2,6 +2,14 @@
 @use "sass:list";
 @import "../../app.component.scss";
 
+icon-button {
+  margin: 25px;
+
+  &+span {
+    font-size: 16pt;
+  }
+}
+
 .wheel-anim {
   position: absolute;
   transform: scale(2);
@@ -9,6 +17,7 @@
 
 .logo-404 {
   @extend %mont-bold,;
+  user-select: none;
   font-size: 156pt;
   margin: 50px;
 
