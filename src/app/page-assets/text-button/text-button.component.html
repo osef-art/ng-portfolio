@@ -1,16 +1,4 @@
-<ng-container *ngIf="linkIsURL; else navButton">
-  <a target="_blank" [href]="link">
-    <ng-container *ngTemplateOutlet="button"></ng-container>
-  </a>
-</ng-container>
-
-<ng-template #navButton>
-  <a [routerLink]="'/' + link" routerLinkActive="active">
-    <ng-container *ngTemplateOutlet="button"></ng-container>
-  </a>
-</ng-template>
-
-<ng-template #button>
+<a [target]="isURL(link) ? '_blank' : ''" [href]="link">
   <div [class]="kind + '-text-button'">
     <span class="inner-txt"> {{ text }} </span>
     <div class="inner-btn">
@@ -19,7 +7,7 @@
       </ng-container>
     </div>
   </div>
-</ng-template>
+</a>
 
 <ng-template #innerStuff>
   <span> {{ icon }} </span>

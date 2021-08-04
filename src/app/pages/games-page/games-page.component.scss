@@ -1,9 +1,5 @@
 @import "../../app.component.scss";
 
-html, body {
-  scrollbar-color: rgb(100, 100, 115) rgb(134, 87, 144);
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -27,7 +23,7 @@ li {
 }
 
 .game-column {
-  width: 85%;
+  width: 95%;
   max-width: $page-max-width;
   margin-bottom: 50px;
 

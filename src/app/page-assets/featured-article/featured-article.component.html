@@ -31,11 +31,7 @@
         <text-button [kind]="kind" [text]="btnText" [link]="link"></text-button>
 
         <ng-container *ngIf="githubLink">
-          <a target="_blank" [href]="githubLink" title="Check the github page !">
-            <div class="github-button">
-              <img src="http://thomas-blondel.fr/img/github-logo.png">
-            </div>
-          </a>
+          <icon-button [kind]="kind" [link]="githubLink" icon="http://thomas-blondel.fr/img/github-logo.png" title="Check the github page !"></icon-button>
         </ng-container>
       </div>
 

@@ -53,7 +53,7 @@ export class Article {
         une version plus poussée de *ministick*.\n\
         L'idéal, ce serait de rendre le jeu beaucoup plus\
         *technique*, avec des *mécaniques* et des *combos uniques*. ça rime.\n\
-        J'ai déjà fluidifié l'animations des mouvements, et j'ai aussi dessiné\
+        J'ai déjà fluidifié l'animation des mouvements, et j'ai aussi dessiné\
         plein de *nouveaux moves* que vous pouvez tester *tout de suite* !!\n\
         Hésitez pas à check le Github 👀"
       );

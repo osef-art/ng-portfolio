@@ -14,10 +14,10 @@ export class GamesPageComponent {
   gameList : GameCard[] = [];
 
   constructor(private titleService: Title) {
+    this.titleService.setTitle("games.");
+    AppComponent.setPageKind(Kind.GAMES);
     new GameCardData();
     this.pinnedGames = GameCardData.cards.slice(0, 4);
     this.gameList = GameCardData.cards;
-    this.titleService.setTitle("games.");
-    AppComponent.setPageKind(Kind.GAMES);
   }
 }
