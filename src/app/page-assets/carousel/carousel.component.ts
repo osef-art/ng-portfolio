@@ -10,14 +10,14 @@ export class CarouselComponent implements OnInit {
   @Input() name!: string;
   @Input() timeDuringSlides: number = 5;
   @Input() timeBetweenSlides: number = 1;
-  urls: string[] = [];
+  paths: string[] = [];
   sliderId!: string;
 
   constructor() {}
 
   ngOnInit() {
     this.sliderId = this.name + "-slider";
-    this.urls = new URLsData().data[this.name];
+    this.paths = new URLsData().data[this.name];
   }
 
   animateCarousel(): boolean {
