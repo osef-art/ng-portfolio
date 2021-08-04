@@ -20,7 +20,13 @@ export class GameCardComponent {
   }
 
   get gameDesc() {
-    return this.game.desc.in(AppComponent.language);
+    var desc : string = this.game.desc.in(AppComponent.language);
+    var regex : RegExp = /(.*)\n/;
+
+    while (regex.test(desc)) {
+      desc = desc.replace(regex, '$1 <br>\r');
+    }
+    return desc;
   }
 
   get formattedDate() {
@@ -36,6 +42,5 @@ export class GameCardComponent {
       case ProgLang.LIBGDX:
         return "https://libgdx.com/assets/brand/stacked_dark.png";
     }
-    return "";
   }
 }

@@ -41,8 +41,17 @@
   }
 
   .desc {
-    margin: 15px 0;
+    margin: 10px 0;
     font-size: 12pt;
+  }
+
+  .center {
+    margin: 5px 0;
+
+    img {
+      cursor: pointer;
+      height: 50px;
+    }
   }
 
   icon-button {
@@ -72,7 +81,7 @@
 }
 
 @mixin colored-card($name) {
-  $card-color: map.get($accent-colors, $name);
+  $card-color: map.get($accent-colors-dimmed, $name);
   background-color: rgba($color: $card-color, $alpha: .4);
 
   h1 {
@@ -111,13 +120,13 @@
 }
 
 .beta {
-  @include colored-card("anims");
+  @include colored-card("art");
 
   sup {
     font-weight: initial;
     font-size: 9pt;
     padding: 2.5px 5px;
-    background-color: map.get($accent-colors-dark, "anims");
+    background-color: map.get($accent-colors, "art");
     border-radius: 5px;
     text-shadow: none;
   }

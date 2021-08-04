@@ -1,17 +1,21 @@
-<div class="game-card" [ngClass]="{ 'beta': game.isBeta }">
+<div class="game-card" [ngClass]="{'beta': game.isBeta}">
   <div class="thumbnail">
     <!-- <img class="animated-tbn" src="assets/thumbnails/ministick-clip-2.gif"> -->
     <img class="static" [src]="game.thumbnailUrl">
   </div>
 
   <h1>
-    {{ game.title }}
-    <sup *ngIf="game.isBeta">BETA</sup>
+    {{ game.title }} <sup *ngIf="game.isBeta">BETA</sup>
   </h1>
-  <div class="desc"> {{ gameDesc }} </div>
+  <div class="desc" [innerHtml]="gameDesc"> </div>
 
   <div class="center">
-    <icon-button [kind]="Kind.GAMES" [link]="''" [title]="'Play ' + game.title + '!'"></icon-button>
+    <div class="spacer"></div>
+    <img src="assets/icons/buttons-icon.png" title="Coming soon! 👀">
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <icon-button [kind]="Kind.GAMES" [link]="game.link" [title]="'Play ' + game.title + '!'"></icon-button>
+    <div class="spacer"></div>
   </div>
 
   <div class="info">
