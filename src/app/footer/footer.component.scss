@@ -62,10 +62,15 @@ footer {
     @extend .flex-y;
   }
 
+  .side-zone {
+    @extend .flex;
+    min-width: 20%;
+  }
+
   .lang-box {
-    @extend .flex-y, .bolder;
+    @extend .flex-y, .center, .bolder;
     cursor: pointer;
-    min-width: $box-size * 2;
+    margin: 0 25px;
     color: rgba($color: $fake-white, $alpha: .6);
 
     img {
@@ -79,6 +84,39 @@ footer {
     &:hover img {
       opacity: 1;
       transform: scale(1.2);
+    }
+  }
+
+  .credit-box {
+    @extend .flex-y, .center, .thin;
+    margin: 0 25px;
+    text-align: center;
+    font-size: 10pt;
+    color: rgba($color: $fake-white, $alpha: .6);
+    transition: .5s;
+
+    img {
+      opacity: .6;
+      width: 40px;
+      height: 40px;
+      transition: .3s;
+    }
+
+    b {
+      @extend .bolder;
+
+      a {
+        @extend %discrete-link;
+      }
+    }
+
+    a:focus, &:hover {
+      color: rgba($color: $fake-white, $alpha: .8);
+
+      img {
+        opacity: 1;
+        transform: scale(1.2);
+      }
     }
   }
 
