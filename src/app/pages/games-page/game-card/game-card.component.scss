@@ -56,6 +56,7 @@
   }
 
   icon-button {
+    @extend .flex;
     transform: scale(0.8);
   }
 
