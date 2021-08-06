@@ -113,7 +113,7 @@ export class GameCardData {
         "ministick-moves",
         new TextContent(
           "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !",
-          "un petit environnement me servan de bac à sable pour tester des mécaniques et la\
+          "un petit environnement me servant de bac à sable pour tester des mécaniques et la\
           physique de la prochaine version de ministick !"
         ),
         "ministick-moves",
@@ -127,7 +127,7 @@ export class GameCardData {
         "KAPS",
         new TextContent(
           "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !",
-          "une autre version de KAPS utilisant une autre librairie et avec un code plus optimisé.\n\
+          "une autre version de KAPS utilisant une librairie différente et avec un code plus optimisé.\n\
           pas mal de nouveaux sidekicks ont été ajoutés !"
         ),
         "kaps-libgdx",
@@ -144,7 +144,7 @@ export class GameCardData {
           Match the colored capsules and get rid of every germ in the grid\
           with the help of your awesome sidekicks ! 🧪",
           "KAPS est un mini-jeu à la 'Dr. Mario' où tu dois débarasser la\
-          grille de tous les virus avec l'aide de tes gélules et tes sidekicks géniaux !"
+          grille de tous les virus avec l'aide de tes gélules et tes sidekicks géniaux ! 🧪"
         ),
         "kaps",
         [ProgLang.JAVA],
