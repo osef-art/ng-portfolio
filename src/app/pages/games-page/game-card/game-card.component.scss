@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:math";
 @import "../../../../styles.scss";
 
 %card {
@@ -109,7 +110,7 @@
     $bar-height: 10px;
     @extend .flex;
     height: $bar-height;
-    border-radius: $bar-height / 2;
+    border-radius: math.div($bar-height , 2);
 
     .gauge {
       height: inherit;

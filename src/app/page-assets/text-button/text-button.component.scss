@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:math";
 @import "../../app.component.scss";
 
 $button-height: 50px;
@@ -46,7 +47,7 @@ $button-height: 50px;
         }
 
         img {
-          margin-top: -$inner-padding / 2;
+          margin-top: math.div(-$inner-padding, 2);
           height: 40%;
         }
       }

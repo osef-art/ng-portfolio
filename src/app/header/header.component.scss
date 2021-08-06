@@ -1,7 +1,8 @@
+@use "sass:math";
 @use "sass:list";
 @import "../app.component.scss";
 
-$icon-size: $header-height/2;
+$icon-size: math.div($header-height, 2);
 $layer: 10;
 
 .page-header {
