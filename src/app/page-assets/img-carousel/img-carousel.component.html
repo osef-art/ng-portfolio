@@ -1,0 +1,45 @@
+<ng-container *ngIf="nbImg > 1; else single">
+  <div class="carousel-wrapper" [style.max-height.px]="height" (mouseenter)="stopSliding()" (mouseleave)="startSliding()">
+    <div class="carousel">
+      <ul [ngStyle]="{'width.%': 100 * nbImg, 'left.%': -100 * selected}">
+        <ng-container *ngFor="let url of slides">
+          <li><img [src]="url"/></li>
+        </ng-container>
+      </ul>
+    </div>
+
+    <!-- abstract radio buttons -->
+    <ng-container *ngFor="let n of indexes">
+      <input type="radio" name="controls" [id]="name + '-button-' + n" [checked]="n ? '' : 'checked'" [value]="n"
+        [(ngModel)]="selected" />
+    </ng-container>
+
+    <ng-container *ngFor="let n of indexes">
+      <!-- navigation dots -->
+      <label class="nav-dot" [for]="name + '-button-' + n" [ngStyle]="{
+          'left.%': 50 + ((n - ((nbImg-1)/2)) * 5),
+          'background-color': n == selected ? 'white' : ''
+        }">
+      </label>
+
+      <!-- arrows -->
+      <label class="left-arrow" [for]="name + '-button-' + moduled(n-1)"
+        [ngStyle]="{'display': n == selected ? 'block' : 'none'}">
+        <img src="assets/icons/chevron-left-icon.png" alt="<">
+      </label>
+
+      <label class="right-arrow" [for]="name + '-button-' + moduled(n+1)"
+        [ngStyle]="{'display': n == selected ? 'block' : 'none'}">
+        <img src="assets/icons/chevron-right-icon.png" alt=">">
+      </label>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #single>
+  <ng-container *ngFor="let url of slides">
+    <div class="frame" [style.max-height.px]="height">
+      <img [src]="url">
+    </div>
+  </ng-container>
+</ng-template>

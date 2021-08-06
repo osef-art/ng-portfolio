@@ -1,0 +1,123 @@
+@use "sass:math";
+@import "../../../styles.scss";
+
+.frame {
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 15px;
+
+  img {
+    @extend .line;
+  }
+}
+
+.carousel-wrapper {
+  @extend .flex;
+  position: relative;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  input {
+    @extend .hidden;
+  }
+}
+
+.nav-dot {
+  $dot-size: 10px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: math.div(-$dot-size, 2);
+
+  bottom: -25px;
+  width: $dot-size;
+  height: $dot-size;
+  z-index: 2;
+
+  background-color: rgba($color: $fake-white, $alpha: .6);
+  border-radius: 50%;
+  transition: .4s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+%arrow {
+  @extend .hidden;
+  $arrow-size: 25px;
+
+  cursor: pointer;
+  position: absolute;
+
+  top: 50%;
+  z-index: 2;
+  opacity: 0.6;
+  margin-top: math.div(-$arrow-size, 2);
+  font-size: $arrow-size;
+  transition: .4s;
+
+  img {
+    height: $arrow-size;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.left-arrow {
+  @extend %arrow;
+  left: 5px;
+}
+
+.right-arrow {
+  @extend %arrow;
+  right: 5px;
+}
+
+.carousel {
+  @extend .line;
+  overflow: hidden;
+  border-radius: 15px;
+
+  ul {
+    @extend .center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  li {
+    @extend .line;
+
+    img {
+      @extend .line;
+      border-radius: 15px;
+      transition: .5s;
+    }
+  }
+
+  &:hover {
+    & ~ .nav-dot {
+      opacity: .15;
+    }
+
+    & ~ %arrow {
+      opacity: .25;
+    }
+
+    img {
+      filter: brightness(110%) ;
+    }
+  }
+}
