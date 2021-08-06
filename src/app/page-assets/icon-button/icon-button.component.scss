@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:math";
 @import "../../../styles.scss";
 
 $button-size: 50px;
@@ -66,20 +67,20 @@ $button-size: 50px;
   }
 }
 
-.icon-button {
+.icon-button, .growing-button, .return-button {
   @extend .center;
   width: $button-size;
   height: $button-size;
   overflow: hidden;
 
   font-size: 30px;
-  border-radius: $button-size / 2;
+  border-radius: math.div($button-size , 2);
   background-color: map.get($accent-colors, "games");
   box-shadow: 0 5px 5px rgba($color: black, $alpha: .2);
   transition: .5s;
 
   img {
-    height: $button-size * 2 / 3;
+    height: math.div($button-size * 2, 3);
     transition: .7s;
   }
 }
@@ -89,7 +90,7 @@ $button-size: 50px;
 
   .dl-icon {
     position: absolute;
-    height: $button-size / 2;
+    height: math.div($button-size , 2);
     transition: .3s;
   }
 
@@ -98,7 +99,7 @@ $button-size: 50px;
     position: relative;
     height: inherit;
     width: inherit;
-    top: -$button-size * 3 / 2;
+    top: math.div(-$button-size * 3, 2);
     background: rgb(50, 225, 200);
     border-bottom: solid white $button-size * 2;
 
@@ -128,11 +129,23 @@ $button-size: 50px;
   }
 }
 
-.growing-button, .return-button {
-  @extend .icon-button;
+.return-button {
+  transform: scale(0.8);
+}
+
+.labeled-return-button {
+  margin: 20px;
+}
+
+.button-label {
+  font-size: 14pt;
+  padding: 0 10px;
 }
 
 a {
+  cursor: pointer;
+  display: inline-block;
+
   &:focus .icon-button, .icon-button:hover {
     transform: scale(1.2);
   }
@@ -144,14 +157,18 @@ a {
   }
 
   &:focus .return-button, .return-button:hover {
+    transform: scale(1);
+
     img {
       animation: back-forth .8s;
       animation-iteration-count: infinite;
     }
   }
 
-  &:focus .download-button, .download-button:hover .dl-icon {
-    transform: translateY(-2.5px);
-    border-bottom: solid white $button-size / 12.5;
+  &:focus .download-button, .download-button:hover{
+     .dl-icon {
+      transform: translateY(-2.5px);
+      border-bottom: solid white math.div($button-size , 1)2.5;
+    }
   }
 }

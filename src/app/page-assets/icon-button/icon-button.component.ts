@@ -11,6 +11,7 @@ export class IconButtonComponent implements OnInit {
   @Input() kind : Kind = AppComponent.pageKind;
   @Input() link !: string;
   @Input() icon !: string;
+  @Input() label : boolean = false;
   triggered: boolean = false;
 
   ngOnInit(): void {
@@ -49,5 +50,12 @@ export class IconButtonComponent implements OnInit {
         return '👀'
     }
     return '👉';
+  }
+
+  get buttonLabel() : string {
+    if (AppComponent.pageKind != Kind.NONE) {
+      return "Return to " + AppComponent.pageKind;
+    }
+    return "Previous page";
   }
 }

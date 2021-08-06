@@ -1,8 +1,11 @@
 <!-- RETURN BUTTON  -->
 <ng-container *ngIf="icon.includes('return'); else download">
-  <a onclick="history.back()">
-    <div class="return-button">
-      <img [src]="icon">
+  <a [ngClass]="{'labeled-return-button': label}" onclick="history.back()">
+    <div class="center">
+      <div class="return-button">
+        <img [src]="icon">
+      </div>
+      <span class="button-label" *ngIf="label"> {{ buttonLabel }} </span>
     </div>
   </a>
 </ng-container>
