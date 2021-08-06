@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../home-page/home-page.component.scss";
 
 $links: (
@@ -16,18 +17,30 @@ $links: (
   transition: ease-out .3s;
 }
 
+.look {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to bottom,
+    rgba($color: black, $alpha: 1),
+    rgba($color: black, $alpha: 1),
+    rgba($color: black, $alpha: 0),
+  );
+}
+
 .bio {
   @extend %mont;
   text-align: justify;
-  width: 70%;
+  max-width: math.div($page-max-width * 2, 3);
+  width: 80%;
 
   .intro {
     @extend %mont-bold;
+    text-align: center;
     font-size: 14pt;
   }
 
   p {
     color: $fake-white;
+    line-height: 16pt;
     font-size: 12pt;
     margin: 30px 0;
 
