@@ -16,7 +16,6 @@ export class FeaturedArticleComponent extends ArticleComponent {
     this.guestName = '@' + this.guestName;
 
     this.regexPatterns[this.guestName] = /\[guest\]/;
-    this.regexPatterns['<a href="$2">$1</a>'] = /\((.+)\)\[(.+)\]/;
+    this.regexPatterns['<a target="_blank" href="$2">$1</a>'] = /\((.+)\)\[(.+)\]/;
   }
-
 }
