@@ -28,7 +28,7 @@ export class TextContent {
   }
 }
 
-export class URLsData {
+export class ThumbnailData {
   data: { [key: string]: string[] } = {};
 
   constructor() {
@@ -38,7 +38,6 @@ export class URLsData {
         this.data[id].push("assets/thumbnails/" + id + "-clip-" + (n + 1) + ".gif")
       }
     });
-    this.data["art"] = ['canyon.jpg', 'mountains2.jpg', 'smoke.jpg', 'padami1.png'].map(name => "assets/wallpapers/" + name);
     this.data["collab"] = ["assets/thumbnails/potsdealer.png"];
   }
 
