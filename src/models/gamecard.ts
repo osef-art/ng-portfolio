@@ -50,7 +50,9 @@ export class GameCardData {
         "ministick.",
         new TextContent(
           "An addictive, infinite and super-fast beat-them all.\n\
-           Let's see how far you can go !"
+           Let's see how far you can go !",
+           "Un 'beat-them-all' assez rapide et nerveux.\n\
+           Jusqu'où tiendrez-vous ? 👀"
         ),
         "ministick",
         [ProgLang.JAVA],
@@ -64,7 +66,10 @@ export class GameCardData {
         new TextContent(
           "The very first playable version of ministick !\n\
           The controls and physics have quite changed since, but this one was\
-          more focused on the different enemies abilities !"
+          more focused on the different enemies abilities !",
+          "Alors ça, c'était la toute première version de ministick !\n\
+          Les contrôles et l'environnement ont beaucoup changé depuis,\n\
+          mais j'ai pu tester pas mal de trucs en terme de code."
         ),
         "ministick/ministick",
         [ProgLang.JS],
@@ -77,7 +82,8 @@ export class GameCardData {
       new GameCard(
         "TETRIS !",
         new TextContent(
-          "A simple Tetris made with Javascript."
+          "A simple Tetris made with Javascript (i was bored)",
+          "Un petit Tetris fait en Javascript. Je m'ennuyais."
         ),
         "TETRIIIS/tetris",
         [ProgLang.JS],
@@ -90,8 +96,10 @@ export class GameCardData {
       new GameCard(
         "Lost in Space",
         new TextContent(
-          "This was the final project I had to return in my first year\
-          in computer science studies.\n It got me the maximal grade 😏"
+          "This space shooter was the final project I had to return in my first year\
+          in computer science studies.\n It got me the maximal grade 😏",
+          "Ce shooter est le projet final que je devais rendre à la fin de ma première\
+          année de licence.\n Ouais j'ai eu 20 ouais. 😏"
         ),
         "lost_in_space/lost_in_space",
         [ProgLang.JS],
@@ -104,7 +112,9 @@ export class GameCardData {
       new GameCard(
         "ministick-moves",
         new TextContent(
-          "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !"
+          "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !",
+          "un petit environnement me servan de bac à sable pour tester des mécaniques et la\
+          physique de la prochaine version de ministick !"
         ),
         "ministick-moves",
         [ProgLang.LIBGDX, ProgLang.JAVA],
@@ -116,7 +126,9 @@ export class GameCardData {
       new GameCard(
         "KAPS",
         new TextContent(
-          "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !"
+          "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !",
+          "une autre version de KAPS utilisant une autre librairie et avec un code plus optimisé.\n\
+          pas mal de nouveaux sidekicks ont été ajoutés !"
         ),
         "kaps-libgdx",
         [ProgLang.LIBGDX, ProgLang.JAVA],
@@ -129,11 +141,14 @@ export class GameCardData {
         "KAPS",
         new TextContent(
           "A 'Dr. Mario'-like colorful mini-game.\n\
-          Match the colored capsules and get rid of every germ in the grid ! 🧪"
+          Match the colored capsules and get rid of every germ in the grid\
+          with the help of your awesome sidekicks ! 🧪",
+          "KAPS est un mini-jeu à la 'Dr. Mario' où tu dois débarasser la\
+          grille de tous les virus avec l'aide de tes gélules et tes sidekicks géniaux !"
         ),
         "kaps",
         [ProgLang.JAVA],
-        new Date(Date.UTC(2019, 12, 0, 0, 0, 0)), .5
+        new Date(Date.UTC(2019, 12, 0, 0, 0, 0)), .8
       )
     )
 
