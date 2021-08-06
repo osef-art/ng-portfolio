@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 src/source/*
 
-*.bat
+/bin
