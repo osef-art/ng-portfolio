@@ -2,14 +2,6 @@
 @use "sass:list";
 @import "../../app.component.scss";
 
-icon-button {
-  margin: 25px;
-
-  &+span {
-    font-size: 16pt;
-  }
-}
-
 .wheel-anim {
   position: absolute;
   transform: scale(2);
@@ -48,9 +40,8 @@ icon-button {
 }
 
 a {
-  @extend .white;
+  @extend %clickable;
   margin: 35px;
-  text-decoration: underline;
   transition: .7s;
 
   &:hover {
