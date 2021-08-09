@@ -32,7 +32,6 @@ $page-max-width: 900px;
   @each $name, $color in $accent-colors {
     .title-shadow-#{$name} {
       @extend %title-shadow;
-
       background: -webkit-linear-gradient(left, rgba($color: $color, $alpha: .5), $color);
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -42,8 +41,8 @@ $page-max-width: 900px;
 }
 
 %dashed {
-  border-top: dashed rgba(230, 230, 255, .4) 2.5px;
-  border-left: dashed rgba(230, 230, 255, .4) 2.5px;
+  border-top: dashed rgba($color: $fake-white, $alpha: .4) 2.5px;
+  border-left: dashed rgba($color: $fake-white, $alpha: .4) 2.5px;
   position: absolute;
 }
 

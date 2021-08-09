@@ -21,17 +21,6 @@ export class AppComponent {
     localStorage.setItem("lang", this.language);
   }
 
-  static scrollToTop() {
-    let scrollToTop = window.setInterval(() => {
-      let pos = window.pageYOffset;
-      if (pos > 0) {
-        window.scrollTo(0, pos * 3 / 4);
-      } else {
-        window.clearInterval(scrollToTop);
-      }
-    }, 8);
-  }
-
   static resetPageKind() {
     this.pageKind = Kind.NONE;
   }
