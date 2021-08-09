@@ -11,8 +11,9 @@ export class ImgCarouselComponent implements OnInit {
 
   @Input() path !: string;
   @Input() files !: string;
-  @Input() interval : number = 0;
-  @Input() height : number = 1000;
+  @Input() transitionTime : number = .6; // seconds
+  @Input() interval : number = 0; // seconds
+  @Input() height : number = 1000; // px
 
   indexes : number[] = [];
   selected : number = 0;
@@ -38,7 +39,7 @@ export class ImgCarouselComponent implements OnInit {
     if (this.interval > 0) {
       this.looper = window.setInterval(() => {
         this.selected = (this.selected + 1) % this.nbImg
-      }, this.interval);
+      }, this.interval * 1000);
     }
   }
 

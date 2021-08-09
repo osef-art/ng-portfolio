@@ -22,13 +22,60 @@
   }
 }
 
+.carousel {
+  @extend .line;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: .4s;
+
+  ul {
+    @extend .center;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    transition: left .6s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  li {
+    @extend .line;
+
+    img {
+      @extend .line;
+      border-radius: 15px;
+      transition: .5s;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+
+    img {
+      box-shadow: 0 5px 10px rgba($color: black, $alpha: .3);
+    }
+
+    & ~ .nav-dot {
+      opacity: .15;
+    }
+
+    & ~ %arrow {
+      transform: translateY(-10px);
+      opacity: .25;
+    }
+  }
+}
+
 .nav-dot {
   $dot-size: 10px;
   cursor: pointer;
   position: absolute;
   margin-left: math.div(-$dot-size, 2);
 
-  bottom: -25px;
+  bottom: -$dot-size * 1.5;
   width: $dot-size;
   height: $dot-size;
   z-index: 2;
@@ -50,9 +97,8 @@
   position: absolute;
 
   top: 50%;
-  z-index: 2;
   opacity: 0.6;
-  margin-top: math.div(-$arrow-size, 2);
+  margin-top: -$arrow-size;
   font-size: $arrow-size;
   transition: .4s;
 
@@ -77,47 +123,4 @@
 .right-arrow {
   @extend %arrow;
   right: 5px;
-}
-
-.carousel {
-  @extend .line;
-  overflow: hidden;
-  border-radius: 15px;
-
-  ul {
-    @extend .center;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-    list-style: none;
-    overflow: hidden;
-    position: relative;
-
-    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-
-  li {
-    @extend .line;
-
-    img {
-      @extend .line;
-      border-radius: 15px;
-      transition: .5s;
-    }
-  }
-
-  &:hover {
-    & ~ .nav-dot {
-      opacity: .15;
-    }
-
-    & ~ %arrow {
-      opacity: .25;
-    }
-
-    img {
-      filter: brightness(110%) ;
-    }
-  }
 }
