@@ -1,0 +1,79 @@
+<div class="caution-container">
+  <div class="jackhammer-container">
+    <img src="assets/icons/jackhammer.gif" height="70px">
+  </div>
+
+  <div class="caution-message">
+    <h2> CAUTION </h2>
+    <h3> <u> This website is still under construction. </u> </h3>
+
+    <div class="text">
+      <p>
+        <u>I'm currently working on this site interface and content.</u> <br>
+        New stuff should be added soon. <br> <span class="white">Don't hesitate to check out regularly and see when new content is added !</span>
+        <br> <br>
+        Please don't mind the fact that some <span class="white">key-content</span> may be missing. <br>
+        However, if you notice some <span class="white">disfunctionments</span>/<span class="white">issues</span> in
+        what is currently displayed,
+        I would appreciate you to <span class="white">contact</span> me. <u>I put a few links below !</u> <br> <br>
+        Also, any kind of <span class="white">feedback</span> would be really appreciated ✨
+        <span class="white">enjoy your stay !</span> :D
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="side-zone">
+    <div class="lang-box" [title]="mainLang == 'FRA' ? 'Switch to English !' : 'Passer en français !'" (click)="switchLanguage()">
+      <img [src]="'assets/icons/' + mainLang + '-icon.png'">
+      {{ mainLang }}
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="links-zone">
+    <div class="center">
+      <div class="link-box">
+        <a class="mail-link" target="_blank" title="Coming soon! ✉">
+          <img class="mail-img"
+            src="https://santasworkshoptn.files.wordpress.com/2021/01/email-icon-white-circle1.png">
+        </a>
+      </div>
+      <div class="link-box">
+        <a href="https://github.com/osef-art" target="_blank">
+          <img src="http://thomas-blondel.fr/img/github-logo.png">
+        </a>
+      </div>
+      <div class="link-box">
+        <a class="discord-link" target="_blank" title="Coming soon! 🤖">
+          <img class="discord-img" src="https://snailking.github.io/poa_snailfarm/img/discord_circle.png">
+        </a>
+      </div>
+      <div class="link-box">
+        <a target="_blank" href="https://codepen.io/osef/">
+          <img class="" src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-White-Large.png">
+        </a>
+      </div>
+    </div>
+
+    <div class="center">
+      <span class="signature">
+        osef. <span class="thin">© 2021</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="side-zone">
+    <div class="spacer"></div>
+    <div class="credit-box">
+      <a href="https://angular.io/" target="_blank">
+        <img src="https://angular.io/assets/images/logos/angular/angular_whiteTransparent.png">
+      </a>
+      <span>Powered with <br> <b><a href="https://angular.io/" target="_blank">Angular</a></b></span>
+    </div>
+  </div>
+</footer>
