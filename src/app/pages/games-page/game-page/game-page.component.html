@@ -1,3 +1,23 @@
 <div class="center">
-  <icon-button icon="play" link="http://"></icon-button>
+  <icon-button icon="return" [label]="true"></icon-button>
+  <div class="spacer"></div>
+  <a (click)="scrollTo(launchZone)">Download links</a>
+</div>
+
+<div class="game-page">
+  <div [innerHtml]="readmeHTML"> </div>
+
+  <h2> DOWNLOAD THE GAME ! ⬇️ </h2>
+  <div class="launch-zone" #launchZone>
+    <div class="spacer"></div>
+    <div>DOWNLOAD</div>
+    <icon-button icon="download" [link]="'https://github.com/osef-art/' + gameId + '/archive/refs/heads/main.zip'"></icon-button>
+    <div class="spacer"></div>
+    - or -
+    <div class="spacer"></div>
+    <text-button text="CLONE" icon="http://thomas-blondel.fr/img/github-logo.png"
+      [link]="'https://github.com/osef-art/' + gameId">
+    </text-button>
+    <div class="spacer"></div>
+  </div>
 </div>

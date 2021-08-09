@@ -1,143 +1,191 @@
-.game-panel {
+@use "sass:map";
+@import "../../../../styles.scss";
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@mixin typing-anim($time) {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing $time steps(40, end);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-page {
   width: 90%;
-  padding: 15px;
+  padding: 75px;
+  padding-top: 15px;
   margin: 0 5% 5% 5%;
-  color: lavender;
-  background-color: rgba(230, 230, 250, 0.4);
+  background-color: rgba($color: $fake-white, $alpha: .25);
   border-radius: 25px;
+  transition: .7s;
+}
+
+a {
+  cursor: pointer;
+  padding: 20px;
+}
+
+:host::ng-deep h1 {
+  @include typing-anim(5s);
+  font-size: 36pt;
   text-align: center;
+  text-shadow: -5px 5px $games-color;
 
-  .container {
-    width: 70%;
+  img {
+    height: 30pt;
+  }
+}
 
-    h1 {
-      font-size: 36pt;
-      text-align: center;
+:host::ng-deep h2 {
+  @include typing-anim(3s);
+  margin-top: 50px;
+  font-size: 24pt;
+  text-shadow: 0 5px 7px rgba($color: black, $alpha: .4);
+  text-align: center;
+}
 
-      img {
-        height: 30pt;
-      }
-    }
+:host::ng-deep h3 {
+  @include typing-anim(2.5s);
+  font-size: 20pt;
+  text-shadow: 0 5px rgba($color: black, $alpha: .4);
+}
 
-    h2 {
-      font-size: 24pt;
-      text-shadow: 0 5px 7px rgba($color: black, $alpha: 0.5);
-      text-align: center;
-    }
+:host::ng-deep h4 {
+  @include typing-anim(2.5s);
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  font-size: 18pt;
+  text-shadow: 0 5px rgba($color: black, $alpha: .3);
+}
 
-    h3 {
-      font-size: 20pt;
-      text-shadow: 0 5px rgba($color: black, $alpha: 0.5);
-    }
+:host::ng-deep hr {
+  margin: 30px auto;
+  width: 80%;
+  border: solid rgba($color: black, $alpha: .1) 2px;
+}
 
-    h4 {
-      margin: 20px 0 0 20px;
-      font-size: 18pt;
-      text-shadow: 0 5px rgba($color: black, $alpha: 0.5);
-    }
+:host::ng-deep p {
+  color: $fake-white;
+  font-size: 12pt;
+  text-align: justify;
 
-    hr {
-      margin: 30px auto;
-      width: 80%;
-      border: solid rgba($color: black, $alpha: 0.1) 2px;
-    }
+  br {
+    margin-bottom: 10px;
+  }
 
-    p {
-      font-size: 12pt;
-      text-align: justify;
+  img {
+    display: block;
+    margin: 25px auto;
+    width: 60%;
 
-      br {
-        margin: 10px auto;
-      }
+    border-radius: 10px;
+  }
+}
 
-      img {
-        height: 14pt;
-        margin: 5px 5px 0 0;
-      }
-    }
+:host::ng-deep a {
+  @extend .white;
+  text-decoration: underline;
+}
 
-    a {
-      text-decoration: underline;
-    }
+:host::ng-deep ul {
+  margin: 10px 0;
+}
 
-    code {
-      font-size: 11pt;
-      font-weight: bold;
-      background-color: rgba(10, 0, 15, 0.4);
-      border-radius: 5px;
-      padding: 2px 5px;
-      margin: 0 5px;
-    }
+:host::ng-deep li {
+  margin-left: 25px;
+}
 
-    pre {
-      font-size: 12pt;
-      font-weight: bold;
-      background-color: rgba(20, 15, 50, 0.5);
-      padding: 10px 0 10px 25px;
+:host::ng-deep code {
+  @extend .white;
+  padding: 2px 5px;
+  margin-top: -5px;
+  font-size: 10pt;
+  font-weight: bold;
+  background-color: rgba(10, 0, 10, .35);
+  border-radius: 5px;
+}
 
-      .cmd {
-        color: rgba(255, 255, 255, 0.5);
-      }
+:host::ng-deep pre {
+  padding: 10px 0 10px 50px;
+  font-size: 12pt;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  background: -webkit-linear-gradient(left,
+    rgba(0, 0, 10, .7),
+    rgba(0, 0, 10, .5),
+    rgba(0, 0, 10, .4)
+  );
 
-      .hljs-keyword {
-        color: #dcdcfa;
-      }
+  code {
+    font-size: 12pt;
+    background: none;
 
-      code {
-        font-size: 13pt;
-        background: none;
-      }
-    }
-
-    table {
-      td {
-        padding: 5px 10px;
-      }
-
-      th {
-        padding: 10px;
-        background-color: rgba(175, 150, 250, 0.75);
-      }
-
-      tbody tr:nth-child(even) {
-        background-color: rgba($color: black, $alpha: 0.2);
-        color: #fff;
-      }
-
-      img {
-        height: 50px;
-      }
-    }
-
-    .launch {
-      padding: 5px 10px;
-      background-color: rgba(230, 230, 250, 0.2);
-      border-radius: 10px;
-
-      .buttons-zone {
-        transform: scale(0.8);
-      }
-    }
-
-    .intro {
-      font-size: 16pt;
-      text-align: center;
-    }
-
-    .warning {
-      background-color: rgba(175, 150, 250, 0.5);
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-
-    .thumbnail {
-      width: 90%;
-      border-radius: 10px;
-    }
-
-    .signature {
-      margin: 20px auto;
-      color: rgba(255, 255, 255, 0.7);
+    &::selection {
+      background-color: rgba($color: $games-color, $alpha: .7);
     }
   }
 }
+
+:host::ng-deep table {
+  border-bottom: rgba($color: black, $alpha: .05) 5px solid;
+
+  td {
+    padding: 5px 10px;
+  }
+
+  th {
+    padding: 10px;
+    background-color: $games-color;
+    text-shadow: 0 2.5px map.get($accent-colors-dark, "games");
+
+    &:first-child {
+      border-top-left-radius: 15px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 15px;
+    }
+
+    &:empty {
+      background-color: rgba($color: $games-color, $alpha: .6);
+    }
+  }
+
+  tbody tr:nth-child(even) {
+    @extend .white;
+    background-color: rgba($color: black, $alpha: .2);
+  }
+
+  img {
+    height: 50px;
+  }
+}
+
+.launch-zone {
+  @extend .center;
+  padding: 5px 25px;
+  border-radius: 10px;
+  background-color: rgba($color: $fake-white, $alpha: .2);
+
+  icon-button {
+    @extend .flex;
+    margin: 20px;
+  }
+}
+
+.intro {
+  font-size: 16pt;
+  text-align: center;
+}
+
+.warning {
+  background-color: rgba(175, 150, 250, .4);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+

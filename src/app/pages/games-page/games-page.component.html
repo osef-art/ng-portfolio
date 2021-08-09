@@ -43,7 +43,7 @@
       <ul>
         <ng-container *ngFor="let game of gameList">
           <li>
-            <game-card [game]="game"></game-card>
+            <game-card [game]="game" (click)="scrollToTop()"></game-card>
           </li>
         </ng-container>
       </ul>
