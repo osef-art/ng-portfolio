@@ -7,6 +7,7 @@ export enum ProgLang {
 }
 
 export class GameCard {
+  id: string;
   title: string;
   desc: TextContent;
   date: Date;
@@ -19,16 +20,17 @@ export class GameCard {
   thumbnailUrl: string;
   thumbnailAnimatedUrl!: string;
 
-  constructor(title: string, desc: TextContent, path: string, languages: ProgLang[], date: Date, devProg?: number, thumbUrl?: string) {
+  constructor(id: string, title: string, desc: TextContent, path: string, languages: ProgLang[], date: Date, devProg?: number, thumbUrl?: string) {
     this.thumbnailUrl = "assets/thumbnails/" + (thumbUrl ? thumbUrl : path) + "-tbn.png";
     this.date = date;this.languages = languages;
     if (devProg) this.devProg = devProg;
     else this.isBeta = true;
     this.title = title;
     this.desc = desc;
+    this.id = id;
 
     if (this.isJsGame) {
-      this.link = "/js-games/" + path + ".html";
+      this.link = "/js-games/" + path;
     } else {
       this.link = "https://github.com/osef-art/" + path + "/archive/refs/heads/main.zip"
     }
@@ -47,7 +49,7 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "ministick.",
+        "ministick", "ministick.",
         new TextContent(
           "An addictive, infinite and super-fast beat-them all.\n\
            Let's see how far you can go !",
@@ -62,7 +64,7 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "ministick.",
+        "ministick-js", "ministick.",
         new TextContent(
           "The very first playable version of ministick !\n\
           The controls and physics have quite changed since, but this one was\
@@ -71,7 +73,7 @@ export class GameCardData {
           Les contrôles et l'environnement ont beaucoup changé depuis,\n\
           mais j'ai pu tester pas mal de trucs en terme de code."
         ),
-        "ministick/ministick",
+        "ministick/ministick.html",
         [ProgLang.JS],
         new Date(Date.UTC(2019, 9, 0, 0, 0, 0)), .6,
         "ministick-js",
@@ -80,12 +82,12 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "TETRIS !",
+        "tetris", "TETRIS !",
         new TextContent(
           "A simple Tetris made with Javascript (i was bored)",
           "Un petit Tetris fait en Javascript. Je m'ennuyais."
         ),
-        "TETRIIIS/tetris",
+        "TETRIIIS/tetris.html",
         [ProgLang.JS],
         new Date(Date.UTC(2018, 5, 0, 0, 0, 0)), 1,
         "tetris",
@@ -94,14 +96,14 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "Lost in Space",
+        "lost-in-space", "Lost in Space",
         new TextContent(
           "This space shooter was the final project I had to return in my first year\
           in computer science studies.\n It got me the maximal grade 😏",
           "Ce shooter est le projet final que je devais rendre à la fin de ma première\
           année de licence.\n Ouais j'ai eu 20 ouais. 😏"
         ),
-        "lost_in_space/lost_in_space",
+        "lost_in_space/lost_in_space.html",
         [ProgLang.JS],
         new Date(Date.UTC(2018, 4, 0, 0, 0, 0)), 1,
         "lost-in-space",
@@ -110,7 +112,7 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "ministick-moves",
+        "ministick-moves", "ministick-moves",
         new TextContent(
           "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !",
           "un petit environnement me servant de bac à sable pour tester des mécaniques et la\
@@ -124,7 +126,7 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "KAPS",
+        "KAPS", "KAPS",
         new TextContent(
           "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !",
           "une autre version de KAPS utilisant une librairie différente et avec un code plus optimisé.\n\
@@ -138,7 +140,7 @@ export class GameCardData {
 
     GameCardData.cards.push(
       new GameCard(
-        "KAPS",
+        "kaps-libgdx", "KAPS",
         new TextContent(
           "A 'Dr. Mario'-like colorful mini-game.\n\
           Match the colored capsules and get rid of every germ in the grid\
