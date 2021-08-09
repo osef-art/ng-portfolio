@@ -3,6 +3,7 @@
 @import "../../../styles.scss";
 
 $button-height: 50px;
+$inner-padding: math.div($button-height, 4);
 
 @each $name, $color in $accent-colors {
   a {
@@ -10,14 +11,14 @@ $button-height: 50px;
       @extend %qsand, .white;
       width: $button-height * 3;
       height: $button-height;
-      padding: 5px 0;
-      margin: 0 10px;
+      margin: 0 $inner-padding;
+      padding: 10px 0;
 
       cursor: pointer;
       overflow: hidden;
       text-align: center;
 
-      font-size: 30px;
+      font-size: math.div($button-height, 2);
       border-radius: 5px;
 
       background-color: $color;
@@ -26,12 +27,12 @@ $button-height: 50px;
       transition: .2s;
 
       .inner-txt {
+        @extend .center;
         display: inline-block;
-        transition: .3s;
+        transition: .4s;
       }
 
       .inner-btn {
-        $inner-padding: 10px;
         @extend .center;
         position: relative;
         width: $button-height;
@@ -39,10 +40,10 @@ $button-height: 50px;
         left: -$button-height;
         top: -$button-height;
         background: map.get($accent-colors-dark, $name);
-        transition: .3s;
+        transition: .25s;
 
         span {
-          font-size: 25px;
+          font-size: math.div($button-height, 2);
           margin-top: -$inner-padding;
         }
 
@@ -60,6 +61,7 @@ $button-height: 50px;
 
       .inner-btn {
         left: 0;
+        transition: .5s;
       }
     }
   }

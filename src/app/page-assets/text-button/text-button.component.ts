@@ -10,7 +10,7 @@ import { IconButtonComponent } from '../icon-button/icon-button.component';
 export class TextButtonComponent extends IconButtonComponent implements OnInit {
   @Input() text!: string;
 
-  ngOnInit(): void {
+  ngOnInit() {
     super.ngOnInit();
     if (!this.text) {
       this.text = this.defaultButtonText(this.kind);
