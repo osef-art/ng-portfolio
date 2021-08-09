@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AppComponent } from 'src/app/app.component';
+import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
   selector: 'not-found-page',
@@ -8,8 +8,8 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./not-found-page.component.scss']
 })
 export class NotFoundPageComponent {
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private scroller : PageScrollerService) {
     this.titleService.setTitle("nope. not here");
-    AppComponent.scrollToTop();
+    scroller.scrollToTop();
   }
 }

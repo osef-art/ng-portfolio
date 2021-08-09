@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { Title } from '@angular/platform-browser';
 import { Kind } from 'src/models/models';
+import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,12 +10,12 @@ import { Kind } from 'src/models/models';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private scroller : PageScrollerService) {
     this.titleService.setTitle("welcome.");
     AppComponent.resetPageKind();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     HomePageComponent.buildWave(60, 60);
   }
 
@@ -81,7 +82,7 @@ export class HomePageComponent implements OnInit {
   }
 
   scrollToTop() {
-    AppComponent.scrollToTop();
+    this.scroller.scrollToTop();
   }
 
   get Kind() : typeof Kind {

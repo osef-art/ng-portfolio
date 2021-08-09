@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "sass:list";
 @import "../../app.component.scss";
 
@@ -45,7 +44,7 @@ a {
   transition: .7s;
 
   &:hover {
-    color: map.get($accent-colors, "games");
+    color: $games-color;
     letter-spacing: 1px;
   }
 }

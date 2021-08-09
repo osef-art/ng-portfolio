@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AppComponent } from 'src/app/app.component';
+import { PageScrollerService } from 'src/app/services/page-scroller.service';
 import { HomePageComponent } from '../home-page/home-page.component';
 
 @Component({
@@ -9,12 +9,12 @@ import { HomePageComponent } from '../home-page/home-page.component';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private scroller : PageScrollerService) {
     this.titleService.setTitle("hi! 👉🏾👈🏾");
-    AppComponent.scrollToTop();
+    scroller.scrollToTop();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     HomePageComponent.buildWave(60, 60);
   }
 }

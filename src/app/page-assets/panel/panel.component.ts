@@ -16,7 +16,7 @@ export class PanelComponent implements OnInit {
 
   constructor(private elRef: ElementRef) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.elRef.nativeElement.style.width = this.minWidth + "%";
     this.elRef.nativeElement.style.minWidth = this.minWidth + "%";
   }
