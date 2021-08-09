@@ -1,0 +1,148 @@
+@use "sass:map";
+@use "sass:math";
+@import "../../../styles.scss";
+
+%card {
+  @extend .flex-y;
+  padding: 20px;
+  text-align: justify;
+  border-radius: 15px;
+  transition: .5s;
+
+  .thumbnail {
+    max-height: 125px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      @extend .line;
+    }
+
+    .static {
+      z-index: 2;
+    }
+
+    .animated {
+      z-index: 1;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20pt;
+    text-shadow: 2.5px 2.5px $games-color;
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 0;
+    font-size: 13pt;
+    color: rgba($color: $fake-white, $alpha: .8);
+  }
+
+  .desc {
+    margin: 10px 0;
+    font-size: 12pt;
+  }
+
+  .center {
+    margin: 5px 0;
+
+    img {
+      cursor: pointer;
+      height: 50px;
+    }
+  }
+
+  .buttons-zone {
+    @extend .center;
+    margin: 15px 0;
+
+    .buttons {
+      transition: .3s;
+
+      &:hover {
+        transform: scale(1.2) ;
+      }
+    }
+
+    icon-button {
+      @extend .flex;
+      transform: scale(0.9);
+    }
+  }
+
+  .info {
+    @extend .center;
+    margin: 10px 0;
+
+    .date {
+      font-size: 14pt;
+      color: rgba($color: $fake-white, $alpha: .6);
+    }
+
+    .lang {
+      margin: 0 5px;
+      height: 25px;
+    }
+  }
+
+  .prog-label {
+    margin-bottom: 5px;
+    color: lavender;
+    font-size: 9pt;
+  }
+}
+
+@mixin colored-card($name) {
+  $card-color: map.get($accent-colors-dimmed, $name);
+  background-color: rgba($color: $card-color, $alpha: .4);
+
+  h1 {
+    text-shadow: 2.5px 2.5px map.get($accent-colors-dark, $name);
+  }
+
+  .progression-bar {
+    background-color: rgba($color: $fake-white, $alpha: .3);
+
+    .gauge {
+      background-color: map.get($accent-colors, $name);
+    }
+  }
+
+  &:hover {
+    background-color: rgba($color: $card-color, $alpha: .5);
+  }
+}
+
+.game-card {
+  @include colored-card("games");
+  @extend %card;
+
+  .progression-bar {
+    $bar-height: 10px;
+    @extend .flex;
+    height: $bar-height;
+    border-radius: math.div($bar-height , 2);
+
+    .gauge {
+      height: inherit;
+      width: $bar-height;
+      border-radius: inherit;
+    }
+  }
+}
+
+.beta {
+  @include colored-card("art");
+
+  sup {
+    font-weight: initial;
+    font-size: 9pt;
+    padding: 2.5px 5px;
+    background-color: $art-color;
+    border-radius: 5px;
+    text-shadow: none;
+  }
+}
