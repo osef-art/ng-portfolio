@@ -74,14 +74,6 @@
 }
 
 // COLORS
-
-$fake-white: rgb(225, 225, 250);
-$fake-black: rgb(50, 50, 60);
-$no-color: rgba($color: black, $alpha: 0);
-
-$sig-gradient: (rgb(175, 125, 250), rgb(250, 85, 150));
-$featured-color: rgb(235, 250, 100);
-
 $accent-colors: (
     "art": rgb(250, 25, 125),
   "games": rgb(175, 150, 250),
@@ -103,6 +95,18 @@ $accent-colors-dimmed: (
   "music": rgb(225, 250, 150),
 );
 
+$fake-white: rgb(225, 225, 250);
+$fake-black: rgb(50, 50, 60);
+$no-color: rgba($color: black, $alpha: 0);
+
+$sig-gradient: (rgb(175, 125, 250), rgb(250, 85, 150));
+$featured-color: rgb(235, 250, 100);
+
+$art-color: map.get($accent-colors, "art");
+$games-color: map.get($accent-colors, "games");
+$anims-color: map.get($accent-colors, "anims");
+$music-color: map.get($accent-colors, "music");
+
 // GLOBAL RULES
 html, body {
   @extend %sans;
@@ -118,6 +122,11 @@ html, body {
   );
 
   scrollbar-color: rgba(210, 210, 250, .5) rgb(52.5, 50, 60);
+
+  *::selection {
+    color: white;
+    background-color: rgba(150, 150, 250, .5);
+  }
 }
 
 h1, h2, h3, h4 {
