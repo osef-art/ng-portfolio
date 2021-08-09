@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "sass:math";
 @import "../../../styles.scss";
 
@@ -75,7 +74,7 @@ $button-size: 50px;
 
   font-size: 30px;
   border-radius: math.div($button-size , 2);
-  background-color: map.get($accent-colors, "games");
+  background-color: $games-color;
   box-shadow: 0 5px 5px rgba($color: black, $alpha: .2);
   transition: .5s;
 
@@ -138,6 +137,8 @@ $button-size: 50px;
 }
 
 .button-label {
+  @extend .white;
+  text-decoration: underline;
   font-size: 14pt;
   padding: 0 10px;
 }

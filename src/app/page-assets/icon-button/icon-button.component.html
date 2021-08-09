@@ -1,6 +1,6 @@
 <!-- RETURN BUTTON  -->
 <ng-container *ngIf="icon.includes('return'); else download">
-  <a [ngClass]="{'labeled-return-button': label}" onclick="history.back()">
+  <a [ngClass]="{'labeled-return-button': label}" [routerLink]="'/' + kind">
     <div class="center">
       <div class="return-button">
         <img [src]="icon">
@@ -37,7 +37,7 @@
 
 <!-- ROUTER BUTTON -->
 <ng-template #router>
-  <a [routerLink]="link" routerLinkActive="active">
+  <a [routerLink]="link">
     <div class="icon-button">
       <img [src]="icon">
     </div>

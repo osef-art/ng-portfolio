@@ -8,13 +8,17 @@ import { Kind } from 'src/models/models';
   styleUrls: ['./icon-button.component.scss']
 })
 export class IconButtonComponent implements OnInit {
-  @Input() kind : Kind = AppComponent.pageKind;
+  @Input() kind !: Kind;
   @Input() link !: string;
   @Input() icon !: string;
   @Input() label : boolean = false;
   triggered: boolean = false;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    if (!this.kind) {
+      this.kind = AppComponent.pageKind;
+    }
+
     if (!this.icon) {
       this.icon = this.defaultIcon(this.kind);
     }
@@ -28,16 +32,16 @@ export class IconButtonComponent implements OnInit {
     }
   }
 
-  get isNavLink() {
+  get isNavLink(): boolean {
     return this.link.includes('/');
-  }
-
-  isURL(link : string): boolean {
-    return link.includes("http");
   }
 
   get iconIsImg(): boolean {
     return this.icon.includes("/");
+  }
+
+  isURL(link : string): boolean {
+    return link.includes("http");
   }
 
   defaultIcon(kind: Kind): string {
@@ -53,9 +57,16 @@ export class IconButtonComponent implements OnInit {
   }
 
   get buttonLabel() : string {
-    if (AppComponent.pageKind != Kind.NONE) {
+    if (AppComponent.pageKind) {
       return "Return to " + AppComponent.pageKind;
     }
     return "Previous page";
+  }
+
+  get returnLink() : string {
+    if (AppComponent.pageKind) {
+      return '/' + this.kind;
+    }
+    return '../';
   }
 }
