@@ -3,11 +3,13 @@ import { AppComponent } from 'src/app/app.component';
 import { DatePipe } from '@angular/common';
 import { Kind } from 'src/models/models';
 import ArticlesData, { Article } from 'src/models/articles';
+import { MdToHtmlParserService } from 'src/app/services/md-to-html-parser.service';
+import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
   selector: 'article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent implements OnInit {
   @Input() articleId !: string;
@@ -20,15 +22,22 @@ export class ArticleComponent implements OnInit {
   @Input() textRight : boolean = false;
   @Input() new : boolean = false;
 
+  articleParser !: MdToHtmlParserService;
   article !: Article;
-  regexPatterns : { [key:string]: RegExp } = {
-    '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
-    '$1<br>\r': /(.*)\n/
+
+  constructor(
+    private datepipe : DatePipe,
+    private parser : MdToHtmlParserService,
+    private scroller : PageScrollerService
+  ) {
+    parser.addRules({
+      '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
+      '$1<br>\r': /(.*)\n/
+    });
+    this.articleParser = parser;
   }
 
-  constructor(private datepipe : DatePipe) {}
-
-  ngOnInit(): void {
+  ngOnInit() {
     new ArticlesData();
     this.article = ArticlesData.get(this.articleId);
   }
@@ -38,29 +47,17 @@ export class ArticleComponent implements OnInit {
   }
 
   get parsedTitle() : string {
-    var parsedTxt: string = this.article.title.in(AppComponent.language);
-    var regex = /\*([^\s]([^\*]+)[^\s])\*/;
-
-    while (regex.test(parsedTxt)) {
-      parsedTxt = parsedTxt.replace(regex, '<span class="shadow">$1</span>');
-    }
-    return parsedTxt;
+    return this.parser.parsedWithRules(
+      this.article.title.in(AppComponent.language),
+      {'<span class="shadow">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/}
+    );
   }
 
   get parsedContent() : string {
-    var parsedTxt: string = this.article.content.in(AppComponent.language);
-
-    Object.keys(this.regexPatterns).forEach(reg => {
-      var regex = this.regexPatterns[reg];
-
-      while (regex.test(parsedTxt)) {
-        parsedTxt = parsedTxt.replace(regex, reg);
-      }
-    });
-    return parsedTxt;
+    return this.parser.parsed(this.article.content.in(AppComponent.language));
   }
 
   scrollToTop() {
-    AppComponent.scrollToTop();
+    this.scroller.scrollToTop();
   }
 }
