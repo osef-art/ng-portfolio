@@ -3,29 +3,13 @@
     <img src="assets/icons/jackhammer.gif" height="70px">
   </div>
 
-  <div class="caution-message">
-    <h2> CAUTION </h2>
-    <h3> <u> This website is still under construction. </u> </h3>
-
-    <div class="text">
-      <p>
-        <u>I'm currently working on this site interface and content.</u> <br>
-        New stuff should be added soon. <br> <span class="white">Don't hesitate to check out regularly and see when new content is added !</span>
-        <br> <br>
-        Please don't mind the fact that some <span class="white">key-content</span> may be missing. <br>
-        However, if you notice some <span class="white">disfunctionments</span>/<span class="white">issues</span> in
-        what is currently displayed,
-        I would appreciate you to <span class="white">contact</span> me. <u>I put a few links below !</u> <br> <br>
-        Also, any kind of <span class="white">feedback</span> would be really appreciated ✨
-        <span class="white">enjoy your stay !</span> :D
-      </p>
-    </div>
+  <div class="caution-message" [innerHtml]="cautionMessage">
   </div>
 </div>
 
 <footer>
   <div class="side-zone">
-    <div class="lang-box" [title]="mainLang == 'FRA' ? 'Switch to English !' : 'Passer en français !'" (click)="switchLanguage()">
+    <div class="lang-box" [title]="switchMsg" (click)="switchLanguage()">
       <img [src]="'assets/icons/' + mainLang + '-icon.png'">
       {{ mainLang }}
     </div>
