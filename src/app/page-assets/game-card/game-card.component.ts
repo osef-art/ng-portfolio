@@ -1,9 +1,8 @@
 import { DatePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { GameCard, ProgLang } from 'src/models/gamecard';
-import { MdToHtmlParserService } from 'src/app/services/md-to-html-parser.service';
+import { CustomParserService } from 'src/app/services/custom-parser.service';
 import { PageScrollerService } from 'src/app/services/page-scroller.service';
-import { AppComponent } from 'src/app/app.component';
 import { Kind } from 'src/models/models';
 
 @Component({
@@ -14,9 +13,9 @@ import { Kind } from 'src/models/models';
 export class GameCardComponent {
   @Input() game!: GameCard;
 
-  constructor(private datepipe: DatePipe, private parser : MdToHtmlParserService, scroller : PageScrollerService) {
+  constructor(private datepipe: DatePipe, private parser : CustomParserService, scroller : PageScrollerService) {
     scroller.scrollToTop();
-    parser.addRules({
+    parser.setRules({
       '$1 <br>\r': /(.*)\n/
     });
   }
@@ -26,7 +25,7 @@ export class GameCardComponent {
   }
 
   get gameDesc() {
-    return this.parser.parsed(this.game.desc.in(AppComponent.language));
+    return this.parser.parsed(this.game.desc);
   }
 
   get formattedDate() {

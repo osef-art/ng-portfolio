@@ -1,12 +1,12 @@
-import { Lang, TextContent, ThumbnailData } from "./models";
+import { TranslatableText, ThumbnailData } from "./models";
 
 export class Article {
-  title: TextContent;
-  content: TextContent;
+  title: TranslatableText;
+  content: TranslatableText;
   date: Date;
   thumbnails: string[];
 
-  constructor(title: TextContent, content: TextContent, date: Date, thumbnails: string[]) {
+  constructor(title: TranslatableText, content: TranslatableText, date: Date, thumbnails: string[]) {
     this.thumbnails = thumbnails;
     this.content = content;
     this.title = title;
@@ -16,15 +16,15 @@ export class Article {
 
 export default class ArticlesData {
   static articles: { [key: string]: Article } = {};
-  contents: { [key: string]: TextContent } = {};
-  titles: { [key: string]: TextContent } = {};
+  private contents: { [key: string]: TranslatableText } = {};
+  private titles: { [key: string]: TranslatableText } = {};
 
   constructor() {
-    this.titles['ministick'] = new TextContent(
+    this.titles['ministick'] = new TranslatableText(
       "my latest game: *ministick*",
       "mon tout dernier jeu: *ministick*",
     )
-    this.contents['ministick'] = new TextContent(
+    this.contents['ministick'] = new TranslatableText(
       "One of the projects I'm the most proud of.\n\
       Chain *combos* and smash innocent guys in this\
       *colorful* and *addicting* beat-them all.\n\
@@ -36,11 +36,11 @@ export default class ArticlesData {
       *Jusqu'où* pourrez-vous aller ? 💨"
     );
 
-    this.titles['ministick2'] = new TextContent(
+    this.titles['ministick2'] = new TranslatableText(
       "working on... *ministick 2* !",
       "*ministick 2* est en préparation !",
     )
-    this.contents['ministick2'] = new TextContent(
+    this.contents['ministick2'] = new TranslatableText(
       "Since the game had a lot of success among my friends,\
         I have started to upgrade it to a *next level*.\n\
       I'm planning to make the game more *clever* and implement\
@@ -58,13 +58,13 @@ export default class ArticlesData {
       Hésitez pas à check le Github 👀"
     );
 
-    this.titles['collab'] = new TextContent(
+    this.titles['collab'] = new TranslatableText(
       "my collab with *@eChoGames* !",
       "grosse collab avec *@eChoGames* !",
     )
-    this.contents['collab'] = new TextContent(
+    this.contents['collab'] = new TranslatableText(
       "Recently I've been drawing *sprites* for a game brought by *[guest]*\
-      on the occasion of the (ScoreSpace Jam #12)[https://gamejam.com/jam/scorejam12/submissions].\n\
+      on the occasion of the [ScoreSpace Jam #12](https://gamejam.com/jam/scorejam12/submissions).\n\
       The jam's theme was *\"COMBINING\"*, so we've crafted a cute 2048-like\
       game based on *merging* and *selling* potions in town !\n\
       We reached the *4th position* (among 94 participants !) and we keep\
@@ -72,7 +72,7 @@ export default class ArticlesData {
       We hope you'll enjoy playing the game as we enjoyed cooking it.",
 
       "Assez récemment, j'ai dessiné des *sprites* pour un jeu d'*[guest]* à l'occasion de la\
-      (ScoreSpace Jam #12)[https://gamejam.com/jam/scorejam12/submissions].\n\
+      [ScoreSpace Jam #12](https://gamejam.com/jam/scorejam12/submissions).\n\
       Le thème de la Jam était *\"COMBINING\"*, du coup on vous a concocté un petit\
       jeu à la 2048 où l'on doit *fusionner* et *vendre* des potions en ville !\n\
       On a fini par atteindre la *4è place* (sur genre 94 hein !), et vu le\
@@ -107,13 +107,5 @@ export default class ArticlesData {
 
   static get(key: string): Article {
     return ArticlesData.articles[key];
-  }
-
-  titleFrom(key: string, lang: Lang): string {
-    return this.titles[key].in(lang);
-  }
-
-  contentFrom(key: string, lang: Lang): string {
-    return this.contents[key].in(lang);
   }
 }

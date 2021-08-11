@@ -107,67 +107,6 @@ $games-color: map.get($accent-colors, "games");
 $anims-color: map.get($accent-colors, "anims");
 $music-color: map.get($accent-colors, "music");
 
-// GLOBAL RULES
-html, body {
-  @extend %sans;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  min-height: 100%;
-
-  color: white;
-  background: radial-gradient(
-    rgb(5, 5, 7.5),
-    rgb(40, 40, 42.5)
-  );
-
-  scrollbar-color: rgba(210, 210, 250, .5) rgb(52.5, 50, 60);
-
-  *::selection {
-    color: white;
-    background-color: rgba(150, 150, 250, .5);
-  }
-}
-
-h1, h2, h3, h4 {
-  @extend .title;
-}
-
-div {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  outline-width: 5px;
-  outline-offset: 10px;
-  outline-style: solid;
-  outline-color: rgba($color: white, $alpha: 0);
-  transition: .1s;
-
-  &:focus {
-    outline-width: 2px;
-    outline-offset: 5px;
-    outline-color: rgba($color: white, $alpha: .8);
-  }
-}
-
-%clickable {
-  cursor: pointer;
-  color: inherit;
-  text-decoration: underline;
-  transition: .7s ease-out;
-}
-
-%discrete-link {
-  color: inherit;
-  outline-width: 0;
-  outline-offset: 0px;
-
-  &:focus, &:active {
-    outline-color: $no-color;
-  }
-}
 
 // UTILS
 .border {
@@ -210,3 +149,68 @@ a {
   display: none;
 }
 
+
+// GLOBAL RULES
+html, body {
+  @extend %sans, .white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+
+  background: radial-gradient(
+    rgb(5, 5, 7.5),
+    rgb(40, 40, 42.5)
+  );
+
+  scrollbar-color: rgba(210, 210, 250, .5) rgb(47.5, 45, 55);
+
+  *::selection {
+    @extend .white;
+    background-color: rgba(150, 150, 250, .5);
+  }
+}
+
+h1, h2, h3, h4 {
+  @extend .title;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  outline-width: 5px;
+  outline-offset: 10px;
+  outline-style: solid;
+  outline-color: rgba($color: white, $alpha: 0);
+  transition: .1s;
+
+  &:focus {
+    outline-width: 2px;
+    outline-offset: 5px;
+    outline-color: rgba($color: white, $alpha: .8);
+  }
+}
+
+%clickable {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+  transition: .7s ease-out;
+}
+
+%discrete-link {
+  color: inherit;
+  outline-width: 0;
+  outline-offset: 0px;
+
+  &:focus, &:active {
+    outline-color: $no-color;
+  }
+}

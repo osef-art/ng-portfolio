@@ -1,3 +1,5 @@
+import { AppComponent } from "src/app/app.component";
+
 export enum Kind {
   NONE = "",
   ART = "art",
@@ -10,11 +12,8 @@ export enum Lang {
   ENG = "ENG", FRA = "FRA",
 }
 
-export class TextContent {
-  private text: { [key in Lang]: string; } = {
-    FRA: "",
-    ENG: ""
-  };
+export class TranslatableText {
+  private text: { [key in Lang]: string } = { FRA: "", ENG: "" };
 
   constructor(...text: string[]) {
     var langArray = Object.values(Lang);
@@ -23,13 +22,28 @@ export class TextContent {
     }
   }
 
+  static translated(kind: Kind) : string {
+    const kinds : { [key in Kind]: TranslatableText } = {
+      [Kind.NONE] : new TranslatableText(),
+      [Kind.ART] : new TranslatableText(Kind.ART, "dessins"),
+      [Kind.GAMES] : new TranslatableText(Kind.GAMES, "jeux"),
+      [Kind.ANIMS] : new TranslatableText(Kind.ANIMS),
+      [Kind.MUSIC] : new TranslatableText(Kind.MUSIC, "musique"),
+    }
+    return kinds[kind].translated();
+  }
+
+  translated() : string {
+    return this.in(AppComponent.language);
+  }
+
   in(lang: Lang): string {
-    return this.text[lang];
+    return this.text[lang] ? this.text[lang] : this.text[Lang.ENG];
   }
 }
 
 export class ThumbnailData {
-  data: { [key: string]: string[] } = {};
+  private data: { [key: string]: string[] } = {};
 
   constructor() {
     ["ministick", "ministick2"].forEach(id => {

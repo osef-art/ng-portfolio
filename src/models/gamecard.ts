@@ -1,4 +1,4 @@
-import { TextContent } from "./models";
+import { TranslatableText } from "./models";
 
 export enum ProgLang {
   LIBGDX = "LibGDX",
@@ -9,7 +9,7 @@ export enum ProgLang {
 export class GameCard {
   id: string;
   title: string;
-  desc: TextContent;
+  desc: TranslatableText;
   date: Date;
 
   isBeta: boolean = false;
@@ -20,7 +20,7 @@ export class GameCard {
   thumbnailUrl: string;
   thumbnailAnimatedUrl!: string;
 
-  constructor(id: string, title: string, desc: TextContent, path: string, languages: ProgLang[], date: Date, devProg?: number, thumbUrl?: string) {
+  constructor(id: string, title: string, desc: TranslatableText, path: string, languages: ProgLang[], date: Date, devProg?: number, thumbUrl?: string) {
     this.thumbnailUrl = "assets/thumbnails/" + (thumbUrl ? thumbUrl : path) + "-tbn.png";
     this.date = date;this.languages = languages;
     if (devProg) this.devProg = devProg;
@@ -50,11 +50,13 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "ministick", "ministick.",
-        new TextContent(
-          "An addictive, infinite and super-fast beat-them all.\n\
-           Let's see how far you can go !",
-           "Un 'beat-them-all' assez rapide et nerveux.\n\
-           Jusqu'où tiendrez-vous ? 👀"
+        new TranslatableText(
+          "An addictive, infinite and super-fast beat-them all where you\
+          smash your enemies with style.\n\
+          Let's see how far you can go !",
+          "Un 'beat-them-all' assez rapide et nerveux ou tu contrôles\
+          un stickman qui tape d'autres stickman. avec classe en plus.\n\
+          Jusqu'où tiendrez-vous ? 👀"
         ),
         "ministick",
         [ProgLang.JAVA],
@@ -65,7 +67,7 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "ministick-js", "ministick.",
-        new TextContent(
+        new TranslatableText(
           "The very first playable version of ministick !\n\
           The controls and physics have quite changed since, but this one was\
           more focused on the different enemies abilities !",
@@ -83,7 +85,7 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "tetris", "TETRIS !",
-        new TextContent(
+        new TranslatableText(
           "A simple Tetris made with Javascript (i was bored)",
           "Un petit Tetris fait en Javascript. Je m'ennuyais."
         ),
@@ -97,10 +99,10 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "lost-in-space", "Lost in Space",
-        new TextContent(
+        new TranslatableText(
           "This space shooter was the final project I had to return in my first year\
           in computer science studies.\n It got me the maximal grade 😏",
-          "Ce shooter est le projet final que je devais rendre à la fin de ma première\
+          "Ce shooter est un projet final que je devais rendre à la fin de ma première\
           année de licence.\n Ouais j'ai eu 20 ouais. 😏"
         ),
         "lost_in_space/lost_in_space.html",
@@ -113,7 +115,7 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "ministick-moves", "ministick-moves",
-        new TextContent(
+        new TranslatableText(
           "a quick sandbox environment made to test new moves and mechanics for ministick.v2 !",
           "un petit environnement me servant de bac à sable pour tester des mécaniques et la\
           physique de la prochaine version de ministick !"
@@ -127,7 +129,7 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "KAPS", "KAPS",
-        new TextContent(
+        new TranslatableText(
           "a second version of KAPS made with LibGDX. contains a bunch of new sidekicks !",
           "une autre version de KAPS utilisant une librairie différente et avec un code plus optimisé.\n\
           pas mal de nouveaux sidekicks ont été ajoutés !"
@@ -141,7 +143,7 @@ export class GameCardData {
     GameCardData.cards.push(
       new GameCard(
         "kaps-libgdx", "KAPS",
-        new TextContent(
+        new TranslatableText(
           "A 'Dr. Mario'-like colorful mini-game.\n\
           Match the colored capsules and get rid of every germ in the grid\
           with the help of your awesome sidekicks ! 🧪",

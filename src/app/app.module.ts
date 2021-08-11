@@ -28,7 +28,7 @@ import { QuickTipTabComponent } from './page-assets/quick-tips/quick-tip-tab/qui
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { QuickTipLangComponent } from './page-assets/quick-tips/quick-tip-lang/quick-tip-lang.component';
 import { FeaturedArticleComponent } from './page-assets/featured-article/featured-article.component';
-import { MdToHtmlParserService } from './services/md-to-html-parser.service';
+import { CustomParserService } from './services/custom-parser.service';
 
 @NgModule({
   declarations: [

@@ -19,6 +19,10 @@ export class PageScrollerService {
     this.scrollToY(0);
   }
 
+  scrollToBottom(yOffset : number) {
+    this.scrollToY(yOffset);
+  }
+
   scrollTo(elm: HTMLElement) {
     elm.scrollIntoView();
 
