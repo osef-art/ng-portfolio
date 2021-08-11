@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { Kind } from 'src/models/models';
+import { Kind, TranslatableText } from 'src/models/models';
 
 @Component({
   selector: 'panel',
@@ -14,10 +14,18 @@ export class PanelComponent implements OnInit {
   @Input() link !: string;
   @Input() minWidth : number = 50;
 
+  transTitle !: TranslatableText;
+
   constructor(private elRef: ElementRef) {}
 
   ngOnInit() {
     this.elRef.nativeElement.style.width = this.minWidth + "%";
     this.elRef.nativeElement.style.minWidth = this.minWidth + "%";
+
+    this.transTitle = new TranslatableText(...this.title.split('|'));
+  }
+
+  get titleTxt() : string {
+    return this.transTitle.translated();
   }
 }

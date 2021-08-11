@@ -1,6 +1,6 @@
 <div [class]="kind + '-panel'">
-  <h2 class="shadow"> {{ title }} </h2>
-  <img-carousel name="art" path="assets/wallpapers/" files="canyon.jpg, smoke.jpg, mountains2.jpg, padami1.png"
+  <h2 class="shadow"> {{ titleTxt }} </h2>
+  <img-carousel [kind]="kind" name="art" path="assets/wallpapers/" files="canyon.jpg, smoke.jpg, mountains2.jpg, padami1.png"
     [interval]="7" [transitionTime]="1" [height]="250">
   </img-carousel>
   <div class="buttons-zone">
