@@ -1,38 +1,36 @@
 <div class="page-header">
-  <a (click)="scrollToTop()" class="icon-container-art" routerLink="/art">
-    <img class="art-icon" src="assets/icons/art-icon.png">
-  </a>
+  <ng-container *ngFor="let kind of kinds">
+    <ng-container *ngIf="kind; else logo">
+      <a (click)="scrollToTop()" [class]="'icon-container-' + kind" [routerLink]="'/' + kind">
+        <img [class]="kind + '-icon'" [src]="'assets/icons/' + kind + '-icon.png'">
+      </a>
+    </ng-container>
+  </ng-container>
 
-  <a (click)="scrollToTop()" class="icon-container-games" routerLink="/games">
-    <img class="games-icon" src="assets/icons/games-icon.png">
-  </a>
+  <ng-template #logo>
+    <div class="spacer"></div>
 
-  <div class="spacer"></div>
+    <a (click)="scrollToTop()" class="logo-container" title="✨" routerLink="/home">
+      <div>
+        <h1 class="osef-logo">osef</h1>
+      </div>
+      <div>
+        <h1 class="dot-logo" [ngClass]="pageKind + '-hue'">.</h1>
+      </div>
+    </a>
 
-  <a (click)="scrollToTop()" class="logo-container" title="✨" routerLink="/home">
-    <div>
-      <h1 class="osef-logo">osef</h1>
-    </div>
-    <div>
-      <h1 class="dot-logo" [ngClass]="kind + '-hue'">.</h1>
-    </div>
-  </a>
-
-  <div class="spacer"></div>
-
-  <a (click)="scrollToTop()" class="icon-container-anims" routerLink="/anims">
-    <img class="anims-icon" src="assets/icons/anims-icon.png">
-  </a>
-
-  <a (click)="scrollToTop()" class="icon-container-music" routerLink="/music">
-    <img class="music-icon" src="assets/icons/music-icon.png">
-  </a>
+    <div class="spacer"></div>
+  </ng-template>
 
   <div class="sub-panel">
-    <div class="label-container-art"> ART </div>
-    <div class="label-container-games"> GAMES </div>
-    <div class="spacer"></div>
-    <div class="label-container-anims"> ANIMS </div>
-    <div class="label-container-music"> MUSIC </div>
+    <ng-container *ngFor="let kind of kinds">
+      <ng-container *ngIf="kind; else spacer">
+        <div [class]="'label-container-' + kind"> {{ label(kind) }} </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-template #spacer>
+      <div class="spacer"></div>
+    </ng-template>
   </div>
 </div>

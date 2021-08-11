@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PageScrollerService } from 'src/app/services/page-scroller.service';
+import { Kind, TranslatableText } from 'src/models/models';
 import { AppComponent } from '../../app.component';
 
 @Component({
@@ -8,13 +9,22 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private scroller : PageScrollerService) {}
+  kinds : Kind[] = Object.values(Kind);
 
-  get kind() {
+  constructor(private scroller : PageScrollerService) {
+    this.kinds.shift();
+    this.kinds.splice(2, 0, Kind.NONE);
+  }
+
+  get pageKind() {
     return AppComponent.pageKind;
   }
 
   scrollToTop() {
     this.scroller.scrollToTop();
+  }
+
+  label(kind: Kind) : string {
+    return TranslatableText.translated(kind);
   }
 }

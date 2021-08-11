@@ -59,6 +59,7 @@ $layer: 10;
   @each $name, $color in $accent-colors {
     .label-container-#{$name} {
       @extend .light;
+      text-transform: uppercase;
       text-align: center;
       display: inline-block;
       position: relative;
