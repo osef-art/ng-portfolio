@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MdToHtmlParserService } from './md-to-html-parser.service';
+import { CustomParserService } from './custom-parser.service';
 
 describe('MdToHtmlParserService', () => {
-  let service: MdToHtmlParserService;
+  let service: CustomParserService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MdToHtmlParserService);
+    service = TestBed.inject(CustomParserService);
   });
 
   it('should be created', () => {
