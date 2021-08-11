@@ -27,14 +27,7 @@
 <div class="intro-zone">
   <div class="spacer"></div>
   <div class="intro">
-    <p>
-      <span class="white"> glad you got there. </span>
-      feel free to check my latest works in
-      <a routerLink="/games" class="games-link">game developping</a>,
-      <a routerLink="/art" class="art-link"> designing</a>,
-      <a routerLink="/music" class="music-link">producing</a> or
-      <a routerLink="/anims" class="anims-link">animating</a> !
-    </p>
+    <p [innerHtml]="introHtml"></p>
   </div>
   <div class="spacer"></div>
 </div>
@@ -48,12 +41,10 @@
     </article>
 
     <div class="panel-line">
-      <panel [kind]="Kind.ART" title="graphism" [minWidth]="60"></panel>
+      <panel [kind]="Kind.ART" title="free wallpapers!|mes dessins!" [minWidth]="60"></panel>
 
       <div class="vertical-spacer"></div>
-
       <random-tip></random-tip>
-
       <div class="vertical-spacer"></div>
     </div>
 
@@ -62,7 +53,7 @@
     </featured-article>
 
     <article [kind]="Kind.GAMES" articleId="ministick2" githubLink="https://github.com/osef-art/ministick-moves"
-      btnText="TEST" link="games/ministick-moves">
+      btnText="TEST|TESTER" link="games/ministick-moves">
     </article>
   </div>
 </div>

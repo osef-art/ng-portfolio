@@ -23,6 +23,7 @@
 
   .wheel-anim {
     margin-left: 110px;
+    height: 100px;
   }
 
   .wave-anim {
@@ -58,7 +59,7 @@
   }
 }
 
-.intro-zone {
+:host::ng-deep .intro-zone {
   @extend .flex;
 
   .spacer {
