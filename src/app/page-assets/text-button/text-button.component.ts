@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Kind } from 'src/models/models';
+import { Kind, TranslatableText } from 'src/models/models';
 import { IconButtonComponent } from '../icon-button/icon-button.component';
 
 @Component({
@@ -9,25 +9,28 @@ import { IconButtonComponent } from '../icon-button/icon-button.component';
 })
 export class TextButtonComponent extends IconButtonComponent implements OnInit {
   @Input() text!: string;
+  displayed !: TranslatableText;
 
   ngOnInit() {
     super.ngOnInit();
     if (!this.text) {
-      this.text = this.defaultButtonText(this.kind);
+      this.displayed = this.defaultButtonText(this.kind);
+      return;
     }
+    this.displayed = new TranslatableText(...this.text.split('|'));
   }
 
-  defaultButtonText(kind: Kind): string {
+  defaultButtonText(kind: Kind): TranslatableText {
     switch (kind) {
       case Kind.GAMES:
-        return 'PLAY !'
+        return new TranslatableText('PLAY !', 'JOUER !');
       case Kind.ART:
-        return 'PEEK'
+        return new TranslatableText('PEEK', 'OOOHH');
       case Kind.MUSIC:
-        return 'LISTEN'
+        return new TranslatableText('LISTEN', 'ÉCOUTER');
       case Kind.ANIMS:
-        return 'WATCH !'
+        return new TranslatableText('WATCH !', 'VOIR !');
     }
-    return 'GO !';
+    return new TranslatableText('GO !');
   }
 }

@@ -1,6 +1,6 @@
 <a [target]="isURL(link) ? '_blank' : ''" [href]="link">
   <div [class]="kind + '-text-button'">
-    <span class="inner-txt"> {{ text }} </span>
+    <span class="inner-txt"> {{ displayed.translated() }} </span>
     <div class="inner-btn">
       <ng-container *ngIf="iconIsImg; else innerStuff">
         <img [src]="icon">
