@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GithubRequestService } from 'src/app/services/http-request.service';
-import { MdToHtmlParserService } from 'src/app/services/md-to-html-parser.service';
+import { CustomParserService } from 'src/app/services/custom-parser.service';
 import { AppComponent } from 'src/app/app.component';
 import { Kind } from 'src/models/models';
 import * as marked from 'marked';
@@ -19,7 +19,7 @@ export class GamePageComponent implements OnInit {
   constructor(
     private githubRequester : GithubRequestService,
     private scroller : PageScrollerService,
-    private parser : MdToHtmlParserService,
+    private parser : CustomParserService,
     private route: ActivatedRoute,
   ) {}
 
@@ -42,14 +42,23 @@ export class GamePageComponent implements OnInit {
     this.githubRequester
       .getReadMeFrom(this.gameId)
       .subscribe(data => {
-        this.readmeHTML = this.parser.parsedWithRules(data, {
+        // edit urls correctly
+        this.readmeHTML = this.parser.parsed(data, {
           [githubURL] : /\(([a-zA-Z0-9_\-/]+\.(png|jpg|gif))/
         });
+
+        // MD to HTML
         this.readmeHTML = marked.setOptions({}).parse(this.readmeHTML);
+
+        // POST-HTML rules
+        this.readmeHTML = this.parser.parsed(this.readmeHTML, {
+          '<p class="warning">$1</p>' : /<p>(\s*⚠.*\n.*)<\/p>/,
+          '</h1>\n<p class="intro">$1</p>' : /<\/h1>\n<p>(.*\n?.*)<\/p>/
+        });
       });
   }
 
-  scrollTo(elm : HTMLElement) {
-    this.scroller.scrollTo(elm);
+  scrollToLinks() {
+    this.scroller.scrollToBottom(screen.height - 5000);
   }
 }

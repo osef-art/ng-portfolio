@@ -30,7 +30,7 @@ a {
 }
 
 :host::ng-deep h1 {
-  @include typing-anim(5s);
+  @include typing-anim(3s);
   font-size: 36pt;
   text-align: center;
   text-shadow: -5px 5px $games-color;
@@ -90,6 +90,11 @@ a {
 :host::ng-deep a {
   @extend .white;
   text-decoration: underline;
+  transition: .5s;
+
+  &:hover {
+    color: $games-color;
+  }
 }
 
 :host::ng-deep ul {
@@ -132,6 +137,7 @@ a {
 }
 
 :host::ng-deep table {
+  @extend .line;
   border-bottom: rgba($color: black, $alpha: .05) 5px solid;
 
   td {
@@ -178,14 +184,15 @@ a {
   }
 }
 
-.intro {
+:host::ng-deep .intro {
   font-size: 16pt;
   text-align: center;
 }
 
-.warning {
-  background-color: rgba(175, 150, 250, .4);
+:host::ng-deep .warning {
   padding: 10px 20px;
   border-radius: 5px;
+  background-color: rgba($color: $games-color, $alpha: .5);
+  text-shadow: 0 2.5px rgba($color: black, $alpha: .5);
 }
 
