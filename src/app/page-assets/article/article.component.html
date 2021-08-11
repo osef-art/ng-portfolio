@@ -7,7 +7,7 @@
   <div class="thumbnail-zone">
     <div class="spacer"></div>
     <div class="flex">
-      <img-carousel [name]="articleId" [slides]="article.thumbnails" [interval]="4"></img-carousel>
+      <img-carousel [kind]="kind" [name]="articleId" [slides]="article.thumbnails" [interval]="4"></img-carousel>
       <ng-container *ngIf="new">
         <div class="new-stamp">
           <div class="spin"></div>
@@ -19,7 +19,7 @@
     <div class="spacer"></div>
     <div class="spacer"></div>
     <div class="more-link">
-      <a [routerLink]="'/' + kind" (click)="scrollToTop()">more {{ kind }}...</a>
+      <a [routerLink]="'/' + kind" (click)="scrollToTop()"> {{ moreTxt }} </a>
     </div>
   </div>
 </ng-template>

@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { MdToHtmlParserService } from 'src/app/services/md-to-html-parser.service';
+import { CustomParserService } from 'src/app/services/custom-parser.service';
 import { PageScrollerService } from 'src/app/services/page-scroller.service';
 import { ArticleComponent } from '../article/article.component';
 
@@ -14,7 +14,7 @@ export class FeaturedArticleComponent extends ArticleComponent {
   @Input() websiteLink !: string;
   @Input() twitterLink !: string;
 
-  constructor(datepipe : DatePipe, parser : MdToHtmlParserService, scroller : PageScrollerService) {
+  constructor(datepipe : DatePipe, parser : CustomParserService, scroller : PageScrollerService) {
     super(datepipe, parser, scroller);
   }
 
@@ -22,11 +22,11 @@ export class FeaturedArticleComponent extends ArticleComponent {
     super.ngOnInit();
     this.guestName = '@' + this.guestName;
 
-    this.articleParser.addRules({
+    this.articleParser.setRules({
+      [this.guestName] : /\[guest\]/,
       '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
-      '<a target="_blank" href="$2">$1</a>': /\((.+)\)\[(.+)\]/,
+      '<a target="_blank" href="$2">$1</a>': /\[(.+)\]\((.+)\)/,
       '$1<br>\r': /(.*)\n/,
-      [this.guestName] : /\[guest\]/
     });
   }
 }

@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
 import { DatePipe } from '@angular/common';
-import { Kind } from 'src/models/models';
+import { Kind, TranslatableText } from 'src/models/models';
 import ArticlesData, { Article } from 'src/models/articles';
-import { MdToHtmlParserService } from 'src/app/services/md-to-html-parser.service';
+import { CustomParserService } from 'src/app/services/custom-parser.service';
 import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
@@ -22,15 +21,15 @@ export class ArticleComponent implements OnInit {
   @Input() textRight : boolean = false;
   @Input() new : boolean = false;
 
-  articleParser !: MdToHtmlParserService;
+  articleParser !: CustomParserService;
   article !: Article;
 
   constructor(
     private datepipe : DatePipe,
-    private parser : MdToHtmlParserService,
+    private parser : CustomParserService,
     private scroller : PageScrollerService
   ) {
-    parser.addRules({
+    parser.setRules({
       '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
       '$1<br>\r': /(.*)\n/
     });
@@ -47,17 +46,24 @@ export class ArticleComponent implements OnInit {
   }
 
   get parsedTitle() : string {
-    return this.parser.parsedWithRules(
-      this.article.title.in(AppComponent.language),
+    return this.parser.parsed(
+      this.article.title.translated(),
       {'<span class="shadow">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/}
     );
   }
 
   get parsedContent() : string {
-    return this.parser.parsed(this.article.content.in(AppComponent.language));
+    return this.parser.parsed(this.article.content.translated());
   }
 
   scrollToTop() {
     this.scroller.scrollToTop();
+  }
+
+  get moreTxt() : string {
+    return new TranslatableText(
+      "more " + TranslatableText.translated(this.kind) + "...",
+      "+ de " + TranslatableText.translated(this.kind) + "..."
+    ).translated();
   }
 }

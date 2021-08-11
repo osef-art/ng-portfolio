@@ -10,12 +10,12 @@
   <div class="thumbnail-zone">
     <div class="spacer"></div>
     <div class="flex">
-      <img-carousel [name]="articleId" [slides]="article.thumbnails" [interval]="5"></img-carousel>
+      <img-carousel [kind]="kind" [name]="articleId" [slides]="article.thumbnails" [interval]="5"></img-carousel>
     </div>
     <div class="spacer"></div>
     <div class="spacer"></div>
     <div class="more-link">
-      <a routerLink="/games">more games...</a>
+      <a routerLink="/games"> {{ moreTxt }} </a>
     </div>
   </div>
 </ng-template>
@@ -40,7 +40,7 @@
 
         <div class="links">
           <ng-container *ngIf="websiteLink">
-            <div class="link-box">
+            <div class="link-box" [title]="'Check ' + guestName + '\'s website !'">
               <a target="blank" [href]="'https://' + websiteLink">
                 <img class="link" src="assets/icons/web-icon.png">
               </a>
@@ -48,7 +48,7 @@
             </div>
           </ng-container>
           <ng-container *ngIf="twitterLink">
-            <div class="link-box">
+            <div class="link-box" [title]="'Check ' + guestName + '\'s Twitter !'">
               <a target="blank" [href]="'https://twitter.com/' + twitterLink">
                 <img class="link" src="assets/icons/twitter-icon.png">
               </a>
