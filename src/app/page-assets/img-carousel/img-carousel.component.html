@@ -20,7 +20,7 @@
 
     <ng-container *ngFor="let n of indexes">
       <!-- navigation dots -->
-      <label class="nav-dot" [for]="name + '-button-' + n" [ngStyle]="{
+      <label [ngClass]="kind ? kind + '-nav-dot' : 'nav-dot'" [for]="name + '-button-' + n" [ngStyle]="{
         'left.%': 50 + ((n - ((nbImg-1)/2)) * 5),
         'background-color': n == selected ? 'white' : ''
       }">

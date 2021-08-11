@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
+import { Kind } from 'src/models/models';
 
 @Component({
   selector: 'img-carousel',
@@ -6,11 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./img-carousel.component.scss']
 })
 export class ImgCarouselComponent implements OnInit {
+  @Input() kind !: Kind;
   @Input() name !: string;
   @Input() slides !: string[];
 
   @Input() path !: string;
   @Input() files !: string;
+
   @Input() transitionTime : number = .6; // seconds
   @Input() interval : number = 0; // seconds
   @Input() height : number = 1000; // px
@@ -20,6 +24,7 @@ export class ImgCarouselComponent implements OnInit {
   looper : number = 0;
 
   ngOnInit() {
+    if (!this.kind) this.kind = AppComponent.pageKind;
     if (!this.slides) {
       this.slides = this.files.split(new RegExp(", ?")).map((file) => this.path + file);
     }
