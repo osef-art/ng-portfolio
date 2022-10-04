@@ -136,8 +136,8 @@ $music-color: map.get($accent-colors, "music");
 
 .center {
   @extend .flex;
-  align-items: center; // horizontal
-  justify-content: center; // vertical
+  align-items: center; // vertical
+  justify-content: center; // horizontal
 }
 
 .center-y {

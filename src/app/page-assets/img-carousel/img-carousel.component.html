@@ -7,7 +7,7 @@
         'transition-duration': 'left ' + transitionTime + 's cubic-bezier(0.77, 0, 0.175, 1)'
       }">
         <ng-container *ngFor="let url of slides">
-          <li><img [src]="url"/></li>
+          <li><div><img [src]="url"/></div></li>
         </ng-container>
       </ul>
     </div>

@@ -117,7 +117,7 @@ export class HomePageComponent implements OnInit {
     order.sort( () => .5 - Math.random() );
     order.forEach(kind =>
       sentence += (
-        (kind == order[order.length-1] ? new TranslatableText('or', 'ou').in(lang) + " " : "") +
+        (kind == order[order.length-1] ? new TranslatableText('and', 'ou').in(lang) + " " : "") +
         (lang == Lang.FRA ? (kind == Kind.ANIMS ? "d'" : "de ") : "") +
         ("[" + skills[kind].in(lang) + "](" + kind + ")") +
         (kind == order[order.length-1] ? " !" : ", ")
@@ -128,7 +128,8 @@ export class HomePageComponent implements OnInit {
 
   get randomIntro() : TranslatableText {
     return new TranslatableText(
-      "*glad you got there.* feel free to check my latest works in " +
+      "*glad you got there.* feel free to check \
+      my latest works in terms of " +
       this.randomizedNav(Lang.ENG),
       "*content de vous voir.* venez jeter un oeil\
       à mes dernières créations en matière " +

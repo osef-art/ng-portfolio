@@ -44,10 +44,16 @@
   li {
     @extend .line;
 
-    img {
-      @extend .line;
-      border-radius: 15px;
-      transition: .5s;
+    div {
+      @extend .center;
+      max-height: 250px;
+
+      img {
+        // width: auto;
+        // height: 100%;
+        border-radius: 15px;
+        transition: .5s;
+      }
     }
   }
 
@@ -58,11 +64,11 @@
       box-shadow: 0 5px 10px rgba($color: black, $alpha: .3);
     }
 
-    & ~ .nav-dot {
+    &~.nav-dot {
       opacity: .15;
     }
 
-    & ~ %arrow {
+    &~%arrow {
       transform: translateY(-10px);
       opacity: .25;
     }
@@ -93,7 +99,8 @@
   }
 }
 
-@each $name, $color in $accent-colors {
+@each $name,
+$color in $accent-colors {
   .#{$name}-nav-dot {
     @extend .nav-dot;
 

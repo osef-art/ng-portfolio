@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class PageScrollerService {
   scrollToY(yDest : number) {
     let scrollAnim : number = window.setInterval(() => {
       let pageY : number = window.pageYOffset;
-      if (pageY > yDest) {
-        window.scrollTo(0, pageY * 3 / 4);
-      } else {
-        window.clearInterval(scrollAnim);
-      }
+      if (pageY > yDest) window.scrollTo(0, pageY * 3 / 4);
+      else window.clearInterval(scrollAnim);
     }, 8);
   }
 

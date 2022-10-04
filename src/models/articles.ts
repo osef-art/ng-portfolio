@@ -36,6 +36,24 @@ export default class ArticlesData {
       *Jusqu'où* pourrez-vous aller ? 💨"
     );
 
+
+    this.titles['kaps-beta'] = new TranslatableText(
+      "I MADE A *MOBILE GAME* !! 📱",
+      "J'AI FAIT UN *JEU MOBILE* !! 📱",
+    )
+    this.contents['kaps-beta'] = new TranslatableText(
+      "Hi everyone. ✌🏾 How's it going ? Personnally I'm fine since I'm *REALEASING A MOBILE GAME SOON ??!?!??!!?*\n\
+      I'M NOT JOKING, YOU CAN COP IT IN THE LINK BELOW\n\
+      DOWNLOAD THE BETA AND PLAY MY GAME *RIGHT NOW* 🏃‍♂️\n\
+      WHY AREN'T YOU PLAYING ALREADY ???? CLICK THE BUTTON BELOW TO ACCESS THE APK",
+
+      "yo tout le monde, j'espère que vous allez bien- *JE VAIS SORTIR UN JEU MOBILE ????*\n\
+      C'EST ARCHI PAS UNE BLAGUE, VOUS POUVEZ ALLEZ LE TESTER DES MAINTENANT\n\
+      ALLEZ *GO GO GO GO* 🏃‍♂️🏃‍♂️\n\
+      (sauf si vous êtes sur **iOS**. là vous pouvez garder votre calme)\n\
+      QU'EST-CE-QUE TU FAIS ENCORE ICI AU JUSTE ?? Y'A UNE .APK QUI T'ATTEND LA"
+    );
+
     this.titles['ministick2'] = new TranslatableText(
       "working on... *ministick 2* !",
       "*ministick 2* est en préparation !",
@@ -102,6 +120,13 @@ export default class ArticlesData {
       this.contents['collab'],
       new Date(Date.UTC(2021, 2, 20, 0, 0, 0)),
       new ThumbnailData().from('collab')
+    );
+
+    ArticlesData.articles['kaps-beta'] = new Article(
+      this.titles['kaps-beta'],
+      this.contents['kaps-beta'],
+      new Date(Date.UTC(2022, 10, 4, 0, 0, 0)),
+      new ThumbnailData().from('kaps-beta')
     );
   }
 

@@ -48,10 +48,15 @@ export class ThumbnailData {
   constructor() {
     ["ministick", "ministick2"].forEach(id => {
       this.data[id] = [];
-      for (let n = 0; n < 3; n++) {
+      for (let n = 0; n < 3; n++)
         this.data[id].push("assets/thumbnails/" + id + "-clip-" + (n + 1) + ".gif")
-      }
     });
+    ["kaps-beta"].forEach(id => {
+      this.data[id] = [];
+      for (let n = 0; n < 6; n++)
+        this.data[id].push("assets/thumbnails/kaps-clip-" + (n + 1) + ".gif")
+    });
+    this.data["kaps-beta"].push("assets/thumbnails/kaps-clip-sdks.gif")
     this.data["collab"] = ["assets/thumbnails/potsdealer.png"];
   }
 

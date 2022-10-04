@@ -29,11 +29,11 @@ export class ArticleComponent implements OnInit {
     private parser : CustomParserService,
     private scroller : PageScrollerService
   ) {
-    parser.setRules({
+    this.articleParser = parser;
+    this.articleParser.setRules({
       '<span class="white">$1</span>': /\*([^\s]([^\*]+)[^\s])\*/,
       '$1<br>\r': /(.*)\n/
     });
-    this.articleParser = parser;
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GithubRequestService } from 'src/app/services/http-request.service';
+import { WebClientService } from 'src/app/services/web-client.service';
 import { CustomParserService } from 'src/app/services/custom-parser.service';
 import { AppComponent } from 'src/app/app.component';
 import { Kind } from 'src/models/models';
@@ -17,7 +17,7 @@ export class GamePageComponent implements OnInit {
   readmeHTML !: string;
 
   constructor(
-    private githubRequester : GithubRequestService,
+    private webClient : WebClientService,
     private scroller : PageScrollerService,
     private parser : CustomParserService,
     private route: ActivatedRoute,
@@ -39,8 +39,8 @@ export class GamePageComponent implements OnInit {
   getGameReadmeFile() {
     const githubURL : string = "(https://raw.githubusercontent.com/osef-art/" + this.gameId + "/main/$1";
 
-    this.githubRequester
-      .getReadMeFrom(this.gameId)
+    this.webClient
+      .getGithubReadMeFrom(this.gameId)
       .subscribe(data => {
         // edit urls correctly
         this.readmeHTML = this.parser.parsed(data, {
